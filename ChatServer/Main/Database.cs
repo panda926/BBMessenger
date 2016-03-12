@@ -27,10 +27,10 @@ namespace ChatServer
 
         private string GetConnectionString()
         {
-            _IP = "210.116.91.44";
+            _IP = "";
 
 
-            return "Data Source=" + _IP + ";Initial Catalog=dbChat;Persist Security Info=True;User ID=sa;Password=NeedPlus1102;Connection Timeout=15";
+            return "Data Source=" + _IP + ";Initial Catalog=dbChat;Persist Security Info=True;User ID=;Password=;Connection Timeout=15";
 
             //return "Data Source=(local);Initial Catalog=dbChat;Integrated Security=SSPI;";
         }
