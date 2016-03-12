@@ -1,0 +1,34 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.MusicPlayer"
+    Title="HBMessenger" Height="300" Width="405" mc:Ignorable="d" Loaded="Window_Loaded" ResizeMode="NoResize" Closing="Window_Closing" ShowInTaskbar="True">
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="123*" />
+            <ColumnDefinition Width="133.077*" />
+            <ColumnDefinition Width="127.244*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.107*" />
+            <RowDefinition Height="0.712*" />
+            <RowDefinition Height="0.181*" />
+        </Grid.RowDefinitions>
+        <MediaElement  x:Name="mediaPlayerMain" Grid.ColumnSpan="2" LoadedBehavior="Manual"  UnloadedBehavior="Stop" Grid.Row="1" Margin="0,1,3,12"
+                       MediaOpened="Element_MediaOpened" MediaEnded="Element_MediaEnded" ClipToBounds="True" />
+        <Slider x:Name="sliderVolume" Margin="17.394,14.422,12,13" ValueChanged="ChangeMediaVolume" Minimum="0" Maximum="1" Value="0.5" Grid.Column="2" Grid.Row="2" />
+        <ScrollViewer x:Name="scrollViewer1" Grid.Column="1" Grid.RowSpan="2" d:LayoutOverrides="GridBox" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="127.244" Style="{DynamicResource ScrollViewerStyle}">
+            <StackPanel x:Name="stackPanel1">
+                <ListBox x:Name="lstMediaItems" ScrollViewer.HorizontalScrollBarVisibility ="Disabled" SelectionChanged="lstMediaItems_SelectionChanged" Height="224" Width="146" />
+            </StackPanel>
+        </ScrollViewer>
+        <Image HorizontalAlignment="Left" Width="11"  Stretch="Fill" Margin="28.5,21,0,15" Grid.Row="2" Source="/Resources;component/image/musicStop.png" Name="musicStop" Opacity="0.5" MouseDown="musicStop_MouseDown" IsEnabled="False" Cursor="Hand" />
+        <Image Margin="103,6,114,2" Source="/Resources;component/image/play.png" Stretch="Fill" Grid.Row="2" Name="play" MouseDown="play_MouseDown" Cursor="Hand" Grid.ColumnSpan="2" />
+        <Image Margin="37.914,19,0,13" Source="/Resources;component/image/next.png" Stretch="Fill" Grid.Column="1" Grid.Row="2" Name="musicNext" Opacity="0.5" MouseDown="musicNext_MouseDown" IsEnabled="False" Cursor="Hand" HorizontalAlignment="Left" Width="25.46" />
+        <Image Source="/Resources;component/image/prenext.png" Stretch="Fill" Margin="60.454,20,39.369,15" Grid.Row="2" Name="musicPreNext" Opacity="0.5" MouseDown="musicPreNext_MouseDown" IsEnabled="False" Cursor="Hand" />
+        <Image HorizontalAlignment="Right" Margin="0,16.422,111.244,15" Width="16" Source="/Resources;component/image/sound3.png" Stretch="Fill" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" />
+        <Image Margin="10,5,0,6" Name="open" Stretch="Fill" HorizontalAlignment="Left" Width="18" Source="/Resources;component/image/folder.png" Cursor="Hand" MouseDown="open_MouseDown" />
+        <Image Margin="39,5,0,5" Name="delete" Stretch="Fill" HorizontalAlignment="Left" Width="18" Source="/Resources;component/image/delete.png" Cursor="Hand" MouseDown="delete_MouseDown" />
+        <ProgressBar Margin="0,0,125,44" Name="progressBar1" Height="10" Grid.Row="1" VerticalAlignment="Bottom" Grid.RowSpan="2" Grid.ColumnSpan="3" />
+    </Grid>
+</Window>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="gun_light_0" Delay="0.33" >
+  <Image Set="role" Name="gun_light_0_0"  />
+  <Image Set="role" Name="gun_light_0_1"  />
+  <Image Set="role" Name="gun_light_0_0"  />
+  <Image Set="role" Name="gun_light_0_1"  />
+</Animation>

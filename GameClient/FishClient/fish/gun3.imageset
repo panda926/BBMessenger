@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="gun3" Image="fish\gun3.png" NativeHorzRes="512" NativeVertRes="256" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="68" Height="213" />
+  <Image Name="1" XPos="68" YPos="0" Width="68" Height="213" />
+  <Image Name="2" XPos="136" YPos="0" Width="68" Height="213" />
+  <Image Name="3" XPos="204" YPos="0" Width="68" Height="213" />
+  <Image Name="4" XPos="272" YPos="0" Width="68" Height="213" />
+  <Image Name="5" XPos="340" YPos="0" Width="68" Height="213" />
+  <Image Name="6" XPos="408" YPos="0" Width="68" Height="213" />
+</Imageset>
+
+

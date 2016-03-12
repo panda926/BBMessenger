@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="bg_load" Image="fish\bg_load.png" NativeHorzRes="2048" NativeVertRes="1024" AutoScaled="false">
+  <Image Name="bg" XPos="0" YPos="0" Width="1272" Height="703" />
+</Imageset>
+
+

@@ -1,0 +1,29 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	x:Class="ChatClient.ChattingCall"
+	x:Name="Window"
+	Title="HBMessenger"
+    Style="{DynamicResource MainWindowStyle}"
+	Width="310" Height="107" ResizeMode="NoResize" mc:Ignorable="d">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/StyleTheme/ChatCallGeneric.xaml" />
+                <ResourceDictionary Source="/StyleTheme/CommonDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+	<Grid x:Name="LayoutRoot" Margin="0,-10,0,-7">
+        <Label Content="聊天申请" Foreground="Black" Height="26" Margin="27,-22,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="63"></Label>
+		<TextBlock Margin="36,9.04,37,0" TextWrapping="Wrap" x:Name="chattingContent" Height="27" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" />
+        <Button Height="23" HorizontalAlignment="Left" Margin="51,0,0,4" x:Name="button1" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button1_Click" Content="接受" d:LayoutOverrides="VerticalAlignment"/>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,47,4" x:Name="button2" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button2_Click" Content="拒绝" d:LayoutOverrides="VerticalAlignment"/>
+        <Grid HorizontalAlignment="Left" Margin="2,-23,0,0" VerticalAlignment="Top" Width="21" Height="20">
+        	<Image Margin="-1,0,-4,-5" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

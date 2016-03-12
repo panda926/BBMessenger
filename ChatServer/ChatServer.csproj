@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC27499E-EB83-4BD4-A8DC-6B9B492CE45F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChatServer</RootNamespace>
+    <AssemblyName>ChatServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <ApplicationIcon>kuaikuai.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form\AddAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddAuto.Designer.cs">
+      <DependentUpon>AddAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddGateway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddGateway.Designer.cs">
+      <DependentUpon>AddGateway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddGame.Designer.cs">
+      <DependentUpon>AddGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngFinancial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngFinancial.Designer.cs">
+      <DependentUpon>MngFinancial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngChargeApprove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngChargeApprove.Designer.cs">
+      <DependentUpon>MngChargeApprove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngGamePercent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngGamePercent.Designer.cs">
+      <DependentUpon>MngGamePercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngChatPercent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngChatPercent.Designer.cs">
+      <DependentUpon>MngChatPercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngAuto.Designer.cs">
+      <DependentUpon>MngAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DelAuto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DelAuto.Designer.cs">
+      <DependentUpon>DelAuto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngGateway.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngGateway.Designer.cs">
+      <DependentUpon>MngGateway.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\ErrorView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\ErrorView.Designer.cs">
+      <DependentUpon>ErrorView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LogView.Designer.cs">
+      <DependentUpon>LogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\TotalView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\TotalView.Designer.cs">
+      <DependentUpon>TotalView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\BumperCarTable.cs" />
+    <Compile Include="Game\FishTable.cs" />
+    <Compile Include="Game\HorseTable.cs" />
+    <Compile Include="Game\DzCardTable.cs" />
+    <Compile Include="Main\Auto.cs" />
+    <Compile Include="Main\Cash.cs" />
+    <Compile Include="Main\EnvInfo.cs" />
+    <Compile Include="Form\AddRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddRoom.Designer.cs">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Chat.cs" />
+    <Compile Include="Main\Database.cs" />
+    <Compile Include="Form\AddNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddNotice.Designer.cs">
+      <DependentUpon>AddNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddBoard.Designer.cs">
+      <DependentUpon>AddBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddCharge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddCharge.Designer.cs">
+      <DependentUpon>AddCharge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\AddPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\AddPoint.Designer.cs">
+      <DependentUpon>AddPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\LoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\LoginUser.Designer.cs">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngManager.Designer.cs">
+      <DependentUpon>MngManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngEnviroment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngEnviroment.Designer.cs">
+      <DependentUpon>MngEnviroment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngGame.Designer.cs">
+      <DependentUpon>MngGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngGameHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngGameHistory.Designer.cs">
+      <DependentUpon>MngGameHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngPoint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngPoint.Designer.cs">
+      <DependentUpon>MngPoint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngChargeHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngChargeHistory.Designer.cs">
+      <DependentUpon>MngChargeHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngBoard.Designer.cs">
+      <DependentUpon>MngBoard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngNotice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngNotice.Designer.cs">
+      <DependentUpon>MngNotice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngChatHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngChatHistory.Designer.cs">
+      <DependentUpon>MngChatHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngRoom.Designer.cs">
+      <DependentUpon>MngRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngPercent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngPercent.Designer.cs">
+      <DependentUpon>MngPercent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngEvaluation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngEvaluation.Designer.cs">
+      <DependentUpon>MngEvaluation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngServiceman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngServiceman.Designer.cs">
+      <DependentUpon>MngServiceman.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngPrivilege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngPrivilege.Designer.cs">
+      <DependentUpon>MngPrivilege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngRecommender.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngRecommender.Designer.cs">
+      <DependentUpon>MngRecommender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngCash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngCash.Designer.cs">
+      <DependentUpon>MngCash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MngUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MngUser.Designer.cs">
+      <DependentUpon>MngUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PreviewVideo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\PreviewVideo.Designer.cs">
+      <DependentUpon>PreviewVideo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Game\DiceTable.cs" />
+    <Compile Include="Game\Game.cs" />
+    <Compile Include="Game\GameTable.cs" />
+    <Compile Include="Game\SicboTable.cs" />
+    <Compile Include="Main\Users.cs" />
+    <Compile Include="Form\View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\View.Designer.cs">
+      <DependentUpon>View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\AddRoom.resx">
+      <DependentUpon>AddRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddNotice.resx">
+      <DependentUpon>AddNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddBoard.resx">
+      <DependentUpon>AddBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddCharge.resx">
+      <DependentUpon>AddCharge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddPoint.resx">
+      <DependentUpon>AddPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddAuto.resx">
+      <DependentUpon>AddAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddGateway.resx">
+      <DependentUpon>AddGateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddGame.resx">
+      <DependentUpon>AddGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngFinancial.resx">
+      <DependentUpon>MngFinancial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngChargeApprove.resx">
+      <DependentUpon>MngChargeApprove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngGamePercent.resx">
+      <DependentUpon>MngGamePercent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngChatPercent.resx">
+      <DependentUpon>MngChatPercent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngAuto.resx">
+      <DependentUpon>MngAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\DelAuto.resx">
+      <DependentUpon>DelAuto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngGateway.resx">
+      <DependentUpon>MngGateway.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ErrorView.resx">
+      <DependentUpon>ErrorView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LoginUser.resx">
+      <DependentUpon>LoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\LogView.resx">
+      <DependentUpon>LogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngManager.resx">
+      <DependentUpon>MngManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngEnviroment.resx">
+      <DependentUpon>MngEnviroment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngGame.resx">
+      <DependentUpon>MngGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngGameHistory.resx">
+      <DependentUpon>MngGameHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngPoint.resx">
+      <DependentUpon>MngPoint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngChargeHistory.resx">
+      <DependentUpon>MngChargeHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngBoard.resx">
+      <DependentUpon>MngBoard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngNotice.resx">
+      <DependentUpon>MngNotice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngChatHistory.resx">
+      <DependentUpon>MngChatHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngRoom.resx">
+      <DependentUpon>MngRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngPercent.resx">
+      <DependentUpon>MngPercent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngEvaluation.resx">
+      <DependentUpon>MngEvaluation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngServiceman.resx">
+      <DependentUpon>MngServiceman.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngPrivilege.resx">
+      <DependentUpon>MngPrivilege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngRecommender.resx">
+      <DependentUpon>MngRecommender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngCash.resx">
+      <DependentUpon>MngCash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MngUser.resx">
+      <DependentUpon>MngUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\PreviewVideo.resx">
+      <DependentUpon>PreviewVideo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\TotalView.resx">
+      <DependentUpon>TotalView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\View.resx">
+      <DependentUpon>View.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="bin\Debug\Config.ini" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kuaikuai.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChatEngine\ChatEngine.csproj">
+      <Project>{9C4E241B-2C49-40C1-B39F-0428ED435915}</Project>
+      <Name>ChatEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

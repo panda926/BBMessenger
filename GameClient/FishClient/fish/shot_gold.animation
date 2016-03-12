@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="shot_gold" Delay="0.33" >
+  <Image Set="role" Name="gold_0"  />
+  <Image Set="role" Name="gold_1"  />
+  <Image Set="role" Name="gold_2"  />
+  <Image Set="role" Name="gold_3"  />
+  <Image Set="role" Name="gold_4"  />
+  <Image Set="role" Name="gold_5"  />
+  <Image Set="role" Name="gold_6"  />
+  <Image Set="role" Name="gold_7"  />
+  <Image Set="role" Name="gold_8"  />
+  <Image Set="role" Name="gold_9"  />
+  <Image Set="role" Name="gold_10"  />
+  <Image Set="role" Name="gold_11"  />
+  <Image Set="role" Name="gold_12"  />
+  <Image Set="role" Name="gold_13"  />
+  <Image Set="role" Name="gold_14"  />
+  <Image Set="role" Name="gold_15"  />
+  <Image Set="role" Name="gold_16"  />
+  <Image Set="role" Name="gold_17"  />
+  <Image Set="role" Name="gold_18"  />
+  <Image Set="role" Name="gold_19"  />
+</Animation>

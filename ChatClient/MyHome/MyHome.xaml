@@ -1,0 +1,144 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	x:Class="ChatClient.MyHome"
+	x:Name="Window"
+	Title="MyHome"
+    Style="{DynamicResource MainWindowStyle}"
+    Width="532" Height="396" ResizeMode="NoResize" mc:Ignorable="d" Icon="../image/kuaikuai.ico" Loaded="Window_Loaded" Closed="Window_Closed">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Theme/MyHomeGeneric.xaml" />
+                <ResourceDictionary Source="/Theme/MyHomeDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+            <Style TargetType="{x:Type toolkit:DataGridColumnHeader}" x:Key="columnHeaderStyle">
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Height" Value="20" />
+                <Setter Property="SeparatorBrush" Value="DarkRed" />
+                <Setter Property="FontWeight" Value="Black" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolkit:DataGridColumnHeader}">
+                            <Grid>
+                                <Border x:Name="columnHeaderBorder" BorderThickness="1" Padding="3,0,3,0">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#A5A5A5" />
+                                            <GradientStop Offset="1" Color="#4B4B4B" />
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#DEB40A" />
+                                            <GradientStop Offset="1" Color="#FF7F00" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type toolkit:DataGridRow}" x:Key="rowStyle">
+                <!--<Setter Property="Background" Value="Transparent" />-->
+                <Setter Property="Foreground" Value="Black" />
+                <!--<Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />-->
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolkit:DataGridRow}">
+                            <Border x:Name="DGR_Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Offset="0" Color="Transparent" />
+                                        <GradientStop Offset="1" Color="White" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <toolkit:SelectiveScrollingGrid>
+                                    <toolkit:SelectiveScrollingGrid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </toolkit:SelectiveScrollingGrid.ColumnDefinitions>
+                                    <toolkit:SelectiveScrollingGrid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </toolkit:SelectiveScrollingGrid.RowDefinitions>
+                                    <toolkit:DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    <toolkit:DataGridDetailsPresenter Grid.Row="1" Grid.Column="1" toolkit:SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding  AreRowDetailsFrozen, ConverterParameter={x:Static toolkit:SelectiveScrollingOrientation.Vertical}, Converter={x:Static toolkit:DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}" />
+                                    <toolkit:DataGridRowHeader Grid.RowSpan="2" toolkit:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static toolkit:DataGridHeadersVisibility.Row}, Converter={x:Static toolkit:DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" />
+                                </toolkit:SelectiveScrollingGrid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type toolkit:DataGridCell}" x:Key="cellStyle">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolkit:DataGridCell}">
+                            <Border x:Name="border" Background="Transparent" BorderBrush="Transparent" BorderThickness="1" SnapsToDevicePixels="True">
+                                <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="SimpleListBox" TargetType="{x:Type ListBox}">
+                <Setter Property="SnapsToDevicePixels" Value="true"/>
+                <Setter Property="Background" Value="{DynamicResource WindowBackgroundBrush}"/>
+                <Setter Property="BorderBrush" Value="{DynamicResource SolidBorderBrush}"/>
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+                <Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type ListBox}">
+                            <Grid>
+                                <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"/>
+                                <ScrollViewer Margin="1" Style="{DynamicResource SimpleScrollViewer}" Focusable="false" Background="{TemplateBinding Background}">
+
+                                    <!-- StackPanel은 IsItemsHost를 True로 설정하여 자식 항목을 표시하는 데 사용됩니다.-->
+                                    <StackPanel Margin="2" IsItemsHost="true"/>
+
+                                </ScrollViewer>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Background" Value="{DynamicResource DisabledBackgroundBrush}" TargetName="Border"/>
+                                    <Setter Property="BorderBrush" Value="{DynamicResource DisabledBorderBrush}" TargetName="Border"/>
+                                </Trigger>
+                                <Trigger Property="IsGrouping" Value="true">
+                                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+    <Grid x:Name="LayoutRoot" >
+		<Grid HorizontalAlignment="Left" Margin="12,4,0,0" VerticalAlignment="Top" Width="90" Height="90" Name="userPicture">
+			<Ellipse Fill="White" Stroke="White" StrokeThickness="2" Name="myPicture" Margin="-2,1,2,-1" MouseUp="myPicture_MouseUp" />
+		</Grid>
+      <Grid Margin="0" Name="contentsGrid">
+      	<Grid Margin="122,0,0,0" Name="selectGrid"/>
+      	<Grid HorizontalAlignment="Left" Margin="112,5,0,23" Width="8">
+      		<Image HorizontalAlignment="Right" Margin="0,25.5,3,22.5" Width="1" Source="/ChatClient;Component/image/seprater.gif" Stretch="Fill" Height="250"/>
+      	</Grid>
+      </Grid>
+        <ListBox HorizontalAlignment="Left" Style="{DynamicResource SimpleListBox}" Margin="5,116,0,89" Name="listBox1" Width="110" BorderBrush="#fbfbfb" BorderThickness="0" Opacity="1" Background="{x:Null}"/>
+        <Grid HorizontalAlignment="Left" Margin="2,-31,0,0" VerticalAlignment="Top" Width="27" Height="27">
+        	<Image Margin="0,0,1,2" Source="/ChatClient;Component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+        <Label Height="28" HorizontalAlignment="Left" Margin="33,-30,0,0" Name="label1" VerticalAlignment="Top" Width="120" Foreground="Black">我的信息</Label>
+    </Grid>
+</Window>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="connon_level" Image="fish\connon_level.png" NativeHorzRes="1450" NativeVertRes="960" AutoScaled="false">
+  <Image Name="0"  XPos="0"    YPos="0"   Width="290" Height="96" />
+  <Image Name="1"  XPos="290"  YPos="0"   Width="290" Height="96" />
+  <Image Name="2"  XPos="580"  YPos="0"   Width="290" Height="96" />
+  <Image Name="3"  XPos="870"  YPos="0"   Width="290" Height="96" />
+  <Image Name="4"  XPos="1160" YPos="0"   Width="290" Height="96" />
+  <Image Name="5"  XPos="0"    YPos="96"  Width="290" Height="96" />
+  <Image Name="6"  XPos="290"  YPos="96"  Width="290" Height="96" />
+  <Image Name="7"  XPos="580"  YPos="96"  Width="290" Height="96" />
+  <Image Name="8"  XPos="870"  YPos="96"  Width="290" Height="96" />
+  <Image Name="9"  XPos="1160" YPos="96"  Width="290" Height="96" />
+  <Image Name="10" XPos="0"    YPos="192" Width="290" Height="96" />
+  <Image Name="11" XPos="290"  YPos="192" Width="290" Height="96" />
+  <Image Name="12" XPos="580"  YPos="192" Width="290" Height="96" />
+  <Image Name="13" XPos="870"  YPos="192" Width="290" Height="96" />
+  <Image Name="14" XPos="1160" YPos="192" Width="290" Height="96" />
+  <Image Name="15" XPos="0"    YPos="288" Width="290" Height="96" />
+  <Image Name="16" XPos="290"  YPos="288" Width="290" Height="96" />
+  <Image Name="17" XPos="580"  YPos="288" Width="290" Height="96" />
+  <Image Name="18" XPos="870"  YPos="288" Width="290" Height="96" />
+  <Image Name="19" XPos="1160" YPos="288" Width="290" Height="96" />
+  <Image Name="20" XPos="0"    YPos="384" Width="290" Height="96" />
+  <Image Name="21" XPos="290"  YPos="384" Width="290" Height="96" />
+  <Image Name="22" XPos="580"  YPos="384" Width="290" Height="96" />
+  <Image Name="23" XPos="870"  YPos="384" Width="290" Height="96" />
+  <Image Name="24" XPos="1160" YPos="384" Width="290" Height="96" />
+  <Image Name="25" XPos="0"    YPos="480" Width="290" Height="96" />
+  <Image Name="26" XPos="290"  YPos="480" Width="290" Height="96" />
+  <Image Name="27" XPos="580"  YPos="480" Width="290" Height="96" />
+  <Image Name="28" XPos="870"  YPos="480" Width="290" Height="96" />
+  <Image Name="29" XPos="1160" YPos="480" Width="290" Height="96" />
+  <Image Name="30" XPos="0"    YPos="576" Width="290" Height="96" />
+  <Image Name="31" XPos="290"  YPos="576" Width="290" Height="96" />
+  <Image Name="32" XPos="580"  YPos="576" Width="290" Height="96" />
+  <Image Name="33" XPos="870"  YPos="576" Width="290" Height="96" />
+  <Image Name="34" XPos="1160" YPos="576" Width="290" Height="96" />
+  <Image Name="35" XPos="0"    YPos="672" Width="290" Height="96" />
+  <Image Name="36" XPos="290"  YPos="672" Width="290" Height="96" />
+  <Image Name="37" XPos="580"  YPos="672" Width="290" Height="96" />
+  <Image Name="38" XPos="870"  YPos="672" Width="290" Height="96" />
+  <Image Name="39" XPos="1160" YPos="672" Width="290" Height="96" />
+  <Image Name="40" XPos="0"    YPos="768" Width="290" Height="96" />
+  <Image Name="41" XPos="290"  YPos="768" Width="290" Height="96" />
+  <Image Name="42" XPos="580"  YPos="768" Width="290" Height="96" />
+  <Image Name="43" XPos="870"  YPos="768" Width="290" Height="96" />
+  <Image Name="44" XPos="1160" YPos="768" Width="290" Height="96" />
+  <Image Name="45" XPos="0"    YPos="864" Width="290" Height="96" />
+  <Image Name="46" XPos="290"  YPos="864" Width="290" Height="96" />
+  <Image Name="47" XPos="580"  YPos="864" Width="290" Height="96" />
+  <Image Name="48" XPos="870"  YPos="864" Width="290" Height="96" />
+  <Image Name="49" XPos="1160" YPos="864" Width="290" Height="96" />
+</Imageset>
+
+

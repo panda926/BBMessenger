@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="ui_load" Image="fish\ui_load.png" NativeHorzRes="2237" NativeVertRes="628" AutoScaled="false">
+  <Image Name="progress_left" XPos="16" YPos="167" Width="16" Height="11" />
+  <Image Name="progress_middle" XPos="16" YPos="167" Width="16" Height="11" />
+  <Image Name="progress_right" XPos="16" YPos="167" Width="16" Height="11" />
+  <Image Name="progress_step" XPos="0" YPos="167" Width="16" Height="11" />
+
+  <Image Name="frame_tl_" XPos="0" YPos="0" Width="5" Height="32" />
+  <Image Name="frame_tm_" XPos="5" YPos="0" Width="30" Height="32" />
+  <Image Name="frame_tr_" XPos="35" YPos="0" Width="248" Height="32" />
+  <Image Name="frame_ml_" XPos="0" YPos="32" Width="5" Height="10" />
+  <Image Name="frame_mr_" XPos="10" YPos="32" Width="5" Height="10" />
+  <Image Name="frame_bl_" XPos="0" YPos="42" Width="5" Height="5" />
+  <Image Name="frame_bm_" XPos="5" YPos="42" Width="5" Height="5" />
+  <Image Name="frame_br_" XPos="10" YPos="42" Width="5" Height="5" />
+
+  <Image Name="btn_help_image" XPos="0" YPos="47" Width="42" Height="24" />
+  <Image Name="btn_help_down" XPos="42" YPos="47" Width="42" Height="24" />
+  <Image Name="btn_help_over" XPos="84" YPos="47" Width="42" Height="24" />
+  <Image Name="btn_help_disable" XPos="148" YPos="47" Width="42" Height="24" />
+
+  <Image Name="btn_setting_image" XPos="0" YPos="71" Width="42" Height="24" />
+  <Image Name="btn_setting_down" XPos="42" YPos="71" Width="42" Height="24" />
+  <Image Name="btn_setting_over" XPos="84" YPos="71" Width="42" Height="24" />
+  <Image Name="btn_setting_disable" XPos="148" YPos="71" Width="42" Height="24" />
+
+  <Image Name="btn_message_image"   XPos="0"   YPos="372" Width="34" Height="24" />
+  <Image Name="btn_message_down"    XPos="34"  YPos="372" Width="34" Height="24" />
+  <Image Name="btn_message_over"    XPos="68"  YPos="372" Width="34" Height="24" />
+  <Image Name="btn_message_disable" XPos="102" YPos="372" Width="34" Height="24" />
+
+  <Image Name="btn_min_image" XPos="0" YPos="95" Width="32" Height="24" />
+  <Image Name="btn_min_down" XPos="32" YPos="95" Width="32" Height="24" />
+  <Image Name="btn_min_over" XPos="64" YPos="95" Width="32" Height="24" />
+  <Image Name="btn_min_disable" XPos="128" YPos="95" Width="32" Height="24" />
+
+  <Image Name="btn_max_image" XPos="0" YPos="119" Width="29" Height="24" />
+  <Image Name="btn_max_down" XPos="29" YPos="119" Width="29" Height="24" />
+  <Image Name="btn_max_over" XPos="58" YPos="119" Width="29" Height="24" />
+  <Image Name="btn_max_disable" XPos="116" YPos="119" Width="29" Height="24" />
+
+  <Image Name="btn_close_image" XPos="0" YPos="143" Width="41" Height="24" />
+  <Image Name="btn_close_down" XPos="41" YPos="143" Width="41" Height="24" />
+  <Image Name="btn_close_over" XPos="82" YPos="143" Width="41" Height="24" />
+  <Image Name="btn_close_disable" XPos="164" YPos="143" Width="41" Height="24" />
+
+  <Image Name="cursor" XPos="0" YPos="178" Width="80" Height="80" />
+  
+  <Image Name="btn_message_hide_image"   XPos="0"   YPos="308" Width="29" Height="30" />
+  <Image Name="btn_message_hide_down"    XPos="29"  YPos="308" Width="29" Height="30" />
+  <Image Name="btn_message_hide_over"    XPos="58"  YPos="308" Width="29" Height="30" />
+  <Image Name="btn_message_hide_disable" XPos="87"  YPos="308" Width="29" Height="30" />
+
+  <Image Name="btn_message_send_image"   XPos="0"   YPos="337" Width="29" Height="30" />
+  <Image Name="btn_message_send_down"    XPos="29"  YPos="337" Width="29" Height="30" />
+  <Image Name="btn_message_send_over"    XPos="58"  YPos="337" Width="29" Height="30" />
+  <Image Name="btn_message_send_disable" XPos="87"  YPos="337" Width="29" Height="30" />
+
+  <Image Name="message_back_image"   XPos="0"   YPos="396" Width="286" Height="30"  />
+  <Image Name="message_show_image"   XPos="0"   YPos="436" Width="286" Height="76" />
+
+  <Image Name="btn_help_exit_image"   XPos="208"  YPos="345" Width="76" Height="27" />
+  <Image Name="btn_help_exit_down"    XPos="284"  YPos="345" Width="76" Height="27" />
+  <Image Name="btn_help_exit_over"    XPos="360"  YPos="345" Width="76" Height="27" />
+  <Image Name="btn_help_exit_disable" XPos="436"  YPos="345" Width="76" Height="27" />
+
+  <Image Name="help_show_image"   XPos="289"   YPos="0" Width="222" Height="342" />
+ 
+  <Image Name="match_start0_image"  XPos="528"   YPos="0"   Width="365" Height="216" />
+  <Image Name="match_start1_image"  XPos="912"   YPos="0"   Width="365" Height="216" />
+  <Image Name="match_start2_image"  XPos="1872"  YPos="0"   Width="365" Height="216" />
+  <Image Name="match_reset_image"   XPos="528"   YPos="382" Width="490" Height="198" />
+
+  <Image Name="btn_match_cancel_image"   XPos="0"    YPos="519" Width="104" Height="21" />
+  <Image Name="btn_match_cancel_down"    XPos="104"  YPos="519" Width="104" Height="21" />
+  <Image Name="btn_match_cancel_over"    XPos="208"  YPos="519" Width="104" Height="21" />
+  <Image Name="btn_match_cancel_disable" XPos="312"  YPos="519" Width="104" Height="21" />
+
+  <Image Name="btn_match_restart_image"   XPos="0"    YPos="540" Width="104" Height="21" />
+  <Image Name="btn_match_restart_down"    XPos="104"  YPos="540" Width="104" Height="21" />
+  <Image Name="btn_match_restart_over"    XPos="208"  YPos="540" Width="104" Height="21" />
+  <Image Name="btn_match_restart_disable" XPos="312"  YPos="540" Width="104" Height="21" />
+ 
+  <Image Name="btn_match_watch_image"   XPos="0"    YPos="561" Width="104" Height="21" />
+  <Image Name="btn_match_watch_down"    XPos="104"  YPos="561" Width="104" Height="21" />
+  <Image Name="btn_match_watch_over"    XPos="208"  YPos="561" Width="104" Height="21" />
+  <Image Name="btn_match_watch_disable" XPos="312"  YPos="561" Width="104" Height="21" />
+ 
+  <Image Name="btn_match_start_image"   XPos="0"    YPos="582" Width="354" Height="46" />
+  <Image Name="btn_match_start_down"    XPos="354"  YPos="582" Width="354" Height="46" />
+  <Image Name="btn_match_start_over"    XPos="708"  YPos="582" Width="354" Height="46" />
+  <Image Name="btn_match_start_disable" XPos="1062" YPos="582" Width="354" Height="46" />
+
+  <Image Name="match_result_ddbc"   XPos="528"   YPos="224" Width="388" Height="30" />
+  <Image Name="match_result_fhyb"   XPos="528"   YPos="254" Width="388" Height="30" />
+  <Image Name="match_result_jxnl"   XPos="528"   YPos="284" Width="388" Height="30" />
+  <Image Name="match_result_gxnl"   XPos="528"   YPos="314" Width="388" Height="30" />
+  <Image Name="match_result_mncg"   XPos="528"   YPos="344" Width="388" Height="30" />
+
+  <Image Name="btn_gate_end_image"   XPos="1283"  YPos="0" Width="148" Height="51" />
+  <Image Name="btn_gate_end_down"    XPos="1431"  YPos="0" Width="148" Height="51" />
+  <Image Name="btn_gate_end_over"    XPos="1579"  YPos="0" Width="148" Height="51" />
+  <Image Name="btn_gate_end_disable" XPos="1727"  YPos="0" Width="148" Height="51" />
+ 
+  <Image Name="btn_gate_continue_image"   XPos="1283"  YPos="51" Width="148" Height="51" />
+  <Image Name="btn_gate_continue_down"    XPos="1431"  YPos="51" Width="148" Height="51" />
+  <Image Name="btn_gate_continue_over"    XPos="1579"  YPos="51" Width="148" Height="51" />
+  <Image Name="btn_gate_continue_disable" XPos="1727"  YPos="51" Width="148" Height="51" />
+
+  <Image Name="btn_gate_restart_image"   XPos="1283"  YPos="102" Width="148" Height="51" />
+  <Image Name="btn_gate_restart_down"    XPos="1431"  YPos="102" Width="148" Height="51" />
+  <Image Name="btn_gate_restart_over"    XPos="1579"  YPos="102" Width="148" Height="51" />
+  <Image Name="btn_gate_restart_disable" XPos="1727"  YPos="102" Width="148" Height="51" />
+
+  <Image Name="gate_continue_back"  XPos="1024"   YPos="218" Width="574" Height="362" />
+  <Image Name="gate_end_back"  XPos="1598"  YPos="218" Width="566" Height="202" />
+
+  <Image Name="btn_index_show_image"   XPos="1283"  YPos="177" Width="85" Height="24" />
+  <Image Name="btn_index_show_down"    XPos="1368"  YPos="177" Width="85" Height="24" />
+  <Image Name="btn_index_show_over"    XPos="1453"  YPos="177" Width="85" Height="24" />
+  <Image Name="btn_index_show_disable" XPos="1538"  YPos="177" Width="85" Height="24" />
+
+  <Image Name="btn_gate_help_image"   XPos="1283"  YPos="153" Width="73" Height="24" />
+  <Image Name="btn_gate_help_down"    XPos="1356"  YPos="153" Width="73" Height="24" />
+  <Image Name="btn_gate_help_over"    XPos="1429"  YPos="153" Width="73" Height="24" />
+  <Image Name="btn_gate_help_disable" XPos="1502"  YPos="153" Width="73" Height="24" />
+
+  <Image Name="gate_help_back"  XPos="1598"  YPos="420" Width="566" Height="233" />
+
+</Imageset>
+
+

@@ -1,0 +1,540 @@
+﻿<Window x:Class="ChatClient.DiceClient"
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+    WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+    Title="小骰子" Width="810" Height="640" ResizeMode="NoResize" Closing="Window_Closing">
+    
+    <Window.Resources>
+		<ResourceDictionary>
+			<Storyboard x:Key="storybrdXiaoPanelFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgXiaoYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdDicing">
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDice1" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" RepeatBehavior="3x">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="3961.065"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDice2" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" RepeatBehavior="6x">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="4321.221"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDice3" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" RepeatBehavior="9x">
+				<SplineDoubleKeyFrame KeyTime="00:00:00" Value="0"/>
+				<SplineDoubleKeyFrame KeyTime="00:00:01" Value="4320.423"/>
+			</DoubleAnimationUsingKeyFrames>
+		    </Storyboard>
+			<Storyboard x:Key="storybrdDaPanelFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdDanPanelFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDanYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdShuangPanelFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgShuangYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.8000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.1500000">
+						<DiscreteObjectKeyFrame.Value>
+							<Visibility>Hidden</Visibility>
+						</DiscreteObjectKeyFrame.Value>
+					</DiscreteObjectKeyFrame>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgXiaoYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.1500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgShuangYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.3000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDanYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.4500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.6000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXLabel">
+				<ColorAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="lblXLabel" Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)">
+					<SplineColorKeyFrame KeyTime="00:00:00" Value="#FFDC1111"/>
+					<SplineColorKeyFrame KeyTime="00:00:00.5000000" Value="#FFF7E504"/>
+					<SplineColorKeyFrame KeyTime="00:00:01" Value="#FFF71004"/>
+				</ColorAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="lblXLabel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+					<SplineDoubleKeyFrame KeyTime="00:00:00" Value="9"/>
+					<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="9"/>
+				</DoubleAnimationUsingKeyFrames>
+				<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="lblXLabel" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)">
+					<SplineDoubleKeyFrame KeyTime="00:00:00" Value="5"/>
+					<SplineDoubleKeyFrame KeyTime="00:00:00.5000000" Value="5"/>
+				</DoubleAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdDicingResult">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="grdDicingResult" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:08" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXDaFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.2500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXDanFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgXiaoYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgShuangYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDanYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:04" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXXiaoFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgXiaoYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.7500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+			<Storyboard x:Key="storybrdXShuangFlicker">
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgDaYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgXiaoYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.2500000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+				<ObjectAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="imgShuangYellowPanel" Storyboard.TargetProperty="(UIElement.Visibility)">
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:00.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:01.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:02.7500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.2500000" Value="{x:Static Visibility.Hidden}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.5000000" Value="{x:Static Visibility.Visible}"/>
+					<DiscreteObjectKeyFrame KeyTime="00:00:03.7500000" Value="{x:Static Visibility.Hidden}"/>
+				</ObjectAnimationUsingKeyFrames>
+			</Storyboard>
+
+            <Style TargetType="{x:Type toolkit:DataGridColumnHeader}" x:Key="dgColumnHeaderStyle">
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Height" Value="20" />
+                <Setter Property="FontSize" Value="10"/>
+                <Setter Property="SeparatorBrush" Value="DarkRed" />
+                <Setter Property="FontWeight" Value="Black" />
+                <Setter Property="Foreground" Value="#d3cdc9" />
+                <Setter Property="BorderBrush" Value="Blue"/>
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolkit:DataGridColumnHeader}">
+                            <Grid>
+                                <Border x:Name="columnHeaderBorder" BorderThickness="0" Padding="0,0,0,0">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#000000" />
+                                            <GradientStop Offset="1" Color="#000000" />
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                            <GradientStop Offset="0" Color="#3089b6" />
+                                            <GradientStop Offset="1" Color="#303e5b" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type toolkit:DataGridRow}" x:Key="dgRowStyle">
+                <!--<Setter Property="Background" Value="Transparent" />-->
+                <Setter Property="FontWeight" Value="Bold" />
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Foreground" Value="#1d3875" />
+                <Setter Property="Background" Value="#fbeca6" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type toolkit:DataGridRow}">
+                            <Border x:Name="DGR_Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                                        <GradientStop Offset="0" Color="Transparent" />
+                                        <GradientStop Offset="1" Color="Transparent" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <toolkit:SelectiveScrollingGrid>
+                                    <toolkit:SelectiveScrollingGrid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </toolkit:SelectiveScrollingGrid.ColumnDefinitions>
+                                    <toolkit:SelectiveScrollingGrid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="Auto" />
+                                    </toolkit:SelectiveScrollingGrid.RowDefinitions>
+                                    <toolkit:DataGridCellsPresenter Grid.Column="1" ItemsPanel="{TemplateBinding ItemsPanel}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                    <toolkit:DataGridDetailsPresenter Grid.Row="1" Grid.Column="1" toolkit:SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding  AreRowDetailsFrozen, ConverterParameter={x:Static toolkit:SelectiveScrollingOrientation.Vertical}, Converter={x:Static toolkit:DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" Visibility="{TemplateBinding DetailsVisibility}" />
+                                    <toolkit:DataGridRowHeader Grid.RowSpan="2" toolkit:SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical" Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static toolkit:DataGridHeadersVisibility.Row}, Converter={x:Static toolkit:DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" />
+                                </toolkit:SelectiveScrollingGrid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style TargetType="{x:Type toolkit:DataGridCell}" x:Key="dgCellStyle">
+                <Style.Triggers>
+                    <Trigger Property="IsSelected" Value="True">
+                        <Setter Property="Background" Value="LightSkyBlue"/>
+                        <Setter Property="Foreground" Value="#1d3875"/>
+                        <Setter Property="BorderBrush" Value="Blue"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="dgElementRightStyle">
+                <Setter Property="FrameworkElement.HorizontalAlignment" Value="Right"/>
+            </Style>
+            
+            <SolidColorBrush x:Key="TransparentGridLine" Color="Transparent" />
+        </ResourceDictionary>
+	</Window.Resources>
+
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid x:Name="grdMain" Margin="0,0,0,0">
+
+        <Image Margin="0,0,0,0"  Source="/Resources;component/image/diceGame/Background.jpg" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown" />
+		
+		<Grid VerticalAlignment="Top" Height="34" Margin="10,37,0,0">
+		    <Grid.ColumnDefinitions>
+		        <ColumnDefinition Width="50" />
+		        <ColumnDefinition Width="150" />
+				<ColumnDefinition Width="30" />
+                <ColumnDefinition Width="70" />
+                <ColumnDefinition Width="30" />
+                <ColumnDefinition Width="70" />
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"  x:Name="imgCurUserFace" HorizontalAlignment="Right" Margin="0,1,3,8" Width="20" Source="/Resources;component/image/face/DefaultHeadImage.png"/>
+            <Label Grid.Column="1" Content="Nickname" Name="lblUserNick_Top" Foreground="White" />
+            <Image Grid.Column="2" HorizontalAlignment="Right" Margin="0,1,2,8" Width="19" Source="/Resources;component/image/GoldCoin.jpg"/>
+            <Label Grid.Column="3" Content="0" Name="lblUserCash_Top" Foreground="White"/>
+            <Image Grid.Column="4" HorizontalAlignment="Right" Margin="0,1,2,9" Width="19" Source="/Resources;component/image/Point.png"/>
+            <Label Grid.Column="5" Content="0" Name="lblUserPoint_Top" Foreground="White"/>
+        </Grid>
+		
+		<Grid x:Name="grdBettingPanel" Margin="14,67,257,0" VerticalAlignment="Top" Width="533" Height="403">                      
+            <Image x:Name="imgDaPanel" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/DaPanel.png" Visibility="Visible" MouseDown="imgDaPanel_MouseDown" />
+			<Image x:Name="imgXiaoPanel" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/XiaoPanel.png" Visibility="Visible" MouseDown="imgXiaoPanel_MouseDown" />
+			<Image x:Name="imgDanPanel" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/DanPanel.png" Visibility="Visible" MouseDown="imgDanPanel_MouseDown"/>
+			<Image x:Name="imgShuangPanel" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/ShuangPanel.png" Visibility="Visible" MouseDown="imgShuangPanel_MouseDown" />
+
+            <Image x:Name="imgDaYellowPanel" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/YellowSqure.png" Visibility="Hidden"/>
+            <Image x:Name="imgXiaoYellowPanel" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Top" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/YellowSqure.png" Visibility="Hidden"/>
+            <Image x:Name="imgDanYellowPanel" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/YellowSqure.png" Visibility="Hidden"/>
+            <Image x:Name="imgShuangYellowPanel" HorizontalAlignment="Right" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="265" Height="200" Stretch="Fill" Source="/Resources;component/image/diceGame/YellowSqure.png" Visibility="Hidden"/>
+            
+            <Label x:Name="lblDaScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="44,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblXiaoScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="310,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblDanScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="44,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblShuangScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="310,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+
+
+            <Label x:Name="lblDaAllScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblXiaoAllScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="413,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblDanAllScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="144,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblShuangAllScore" Content="" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="418,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="80" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+			
+			<Label x:Name="lblDaSlash" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="119,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="25" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblXiaoSlash" Content="/" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="389,156.4,0,0"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="25" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblDanSlash" Content="/" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="119,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="25" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+            <Label x:Name="lblShuangSlash" Content="/" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="389,0,0,5"  FontSize="20" Foreground="Yellow" FontWeight="Bold" Width="25" Height="40" HorizontalContentAlignment="Center" Visibility="Hidden"/>
+			
+			
+			<Label Margin="203,125,203,0" Name="lblXLabel"  Background="{x:Null}" FontFamily="Arial" FontSize="96" FontWeight="Bold" Foreground="#FFDC1111" RenderTransformOrigin="0.5,0.5" Visibility="Hidden" Height="110.898" VerticalAlignment="Top">
+            	<Label.RenderTransform>
+            		<TransformGroup>
+            			<ScaleTransform/>
+            			<SkewTransform/>
+            			<RotateTransform/>
+            			<TranslateTransform/>
+            		</TransformGroup>
+            	</Label.RenderTransform>X6</Label>
+				
+        </Grid>
+
+        <Grid  x:Name="grdDicingResult" Margin="0,0,255,270" VerticalAlignment="Bottom" Width="350" Height="200" Visibility="Hidden">
+            <Image Margin="20.387,0.487,1.691,11.721" Source="/Resources;component/image/diceGame/mark.png" Stretch="Fill" Opacity="0.9"/>
+            <Label x:Name="lblResultScore" Margin="59.994,44,46.359,88" Content="0" Foreground="#FFF7F1F1" FontSize="56" FontWeight="Bold" FontFamily="Arial" HorizontalContentAlignment="Center"/>
+            <Label HorizontalAlignment="Center" VerticalAlignment="Top" Content="游戏成绩" Margin="74.997,8,51.534,0" FontSize="22" Foreground="Gold"/>
+            
+            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="大:" Margin="41.526,119.777,0,0" FontSize="16" Height="34.83" Width="32.713" />
+            <Label Name="lblResultDa" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="0" Margin="67,0,0,45" FontSize="16" Width="72.159" Height="34.83" />
+            <Label VerticalAlignment="Bottom" Content="小:" Margin="41.526,0,0,23.393" HorizontalAlignment="Left" FontSize="16" Height="Auto" Width="32.713" />
+            <Label Name="lblResultXiao" VerticalAlignment="Bottom" Content="0" Margin="66.997,0,0,22.393" HorizontalAlignment="Left" FontSize="16"/>            
+            <Label Margin="136.882,0,173.794,45.371" VerticalAlignment="Bottom" Content="单:" FontSize="16" Height="34.83" />
+            <Label Name="lblResultDan" Margin="0,0,93,45" VerticalAlignment="Bottom" Content="0" FontSize="16" Height="34.83" HorizontalAlignment="Right" Width="95.293" />
+            <Label Margin="136.882,147,0,18" Content="双:" FontSize="16" HorizontalAlignment="Left" Width="33.067" />
+            <Label Name="lblResultShuang" Margin="162,0,92,22" VerticalAlignment="Bottom" Content="0" FontSize="16"/>
+            
+            <Label Name="lblXResultLavel" HorizontalAlignment="Left" VerticalAlignment="Bottom" Content="X6:" Margin="230.886,0,0,32.724" Height="40" FontSize="18" Width="41" Foreground="#FFE11212" FontWeight="Bold" Visibility="Hidden" ClipToBounds="True" />
+            <Label Name="lblXResultValue" Content="0" Margin="0,0,8.181,33.633" FontSize="18" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="Hidden" HorizontalContentAlignment="Left" Height="38.373" Width="82.093" />
+            
+        </Grid>
+        
+        <Grid x:Name="grdChipPanel" Margin="45,0,300,97" VerticalAlignment="Bottom" Height="60">
+        	<Image x:Name="imgChip5" HorizontalAlignment="Left" Margin="50,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_5_1.png" Stretch="Fill" MouseEnter="imgChip5_MouseEnter" MouseLeave="imgChip5_MouseLeave" MouseDown="imgChip5_MouseDown" />
+    		<Image x:Name="imgChip10" HorizontalAlignment="Left" Margin="130,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_10_1.png" Stretch="Fill" MouseEnter="imgChip10_MouseEnter" MouseLeave="imgChip10_MouseLeave" MouseDown="imgChip10_MouseDown" />
+    		<Image x:Name="imgChip50" HorizontalAlignment="Left" Margin="210,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_50_1.png" Stretch="Fill" MouseEnter="imgChip50_MouseEnter" MouseLeave="imgChip50_MouseLeave" MouseDown="imgChip50_MouseDown" />
+    		<Image x:Name="imgChip100" HorizontalAlignment="Left" Margin="290,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_100_1.png" Stretch="Fill" MouseEnter="imgChip100_MouseEnter" MouseLeave="imgChip100_MouseLeave" MouseDown="imgChip100_MouseDown" />
+    		<Image x:Name="imgChip500" HorizontalAlignment="Left" Margin="370,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_500_1.png" Stretch="Fill" MouseEnter="imgChip500_MouseEnter" MouseLeave="imgChip500_MouseLeave" MouseDown="imgChip500_MouseDown" />
+
+    	</Grid>
+    	
+		<Grid x:Name="grdChipGrayPanel" Margin="0,0,262,90" VerticalAlignment="Bottom" Height="60" Visibility="Hidden">
+    		<Image x:Name="imgGrayChip5" HorizontalAlignment="Left" Margin="50,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_5_3.png" Stretch="Fill"/>
+    		<Image x:Name="imgGrayChip10" HorizontalAlignment="Left" Margin="130,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_10_3.png" Stretch="Fill"/>		
+    		<Image x:Name="imgGrayChip50" HorizontalAlignment="Left" Margin="210,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_50_3.png" Stretch="Fill"/>		
+    		<Image x:Name="imgGrayChip100" HorizontalAlignment="Left" Margin="290,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_100_3.png" Stretch="Fill"/>		
+    		<Image x:Name="imgGrayChip500" HorizontalAlignment="Left" Margin="370,1,0,0" VerticalAlignment="Top" Width="58" Height="58" Source="/Resources;component/image/diceGame/BT_JETTON_500_3.png" Stretch="Fill" />
+    	</Grid>
+
+      	<Grid Margin="14,0,250,32" VerticalAlignment="Bottom" Height="52">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="160" />
+		        <ColumnDefinition Width="88" />
+		        <ColumnDefinition Width="22" />
+				<ColumnDefinition Width="22" />
+				<ColumnDefinition Width="87" />
+                <ColumnDefinition Width="100" />
+		    </Grid.ColumnDefinitions>
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,0,0" Width="70" Grid.Column="0">
+                <Label  Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="22" Content="游戏币:" FontSize="11" Foreground="Yellow"/>
+                <Label  Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="22" Content="总   注:" FontSize="11" Foreground="Yellow"/>
+			</StackPanel>
+			<StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0" Width="100" Grid.Column="1">
+				<Label x:Name="lblCurBettingMoney" Margin="0,0,0,0" VerticalAlignment="Bottom" Height="22" Content="0" FontSize="11" Foreground="Yellow"/>
+				<Label x:Name="lblCurGameMoney" Margin="0,0,0,0" VerticalAlignment="Top" Height="22" Content="0" FontSize="11" Foreground="Yellow"/>
+			</StackPanel>
+			<StackPanel VerticalAlignment="Center" Grid.Column="2">
+				<Image x:Name="imgLeaveTime1" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="22" Height="45" Source="/Resources;component/image/diceGame/Num6.png"/>
+			</StackPanel>
+			<StackPanel VerticalAlignment="Center" Grid.Column="3">
+				<Image x:Name="imgLeaveTime2" HorizontalAlignment="Left" Margin="0,4,0,0" VerticalAlignment="Top" Width="22" Height="45" Source="/Resources;component/image/diceGame/Num0.png"/>
+			</StackPanel>
+            <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,5,0,0" Width="100" Grid.Column="4">
+                <Label  Margin="0,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="22" Content="成  绩:" FontSize="11" Foreground="Yellow"/>
+                <Label  Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="22" Content="一轮成绩:" FontSize="11" Foreground="Yellow"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,5,0,0" Width="100" Grid.Column="5">
+                <Label x:Name="lblCurGainMoney" Margin="0,0,0,0" VerticalAlignment="Bottom" Height="22" Content="0" FontSize="11" Foreground="Yellow"/>
+                <Label x:Name="lblRoundGainMoney" Margin="0,0,0,0" VerticalAlignment="Top" Height="22" Content="0" FontSize="11" Foreground="Yellow"/>
+            </StackPanel>
+        </Grid>
+      	
+		<Grid x:Name="grdGameNotice" HorizontalAlignment="Right" Margin="0,31,16,0" VerticalAlignment="Top" Width="232" Height="60" Background="#262b38" Visibility="Visible">
+			<Image Margin="0,0,0,0" VerticalAlignment="Top" Source="/Resources;component/image/GameLogo.png" Stretch="Fill" MouseLeftButtonDown="Image_MouseLeftButtonDown"/>
+        </Grid>
+		
+		<Grid HorizontalAlignment="Right" Margin="0,95,16,0" VerticalAlignment="Top" Width="232" Height="158" Background="#ecd8c5">
+		</Grid>
+        
+		<Image x:Name="imgDice1" Margin="0,102.884,110.5,0" Source="/Resources;component/image/diceGame/dice1.gif" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="53" Height="62" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden">
+    		        <Image.RenderTransform>
+    			        <TransformGroup>
+    				        <ScaleTransform/>
+    				        <SkewTransform/>
+    				        <RotateTransform/>
+    				        <TranslateTransform/>
+    			        </TransformGroup>
+    		        </Image.RenderTransform>
+    	        </Image>
+        
+    	        <Image x:Name="imgDice2" Margin="0,168.884,167.5,0" Source="/Resources;component/image/diceGame/dice2.gif" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="53" Height="62" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden">
+    		        <Image.RenderTransform>
+    			<TransformGroup>
+    				<ScaleTransform/>
+    				<SkewTransform/>
+    				<RotateTransform/>
+    				<TranslateTransform/>
+    			</TransformGroup>
+    		</Image.RenderTransform>
+    	        </Image>
+        
+    	        <Image x:Name="imgDice3" Margin="0,168.884,53.5,0" Source="/Resources;component/image/diceGame/dice3.gif" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Width="53" Height="62" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden">
+    		        <Image.RenderTransform>
+    			        <TransformGroup>
+    				        <ScaleTransform/>
+    				        <SkewTransform/>
+    				        <RotateTransform/>
+    				        <TranslateTransform/>
+    			        </TransformGroup>
+    		        </Image.RenderTransform>
+    	        </Image>		
+		
+    	 <Grid x:Name="grdBettingGraph" HorizontalAlignment="Right" Margin="0,95,16,0" VerticalAlignment="Top" Width="232" Height="158" Background="#1574a5" Visibility="Hidden">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="58" />
+		        <ColumnDefinition Width="58" />
+		        <ColumnDefinition Width="58" />
+				<ColumnDefinition Width="58" />
+		    </Grid.ColumnDefinitions>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="130"/>
+				<RowDefinition Height="28"/>
+			</Grid.RowDefinitions>
+            
+            <Label Margin="0,0,0,0" Padding="20,5,0,0" Content="大" Grid.Column="0" Grid.Row="1" Width="58" Height="28" Background="#303e5b" FontSize="14" FontWeight="Bold" Foreground="#fff05a"/>
+            <Label Margin="0,0,0,0" Padding="20,5,0,0" Content="小" Grid.Column="1" Grid.Row="1" Width="58" Height="28" Background="#303e5b" FontSize="14" FontWeight="Bold" Foreground="#fff05a"/>
+            <Label Margin="0,0,0,0" Padding="20,5,0,0" Content="单" Grid.Column="2" Grid.Row="1" Width="58" Height="28" Background="#303e5b" FontSize="14" FontWeight="Bold" Foreground="#fff05a"/>
+            <Label Margin="0,0,0,0" Padding="20,5,0,0" Content="双" Grid.Column="3" Grid.Row="1" Width="58" Height="28" Background="#303e5b" FontSize="14" FontWeight="Bold" Foreground="#fff05a"/>
+		</Grid>
+
+        <Grid  HorizontalAlignment="Right" Margin="0,257,16,230" Width="232"  Background="#fbeca6">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="23"/>
+                <RowDefinition Height="0.99*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Margin="0" Name="panUserListHeader" RenderTransformOrigin="0.5,0.5" ScrollViewer.CanContentScroll="False" Orientation="Vertical" Grid.Row="0">
+
+            </StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Hidden" Margin="0,0,0,5"  VerticalScrollBarVisibility="Auto" Style="{DynamicResource ScrollViewerStyle}" Grid.Row="1" Background="#ece2d8">
+                <StackPanel Margin="0" Name="panUserList" RenderTransformOrigin="0.5,0.5" ScrollViewer.CanContentScroll="True" Orientation="Vertical">
+
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        
+        
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meGameStart" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meTimeWarning" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meGameEnd" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meBet" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meAlert" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meCheer" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meGameLost" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="mePayCol" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meMostCard" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meProp" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" Visibility="Visible"/>
+        <MediaElement Height="23" Margin="50,8,0,0" x:Name="meBackground" VerticalAlignment="Top" LoadedBehavior="Manual"  UnloadedBehavior="Manual" HorizontalAlignment="Left" Width="160" MediaEnded="meBackground_MediaEnded" Visibility="Visible"/>
+
+        <Grid x:Name="grdChatEdit" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,16,12" Width="232" Background="#fbcf9a" Height="215">
+            <RichTextBox Height="184" HorizontalAlignment="Left" Margin="2,2,0,29" Name="rtxtMessageView" VerticalAlignment="Top" Width="228" Focusable="False" Background="#323643" Foreground="White"/>
+            <RichTextBox Height="25" HorizontalAlignment="Left" Margin="2,0,0,2" Name="rtxtMessageEdit" VerticalAlignment="Bottom" Width="187" Background="#323643" Foreground="White" PreviewKeyDown="rtxtMessageEdit_PreviewKeyDown" />
+            <Button x:Name="btnSendMsg"  Content="发送" HorizontalAlignment="Right" Height="26" Margin="0,0,3,2" VerticalAlignment="Bottom" Width="39" Background="#12397a" Foreground="White" Click="btnSendMsg_Click" />
+        </Grid>
+
+        <StackPanel x:Name="Title" Orientation="Horizontal" HorizontalAlignment="Left" Height="28" VerticalAlignment="Top">
+            <Image x:Name="imgIcon" Margin="10,1,0,0" Width="20" Height="20" Source="/Resources;component/image/face/DefaultHeadImage.png"/>
+            <Label Name="lblTitle" Content="Title" Foreground="White" Margin="5,0,0,0"/>
+        </StackPanel>
+        
+        <StackPanel x:Name="applicationButtonPannel" Orientation="Horizontal" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top">
+            <Image x:Name="imgNotice" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,3,0,0" Width="52" Height="20" Source="/Resources;component/image/diceGame/btnHelp.png" Stretch="Fill" MouseDown="imgNotice_MouseDown" MouseLeave="imgNotice_MouseLeave" />
+            <Image x:Name="imgVolumn" HorizontalAlignment="Right"  Margin="0,4,10,0" VerticalAlignment="Top" Width="25" Height="19" Source="/Resources;component/image/diceGame/VolumnOpen.png" MouseDown="imgVolumn_MouseDown" />
+            <Button  x:Name="btnMinimized" Content="" Margin="0" Width="25" HorizontalAlignment="Right" Height="20" Template="{DynamicResource Btnminimize_style}"  VerticalAlignment="Top" Click="btnMinimized_Click" />
+            <Button  x:Name="btnClose" Content="" Margin="0" Width="38" HorizontalAlignment="Right" Height="20" Style="{DynamicResource Btnclosemize_style}" VerticalAlignment="Top" Click="btnClose_Click" />
+        </StackPanel>
+		
+    </Grid>
+	
+</Window>

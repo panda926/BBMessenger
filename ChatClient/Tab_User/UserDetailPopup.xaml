@@ -1,0 +1,90 @@
+﻿<Window x:Class="ChatClient.UserDetailPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"    
+    x:Name="tip" Style="{DynamicResource MainWindowStyle}"
+    Title="HBMessenger" Height="230" Width="295" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False" SnapsToDevicePixels="False" >
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../StyleTheme/UserDetailPopupGeneric.xaml" />
+                <ResourceDictionary Source="../StyleTheme/UserDetailPopupDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    <Window.Resources>
+
+        <Storyboard x:Key="showDW">
+            <DoubleAnimation Storyboard.TargetName="RootGrid"  
+                        Storyboard.TargetProperty="Opacity"  
+                        From="0.2" To="1" Duration="0:0:0.2"/>
+
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="RootGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="RootGrid">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0.25"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+
+
+    </Window.Resources>
+    <Window.Triggers>
+
+        <EventTrigger SourceName="tip" RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard x:Name="showQueryCanvasStoryboard2"    
+                      Storyboard="{StaticResource showDW}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid x:Name="RootGrid" >
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform />
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <!--<Border BorderBrush="Black" BorderThickness="1" CornerRadius="5" Margin="0" >
+            <Border.Effect>
+                <DropShadowEffect Opacity="0.7" ShadowDepth="0" BlurRadius="8"/>
+            </Border.Effect>
+            <Border.Background>
+                <ImageBrush ImageSource="/Resources;component/image/main_Pan2.jpg" />
+            </Border.Background>
+        </Border>-->
+        <Grid x:Name="grid" Margin="12,12,0,0" HorizontalAlignment="Left" Width="60" Height="60" VerticalAlignment="Top" >
+            <Border x:Name="border" BorderThickness="1" CornerRadius="5" Margin="-2" Background="#FF3FB0FF" BorderBrush="#FF3FB0FF" Opacity="0">
+                <Border.Effect>
+                    <BlurEffect Radius="2"/>
+                </Border.Effect>
+            </Border>
+            <Border x:Name="border3" BorderThickness="1" Margin="1" Background="White" CornerRadius="3">
+                <Grid Margin="-1" Name="imageGrid"/>
+            </Border>
+            <Border x:Name="border2" BorderBrush="#FF3FB0FF" BorderThickness="1" Margin="0" CornerRadius="3" Opacity="0"/>
+            <Border x:Name="border1"  BorderBrush="White" BorderThickness="1" Margin="0" CornerRadius="3" Opacity="0.85"/>
+        </Grid>
+        
+    	
+    	<Label VerticalAlignment="Top" Content="Label" Margin="90,56,10,0" Name="userName" Foreground="Black" />
+        <Grid Margin="1,100,0,83" Name="grid1" Height="78">
+            <Border BorderBrush="DarkGray" BorderThickness="0.2" CornerRadius="5" Margin="11,0,15,6" />
+            <TextBlock   Margin="15,2,15,2" Name="textBlock1"  />
+        </Grid>
+        <Label Name="userSign" Foreground="Black" Margin="91,21,10,0" FontWeight="Bold" VerticalAlignment="Top" Height="30">
+            <Label.Effect>
+                <DropShadowEffect Color="White" ShadowDepth="1" Direction="297" BlurRadius="7"/>
+            </Label.Effect>
+        </Label>
+        <!--<TextBlock Height="21" Margin="91,30,67,0" Name="userSign" VerticalAlignment="Top" />-->
+        <Label VerticalAlignment="Top" Content="年龄 :" Margin="9,75,224,0" Foreground="DarkBlue"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="10" Margin="48,75,0,0" Width="33.993" Foreground="#FF110101" Name="ago"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="岁" Margin="67,75,0,0" Foreground="#FF110101"/>
+        <Label Visibility="Hidden" VerticalAlignment="Top" Content="评价 :" Margin="91,75,0,0" Foreground="DarkBlue" Height="25.96" HorizontalAlignment="Left" Width="41" />
+        <Label Visibility="Hidden" HorizontalAlignment="Right" VerticalAlignment="Top" Content="2859" RenderTransformOrigin="3.106,1.81" Margin="0,75,108,0" Foreground="#FF110101" Name="count" Height="25.96" Width="41" />
+        <Label Visibility="Hidden" HorizontalAlignment="Left" Content="地址 :" Margin="9,94,0,142" Foreground="DarkBlue" d:LayoutOverrides="Height"/>
+        <Label Visibility="Hidden" Content="단동시 메이꾸이깡반 신짱쩨 12호" Margin="48,94,10,142" d:LayoutOverrides="Width, Height" Foreground="#FF110101" Name="address"/>
+    </Grid>
+</Window>

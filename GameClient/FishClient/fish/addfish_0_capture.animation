@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="addfish_0_capture" Delay="0.33" >
+  <Image Set="addfish_0" Name="20"  />
+  <Image Set="addfish_0" Name="21"  />
+  <Image Set="addfish_0" Name="22"  />
+  <Image Set="addfish_0" Name="23"  />
+  <Image Set="addfish_0" Name="24"  />
+  <Image Set="addfish_0" Name="25"  />
+  <Image Set="addfish_0" Name="26"  />
+  <Image Set="addfish_0" Name="27"  />
+  <Image Set="addfish_0" Name="28"  />
+  <Image Set="addfish_0" Name="29"  />
+
+ 
+</Animation>
+
+
+
+

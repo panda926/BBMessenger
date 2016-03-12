@@ -1,0 +1,55 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.WomanUserControl"
+    Height="50" Width="280" mc:Ignorable="d" MouseDoubleClick="UserControl_MouseDoubleClick" x:Name="womanPanel">
+	
+	<Grid Name="userGrid" MouseEnter="userGrid_MouseEnter" MouseLeave="userGrid_MouseLeave" Cursor="Hand" MouseUp="userGrid_MouseUp">
+		<Grid Margin="54,0,0,0" VerticalAlignment="Top" Height="25">
+            <Label Content="Label" d:LayoutOverrides="Width" FontSize="10.667" Name="userNick" Padding="2" Margin="6,0,0,0" VerticalAlignment="Bottom" FontFamily="Microsoft YaHei"/>
+            <!--<Label Margin="0,-2,0,-4" Name="chattingState" HorizontalAlignment="Right" Width="54"></Label>-->
+        </Grid>
+		<Grid Margin="54,25,0,1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="18*" />
+                <ColumnDefinition Width="208*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal" Grid.ColumnSpan="2">
+                <Button x:Name="btnCam" ToolTip="视频预览" Margin="0" Width="0" Height="17" VerticalAlignment="Top" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" Cursor="Hand" Click="Button_Click_1" IsEnabled="False">
+                    <Image Source="/Resources;component/image/video.png" Width="15" Height="15" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </Button>
+                <Button ToolTip="查看个人资料" Margin="0" Width="17" Height="17" VerticalAlignment="Top" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" Cursor="Hand" Click="Button_Click">
+                    <Image Source="/Resources;component/image/profile.png" Width="12" Height="12" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+                </Button>
+                <Label Content="Label" d:LayoutOverrides="Width" FontSize="10.667" Name="userSign" Padding="2" Foreground="Gray" VerticalAlignment="Top" />
+            </StackPanel>
+		</Grid>
+		<!--<Grid Margin="67,0,0,0.333" VerticalAlignment="Bottom" Height="20.979" Visibility="Hidden" Name="stateGrid">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="85*"/>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition Width="3*"/>
+				<ColumnDefinition Width="3*"/>
+			</Grid.ColumnDefinitions>
+			<Image Margin="0.666,5.328,2.997,1.998" Grid.Column="1" Source="/Resources;component/image/profile.png" Stretch="Fill" Name="profilIcon"  ToolTip="查看个人资料" MouseDown="profilIcon_MouseDown" />
+			<Image Margin="0,4.329,0,-0.333" Grid.Column="2" Source="/Resources;component/image/heart.png" Stretch="Fill" Visibility="Hidden"/>
+			<Label Content="Label" d:LayoutOverrides="Height" Margin="0.333,0.327,46.953,-0.332" Grid.Column="3" FontSize="10.667" Name="userVisite" Padding="2" Foreground="Gray" Visibility="Hidden"/>
+		</Grid>-->
+
+        <Grid Width="50" Margin="4,2,0,2" HorizontalAlignment="Left" x:Name="grdUserIcon">
+            <Grid Width="46" Margin="0" Name="userIcon" MouseEnter="userIcon_MouseEnter_1" MouseDown="userIcon_MouseDown">
+                <Border BorderBrush="LightBlue" BorderThickness="2" CornerRadius="4" Opacity="0.8" Width="46" x:Name="brUserIcon">                    
+                </Border>
+                <!--<Ellipse.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Ellipse.RenderTransform>-->
+            </Grid>
+            <Image HorizontalAlignment="Right" Margin="5" VerticalAlignment="Bottom" Width="12" Height="12" x:Name="imgUserState" Source="/Resources;component/Icons/imonline.ico" Opacity="0.8" />
+        </Grid>
+    </Grid>
+</UserControl>

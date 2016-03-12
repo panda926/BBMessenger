@@ -1,0 +1,19 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.PaperControl"
+	x:Name="UserControl"
+	d:DesignWidth="426" d:DesignHeight="304">
+
+	<Grid x:Name="LayoutRoot">
+		<Button HorizontalAlignment="Right" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="75" Content="확인" Margin="0,0,128,8" Height="27"/>
+		<Button HorizontalAlignment="Right" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="75" Content="리스트로" Margin="0,0,20,7" Height="27"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="제목:" Margin="37,34,0,0" Width="60" Height="24.96" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" Content="내용:" Margin="37,68,0,79.04" Width="60" Background="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+		<TextBox Style="{DynamicResource SimpleTextBox}" VerticalAlignment="Top" TextWrapping="Wrap" Margin="113,30,20,0"/>
+		<TextBox TextWrapping="Wrap" Margin="113,69,20,78.04"/>
+	</Grid>
+</UserControl>

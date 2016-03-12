@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="coin_silver" Delay="0.33" >
+  <Image Set="role" Name="coin_silver_0"  />
+  <Image Set="role" Name="coin_silver_1"  />
+  <Image Set="role" Name="coin_silver_2"  />
+  <Image Set="role" Name="coin_silver_3"  />
+  <Image Set="role" Name="coin_silver_4"  />
+  <Image Set="role" Name="coin_silver_5"  />
+  <Image Set="role" Name="coin_silver_6"  />
+  <Image Set="role" Name="coin_silver_7"  />
+  <Image Set="role" Name="coin_silver_8"  />
+  <Image Set="role" Name="coin_silver_9"  />
+  <Image Set="role" Name="coin_silver_10"  />
+  <Image Set="role" Name="coin_silver_11"  />
+  <Image Set="role" Name="coin_silver_12"  />
+  <Image Set="role" Name="coin_silver_13"  />
+  <Image Set="role" Name="coin_silver_14"  />
+  <Image Set="role" Name="coin_silver_15"  />
+  <Image Set="role" Name="coin_silver_16"  />
+  <Image Set="role" Name="coin_silver_17"  />
+  <Image Set="role" Name="coin_silver_18"  />
+  <Image Set="role" Name="coin_silver_19"  />
+
+ 
+</Animation>
+
+
+

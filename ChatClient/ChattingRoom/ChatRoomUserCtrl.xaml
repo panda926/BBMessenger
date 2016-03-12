@@ -1,0 +1,201 @@
+﻿<UserControl x:Class="ChatClient.ChatRoomUserCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Luna" xmlns:ee="http://schemas.microsoft.com/expression/2010/effects"
+             d:DesignHeight="572" d:DesignWidth="700" Unloaded="UserControl_Unloaded">
+    <Grid x:Name="LayoutRoot" Margin="0,0,0,-1.5">
+        <Grid Margin="0,1,2,1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.074*"/>
+                <RowDefinition Height="0.075*"/>
+                <RowDefinition Height="0.851*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="Bg" Margin="0,0,0,1" Opacity="0.655" CornerRadius="3" Padding="0" d:LayoutOverrides="HorizontalAlignment" Grid.RowSpan="3">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="White" Offset="0.114"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <Border x:Name="Bg2" Opacity="0.795" Margin="1,0,0,-1.185" Grid.Row="1">
+                <Border.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Offset="0" Color="#19FFFFFF"/>
+                        <GradientStop Color="#FFE0F7FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Border.Background>
+            </Border>
+            <!--<StackPanel Margin="0,0,0,9" Orientation="Horizontal" Panel.ZIndex="6" HorizontalAlignment="Right" d:LayoutOverrides="HorizontalAlignment">
+                <Button x:Name="btnMin1" Content="" Margin="0" Width="25" HorizontalAlignment="Right" Height="18"  Template="{DynamicResource Btnminimize_style}" BorderBrush="{x:Null}" VerticalAlignment="Top" Focusable="False" />
+                <Button x:Name="btnClose1" Content="" Margin="0" Width="38" HorizontalAlignment="Right" Height="18"  Style="{DynamicResource Btnclosemize_style}" VerticalAlignment="Top" Focusable="False" />
+            </StackPanel>-->
+
+            <Grid x:Name="grid" Margin="7,7,0,0" HorizontalAlignment="Left" Width="28" Height="28" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment" >
+                <Border BorderThickness="1" Margin="1" Background="White" CornerRadius="3">
+                    <Image   Cursor="Hand" Margin="-1" x:Name="imageHead" Source="/Resources;component/image/icon1.gif" Stretch="Fill" />
+                </Border>
+                <Border  BorderBrush="#FFE0E0E0" BorderThickness="1" Margin="0" CornerRadius="3"/>
+            </Grid>
+
+            <Grid x:Name="TopGird" Margin="4.5,6,146.499,3.315" Grid.Row="1">
+                <StackPanel HorizontalAlignment="Left" Margin="15.595,0.25,0,-0.949" Orientation="Horizontal">
+                    <Button  Margin="0" Width="28" Height="28" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" VerticalAlignment="Top">
+                        <Image Margin="0" Source="/Resources;component/image/video.png" Width="28" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    </Button>
+                    <Button  Margin="8,0,0,0" Width="28" Height="28" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Image Margin="0" Source="/Resources;component/image/b9m0_0.png" Width="28" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="CenterGird" Margin="2,0.185,3.167,31.167" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.706*"/>
+                    <RowDefinition Height="0.066*"/>
+                    <RowDefinition Height="0.228*"/>
+                </Grid.RowDefinitions>
+
+                <RichTextBox x:Name="richlist" Margin="0,0,156,0" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" BorderThickness="1,0,1,1">
+                    <RichTextBox.Background>
+                        <LinearGradientBrush EndPoint="1.0,0.5" StartPoint="0.0,0.5">
+                            <GradientStop Color="#FFE8EBF1" Offset="0"/>
+                            <GradientStop Color="#FFF3FCFE" Offset="0.6"/>
+                            <GradientStop Color="Transparent" Offset="1"/>
+                        </LinearGradientBrush>
+                    </RichTextBox.Background>
+                    <RichTextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </RichTextBox.RenderTransform>
+                    <FlowDocument/>
+                </RichTextBox>
+
+                <RichTextBox x:Name="richTextBox" Margin="0,0,156,0" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
+                    <RichTextBox.Background>
+                        <LinearGradientBrush EndPoint="1.0,0.5" StartPoint="0.0,0.5">
+                            <GradientStop Color="#FFE8EBF1" Offset="0"/>
+                            <GradientStop Color="#FFF3FCFE" Offset="0.6"/>
+                            <GradientStop Color="Transparent" Offset="1"/>
+                        </LinearGradientBrush>
+                    </RichTextBox.Background>
+                    <RichTextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </RichTextBox.RenderTransform>
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text=""/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>
+
+                <!--<Button x:Name="button" Content="&lt;" HorizontalAlignment="Right" Margin="0,0,145.833,-18.759" Width="8" Height="120" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Bottom" Style="{DynamicResource NormalButtonStyle}">
+                    <Button.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Button.RenderTransform>
+                </Button>-->
+                <Image HorizontalAlignment="Right" Width="1.5" Source="/Resources;component/image/seprater.gif"  Margin="0,120,145.833,-50" RenderTransformOrigin="0.5,0.5" Height="Auto" VerticalAlignment="Bottom" />
+
+                <StackPanel HorizontalAlignment="Left" Height="25.938" Margin="7.551,0,0,0" Orientation="Horizontal" VerticalAlignment="Top" Grid.Row="1">
+                    <Button  Margin="0,2.5,0,0" Width="20" Height="20" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" VerticalAlignment="Top">
+                        <Image Margin="0" Source="/Resources;component/image/ChatRoomIcon/font.png" Width="20" Height="20" VerticalAlignment="Top">
+                            <Image.Effect>
+                                <ee:SharpenEffect Amount="0" Height="0"/>
+                            </Image.Effect>
+                        </Image>
+                    </Button>
+
+                    <Button  Margin="10,2.5,0,0" Width="20" Height="20" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Image Margin="0" Source="/Resources;component/image/ChatRoomIcon/emotionFace_16.png" Width="20" Height="20" VerticalAlignment="Top">
+                            <Image.Effect>
+                                <ee:SharpenEffect Amount="0" Height="0"/>
+                            </Image.Effect>
+                        </Image>
+                    </Button>
+
+                    <Button  Margin="10,2.5,0,0" Width="20" Height="20" d:LayoutOverrides="Width" Style="{DynamicResource MainPannel_Button}" VerticalAlignment="Top" HorizontalAlignment="Left">
+                        <Image Margin="0" Source="/Resources;component/image/ChatRoomIcon/aio_quickbar_twitter.png" Width="20" Height="20" VerticalAlignment="Top">
+                            <Image.Effect>
+                                <ee:SharpenEffect Amount="0" Height="0"/>
+                            </Image.Effect>
+                        </Image>
+                    </Button>
+                </StackPanel>
+            </Grid>
+
+            <TextBlock x:Name="tbNickName" Margin="41,8.5,0,16.333" TextWrapping="Wrap" FontSize="10.667" Foreground="Black" Text="天蚕土豆（1234654987）" HorizontalAlignment="Left" d:LayoutOverrides="Height"/>
+            <TextBlock x:Name="tbPersonal" Margin="41,0,0,2.658" TextWrapping="Wrap" VerticalAlignment="Bottom" FontSize="10.667" Foreground="Black" Text="帅的被人砍！" HorizontalAlignment="Left"/>
+
+            <TextBlock x:Name="textBlock" Margin="9,0,0,8.5"  Text="可输入350字" VerticalAlignment="Bottom" FontSize="14.667" HorizontalAlignment="Left" Grid.Row="2"/>
+
+            <Grid x:Name="extemview" HorizontalAlignment="Right" Margin="0,1.185,2.499,4.833" Width="148.5" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
+                <Grid.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Grid.RenderTransform>
+
+                <!--<RichTextBox x:Name="richTextBox1" Canvas.Left="0.331" Canvas.Top="1.5" Margin="0,0,0,28.967" RenderTransformOrigin="0.5,0.5" Visibility="Hidden">
+                    <RichTextBox.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </RichTextBox.RenderTransform>
+                    <FlowDocument>
+                        <Paragraph>
+                            <Run Text=""/>
+                        </Paragraph>
+                    </FlowDocument>
+                </RichTextBox>-->
+
+                <Image x:Name="man1" Width="142" Source="/Resources;component/image/heart1.png" Stretch="Fill" Height="150" VerticalAlignment="Top" Canvas.Left="0.057" Margin="3.25,70">
+                    <Image.Effect>
+                        <ee:SharpenEffect Amount="0" Height="0"/>
+                    </Image.Effect>
+                </Image>
+                <Image x:Name="man2" Width="110" Source="/Resources;component/image/rose2.png" Stretch="Fill" Height="115" Canvas.Top="222.5" VerticalAlignment="Bottom" Margin="3.75,0,3.75,4">
+                    <Image.Effect>
+                        <ee:SharpenEffect Amount="0" Height="0"/>
+                    </Image.Effect>
+                </Image>
+            </Grid>
+
+            <Canvas x:Name="canvas" Height="22.5" Margin="0,0,13.792,4.667" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="16.5" RenderTransformOrigin="0.5,0.5" Grid.Row="2">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+                <Button Content="发送" Height="22.5" Width="73.268" FontSize="13.333" Canvas.Left="-207.134" Canvas.Top="-1.5" HorizontalAlignment="Right" Style="{DynamicResource NormalButtonStyle}" />
+                <Button Content="关闭" Height="22.5" FontSize="13.333" Width="73" d:LayoutOverrides="Width" Canvas.Left="-286" Canvas.Top="-1.5" HorizontalAlignment="Right" Style="{DynamicResource NormalButtonStyle}" />
+            </Canvas>
+        </Grid>
+    </Grid>
+</UserControl>

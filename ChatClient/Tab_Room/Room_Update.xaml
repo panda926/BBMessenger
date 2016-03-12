@@ -1,0 +1,50 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.Room_Update"
+    Style="{DynamicResource MainWindowStyle}"
+    Title="HBMessenger" Height="183" Width="355" ResizeMode="NoResize" Loaded="Window_Loaded" mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../StyleTheme/RoomUpdateGeneric.xaml" />
+                <ResourceDictionary Source="../StyleTheme/ChatDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="36*"/>
+    		<RowDefinition Height="31*"/>
+            <RowDefinition Height="34*"/>
+    		<RowDefinition Height="34*"/>
+    	</Grid.RowDefinitions>
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="0.029*"/>
+    		<ColumnDefinition Width="0.217*"/>
+    		<ColumnDefinition Width="0.754*"/>
+    	</Grid.ColumnDefinitions>
+        <!--<Image Height="34" HorizontalAlignment="Left" Margin="90,1,0,0" x:Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="36" Source="/Resources;component/image/alert.png" />
+        <Label Height="28" Margin="137,4,51,0" x:Name="label1" VerticalAlignment="Top" Content="还可以创建3个频道，且创建后不能删除。" FontFamily="SimSun" FontSize="13.333" Foreground="Black" />-->
+        <Label Margin="0,5" x:Name="label2" FlowDirection="LeftToRight" Content="频道名称:" FontFamily="SimSun" FontSize="13.333" Foreground="Black" Grid.Column="1" />
+        <!--<Label HorizontalAlignment="Left" Margin="22,101,0,119" x:Name="label3" Width="65" Content="选择 ID:" FontFamily="SimSun" FontSize="13.333" Foreground="Black" />-->
+        <!--<Label Margin="0,102,151,115" x:Name="label4" HorizontalAlignment="Right" Width="68" Content="频道类别:" FontFamily="SimSun" FontSize="13.333" Foreground="Black" />-->
+        <TextBox Margin="0,3,0,8" x:Name="roomBox" TextWrapping="Wrap" FontFamily="SimSun" FontSize="13.333" Foreground="Black" Grid.Column="2" MaxLength="35" />
+        <Button Margin="49.865,5,118,-7" x:Name="goRegistor" Background="DodgerBlue" Foreground="White" FontSize="16" Click="Update_Room" Content="立即갱신" Grid.Column="2" Grid.Row="3"/>
+        <!--<Label Margin="94,102,0,112" x:Name="roomIdLabel" FontFamily="SimSun" FontSize="13.333" Foreground="Black" HorizontalAlignment="Left" Width="123" />-->
+        <Label Margin="0,1,0,0" x:Name="label5" Content="登录密码:" FontFamily="SimSun" FontSize="13.333" Foreground="Black" Grid.Column="1" Grid.Row="1" />
+        <PasswordBox Margin="0.333,3,103.348,2" x:Name="roomPass"  Foreground="Black" MaxLength="13" Grid.Column="2" Grid.Row="1" d:LayoutOverrides="HorizontalMargin" />
+        <Label Margin="0,5,0,36" x:Name="label6" Content="确认密码:" FontFamily="SimSun" FontSize="13.333" Foreground="Black" Grid.Column="1" Grid.Row="2" Grid.RowSpan="2" />
+        <PasswordBox Margin="72,5,103.348,4" x:Name="veriPass"   Foreground="Black" MaxLength="13" Grid.Column="1" Grid.Row="2" Grid.ColumnSpan="2" />
+        <!--<ComboBox Margin="0,102,15,118" Name="roomKind" HorizontalAlignment="Right" Width="134" Foreground="Black">
+            <ComboBoxItem Content="游戏"/>
+            <ComboBoxItem Content="娱乐"/>
+            <ComboBoxItem Content="其他"/>
+            <ComboBoxItem Content="教育"/>
+        </ComboBox>-->
+        <Grid Margin="-1.116,-24,0,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Left" Width="25.865" Grid.ColumnSpan="2">
+            <Image Margin="-3,-10,3,11" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+        <Label VerticalAlignment="Top" Content="创建频道" Margin="9.092,-34,229.217,0" Foreground="#FF110101" Height="25.96" Grid.Column="1" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>

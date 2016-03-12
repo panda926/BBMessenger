@@ -1,0 +1,21 @@
+﻿<Window x:Class="ChatClient.Id_Select"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Style="{DynamicResource MainWindowStyle}"
+    Title="Id_Select" Height="162" Width="453" Loaded="Window_Loaded" ResizeMode="NoResize" Icon="/ChatClient;component/image/kuaikuai.ico">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../Theme/IdSelectGeneric.xaml" />
+                <ResourceDictionary Source="../Theme/ChatDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Label Content="选择账号" Foreground="Black" Margin="34,-32,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="62"></Label> 
+        <WrapPanel Margin="2,0,0,0" Name="randomPan" />
+        <Grid HorizontalAlignment="Left" Margin="6,-21,0,0" VerticalAlignment="Top" Width="26" Height="26">
+            <Image Margin="-3,-11,3,12" Source="/ChatClient;Component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+﻿<bs:BaseWindow x:Class="ChatClient.CamSelectingWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"	
+        Style="{DynamicResource MyInfoWindowStyle}"
+        ResizeMode="NoResize" Icon="/Resources;component/image/kuaikuai.ico"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"  
+        xmlns:bs="clr-namespace:ChatClient"
+        WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen"
+        Title="CamSelectingWnd" Height="150" Width="300" MinHeight="150" MinWidth="300" MaxHeight="150" MaxWidth="300" Closing="BaseWindow_Closing">
+    <Grid>
+        <ComboBox Margin="8,0,0,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Center" HorizontalAlignment="Center" Width="200" Name="cmbCamera" Foreground="Green" SelectionChanged="cmbCamera_SelectionChanged" />
+        <Button Content="确认" Margin="0,0,10,10" Height="22.5" Width="73.268" FontSize="13.333" HorizontalAlignment="Right" VerticalAlignment="Bottom" Style="{DynamicResource NormalButtonStyle}" Cursor="Hand" Click="Button_Click" />
+        <StackPanel x:Name="applicationButtonPannel" Orientation="Horizontal" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment">
+            <Button  x:Name="btnMin" Content="" Margin="0" Width="25" HorizontalAlignment="Right" Height="18" Template="{DynamicResource Btnminimize_style}"  VerticalAlignment="Top" Click="btnMin_Click" />
+            <Button  x:Name="btnClose" Content="" Margin="0" Width="38" HorizontalAlignment="Right" Height="18" Style="{DynamicResource Btnclosemize_style}" VerticalAlignment="Top" Click="btnClose_Click" />
+        </StackPanel>
+    </Grid>
+</bs:BaseWindow>

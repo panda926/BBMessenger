@@ -1,0 +1,41 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.MyInfoControl"
+	x:Name="UserControl"
+	Width="392" Height="326">
+
+	<Grid x:Name="LayoutRoot" Width="392" Height="326">
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Top" Content="帐    号:" Margin="26,45,0,0" Foreground="Black" Height="23.687" Width="64" />
+		<Label  VerticalAlignment="Top" Content="称  号:" Margin="180,43,160,0" Foreground="Black" Height="25.96" />
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Top" Content="出生年月:" Margin="25,74,0,0" Foreground="Black" Height="25.96" Width="63.006" />
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Top" Content="EMAIL:" Margin="25,109,0,0" Foreground="Black" Height="25.96" Width="63.006" />
+		<Label Visibility="Hidden" HorizontalAlignment="Left"  Content="地  址:" Margin="34,76,0,0" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" VerticalAlignment="Top" Foreground="Black" Height="25.96" Width="52.6" />
+        <Label HorizontalAlignment="Left"  VerticalAlignment="Top" Name="userId" Margin="94,46,0,0" Foreground="Black" Height="26" Width="91">Label</Label>
+        <TextBox Visibility="Hidden" Style="{DynamicResource TextBoxStyle}"   Margin="0,79.04,8,0" VerticalAlignment="Top" Name="userAddress" Foreground="Black" MaxLength="30" TextChanged="userAddress_TextChanged" HorizontalAlignment="Right" Width="293" />
+        <TextBox Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,45,8,0" Width="145.392" Name="userNicname" Foreground="Black" MaxLength="24" TextChanged="userNicname_TextChanged" />
+		<TextBox TextWrapping="Wrap" Style="{DynamicResource TextBoxStyle}" HorizontalAlignment="Left"  VerticalAlignment="Top" Margin="91,109,8,0" Width="293" Name="userEmailAddress" Foreground="Black" />
+        <Button Style="{DynamicResource NormalButtonStyle}" HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="100" Content="保存" Margin="0,0,12,28" Height="30" FontSize="14"  Click="Button_Click" Foreground="OrangeRed" Name="buttonSave" />
+		<!--<Label HorizontalAlignment="Left"  VerticalAlignment="Bottom" Content="原密码:" Margin="33.006,0,0,63" Foreground="Black" />-->
+        <!--<Label HorizontalAlignment="Left"  VerticalAlignment="Bottom" Content="新密码:" Margin="33.006,0,0,31" Foreground="Black" />-->
+        <!--<PasswordBox Style="{DynamicResource passwordBoxStyle}" VerticalAlignment="Bottom" Margin="91,0,145,63" Name="rePass" Foreground="Black" Height="19.8" PasswordChanged="rePass_PasswordChanged" />-->
+        <!--<PasswordBox Style="{DynamicResource passwordBoxStyle}" VerticalAlignment="Bottom" Margin="91,0,145,31" Name="newPass" Foreground="Black" Height="19.8" />-->
+        <ComboBox Margin="91,76,0,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Name="userYear" SelectionChanged="userYear_SelectionChanged" />
+		<ComboBox Margin="203,76,0,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Name="userMonth" Width="56" SelectionChanged="userMonth_SelectionChanged" HorizontalAlignment="Left" />
+		<ComboBox HorizontalAlignment="Right" Margin="0,76,51,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Width="56" Name="userDay" SelectionChanged="userDay_SelectionChanged" />
+        <Label Visibility="Hidden"  HorizontalAlignment="Right"  VerticalAlignment="Bottom" Name="gamepercent" RenderTransformOrigin="6.466,6.704" Margin="0,0,77,20" Foreground="Black" Height="25.96" Width="70">0</Label>
+        <Label Visibility="Hidden"  VerticalAlignment="Bottom" Content="积  分:" Name="gamePro" Margin="194,0,0,20" Foreground="Black" Height="25.96" HorizontalAlignment="Left" Width="51" />
+		<Label Visibility="Hidden"  HorizontalAlignment="Left"  Name="chatprecent" Margin="93,0,0,21" Width="82" VerticalAlignment="Bottom" Height="25.04" Foreground="Black">0</Label>
+        <Label Visibility="Hidden"  VerticalAlignment="Bottom" Content="金  币:" Name="chatPro" Margin="33,0,0,20" d:LayoutOverrides="HorizontalAlignment" Foreground="Black" Height="25.96" HorizontalAlignment="Left" Width="51" />
+		<Label HorizontalAlignment="Left" Content="签  名:" Margin="36,142,0,153.04" Foreground="Black" Width="55" />
+        <TextBox Style="{DynamicResource TextBoxStyle}" TextWrapping="Wrap" Margin="91,142,8,70" Foreground="Black" Name="signBox" MaxLength="100" TextChanged="signBox_TextChanged" />
+        <Button Style="{DynamicResource NormalButtonStyle}" Height="23" HorizontalAlignment="Right" Margin="0,0,12,30" Name="button1" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button1_Click" Visibility="Hidden">充值</Button>
+        <StackPanel Margin="79,0,157,25" VerticalAlignment="Bottom" Orientation="Horizontal">
+            <CheckBox Visibility="Hidden" x:Name="chkAllGuest" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Style="{DynamicResource CheckBoxStyle}" />
+            <TextBlock Visibility="Hidden" x:Name="txtAllGuest" Text="允许所有人对话" VerticalAlignment="Center" FontSize="13"  Foreground="Black" />
+        </StackPanel>
+    </Grid>
+</UserControl>

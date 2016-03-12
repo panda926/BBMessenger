@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="change_eff" Delay="0.33" >
+  <Image Set="change_eff" Name="0"  />
+  <Image Set="change_eff" Name="1"  />
+  <Image Set="change_eff" Name="2"  />
+  <Image Set="change_eff" Name="3"  />
+  <Image Set="change_eff" Name="4"  />
+  <Image Set="change_eff" Name="5"  />
+  <Image Set="change_eff" Name="6"  />
+ <Image Set="change_eff" Name="6"  />
+  <Image Set="change_eff" Name="5"  />
+  <Image Set="change_eff" Name="4"  />
+  <Image Set="change_eff" Name="3"  />
+  <Image Set="change_eff" Name="2"  />
+  <Image Set="change_eff" Name="1"  />
+  <Image Set="change_eff" Name="0"  />
+
+</Animation>

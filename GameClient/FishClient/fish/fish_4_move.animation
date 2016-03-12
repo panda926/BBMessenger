@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="fish_4_move" Delay="0.33" >
+  <Image Set="fish_4" Name="0"  />
+  <Image Set="fish_4" Name="1"  />
+  <Image Set="fish_4" Name="2"  />
+  <Image Set="fish_4" Name="3"  />
+  <Image Set="fish_4" Name="4"  />
+  <Image Set="fish_4" Name="5"  />
+  <Image Set="fish_4" Name="6"  />
+  <Image Set="fish_4" Name="7"  />
+  <Image Set="fish_4" Name="8"  />
+  <Image Set="fish_4" Name="9"  />
+  <Image Set="fish_4" Name="10"  />
+  <Image Set="fish_4" Name="11"  />
+
+  <Image Set="fish_4" Name="11"  />
+  <Image Set="fish_4" Name="10"  />
+  <Image Set="fish_4" Name="9"  />
+  <Image Set="fish_4" Name="8"  />
+  <Image Set="fish_4" Name="7"  />
+  <Image Set="fish_4" Name="6"  />
+  <Image Set="fish_4" Name="5"  />
+  <Image Set="fish_4" Name="4"  />
+  <Image Set="fish_4" Name="3"  />
+  <Image Set="fish_4" Name="2"  />
+  <Image Set="fish_4" Name="1"  />
+  <Image Set="fish_4" Name="0"  />
+ 
+</Animation>
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="fish_13_move" Delay="0.33" >
+   <Image Set="fish_13" Name="0"  />
+   <Image Set="fish_13" Name="1"  />
+   <Image Set="fish_13" Name="2"  />
+ 
+   <Image Set="fish_13" Name="2"  />
+   <Image Set="fish_13" Name="1"  />
+   <Image Set="fish_13" Name="0"  />
+</Animation>
+
+

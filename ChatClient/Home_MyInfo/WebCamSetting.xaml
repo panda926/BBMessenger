@@ -1,0 +1,13 @@
+﻿<UserControl x:Class="ChatClient.Home_MyInfo.WebCamSetting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                          
+             Width="396" Height="290" Loaded="UserControl_Loaded"
+             xmlns:Controls="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+             Name="bTarget" Unloaded="bTarget_Unloaded">
+    <Grid>
+        <WindowsFormsHost HorizontalAlignment="Center" Margin="0,12,0,0" VerticalAlignment="Top" Height="240" Width="320">
+            <Controls:Panel x:Name="cameraView" Height="240" Width="320" Dock="Fill" />
+        </WindowsFormsHost>        
+        <ComboBox Margin="0,0,0,10" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="150" Name="cmbCamera" Foreground="Green" SelectionChanged="cmbCamera_SelectionChanged" />
+    </Grid>
+</UserControl>

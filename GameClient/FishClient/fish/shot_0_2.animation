@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="shot_0_2" Delay="0.33" >
+  <Image Set="shot_0_2" Name="0"  />
+  <Image Set="shot_0_2" Name="1"  />
+  <Image Set="shot_0_2" Name="2"  />
+  <Image Set="shot_0_2" Name="3"  />
+  <Image Set="shot_0_2" Name="4"  />
+  <Image Set="shot_0_2" Name="5"  />
+  <Image Set="shot_0_2" Name="6"  />
+  <Image Set="shot_0_2" Name="7"  />
+  <Image Set="shot_0_2" Name="8"  />
+  <Image Set="shot_0_2" Name="9"  />
+  <Image Set="shot_0_2" Name="10"  />
+  <Image Set="shot_0_2" Name="11"  />
+
+  <Image Set="shot_0_2" Name="11"  />
+  <Image Set="shot_0_2" Name="10"  />
+  <Image Set="shot_0_2" Name="9"  />
+  <Image Set="shot_0_2" Name="8"  />
+  <Image Set="shot_0_2" Name="7"  />
+  <Image Set="shot_0_2" Name="6"  />
+  <Image Set="shot_0_2" Name="5"  />
+  <Image Set="shot_0_2" Name="4"  />
+  <Image Set="shot_0_2" Name="3"  />
+  <Image Set="shot_0_2" Name="2"  />
+  <Image Set="shot_0_2" Name="1"  />
+  <Image Set="shot_0_2" Name="0"  />
+</Animation>
+
+

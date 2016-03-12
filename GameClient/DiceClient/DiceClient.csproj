@@ -1,0 +1,242 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2C49BB0-9CB6-4041-9B8F-17E7826F4053}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DiceClient</RootNamespace>
+    <AssemblyName>DiceClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DiceView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiceView.Designer.cs">
+      <DependentUpon>DiceView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_5_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_5_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_5_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_10_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_10_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_10_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_50_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_50_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_50_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_100_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_100_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_100_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_500_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_500_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_500_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chip500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DanPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DaPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice3.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice4.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice5.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dice6.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dicegame.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DiceGameBackground.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Num9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_5.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_10.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_50.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_100.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_500.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ShuangPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolumnClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VolumnOpen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\XiaoPanel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\YellowSqure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChatEngine\ChatEngine.csproj">
+      <Project>{9C4E241B-2C49-40C1-B39F-0428ED435915}</Project>
+      <Name>ChatEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameControls\GameControls.csproj">
+      <Project>{88E4C78D-F41C-4BA9-976A-698AB4A60E16}</Project>
+      <Name>GameControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

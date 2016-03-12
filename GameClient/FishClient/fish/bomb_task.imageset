@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="bomb_task" Image="fish\bomb_task.png" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="256" Height="128" />
+  <Image Name="1" XPos="256" YPos="0" Width="256" Height="128" />
+  <Image Name="2" XPos="512" YPos="0" Width="256" Height="128" />
+  <Image Name="3" XPos="768" YPos="0" Width="256" Height="128" />
+  <Image Name="4" XPos="768" YPos="0" Width="256" Height="128" />
+
+</Imageset>

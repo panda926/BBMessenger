@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="bar_enough" Image="fish\bar_enough.png" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="100" Height="80" />
+  <Image Name="1" XPos="100" YPos="0" Width="100" Height="80" />
+  <Image Name="2" XPos="200" YPos="0" Width="100" Height="80" />
+  <Image Name="3" XPos="300" YPos="0" Width="100" Height="80" />
+  <Image Name="4" XPos="400" YPos="0" Width="100" Height="80" />
+  <Image Name="5" XPos="500" YPos="0" Width="100" Height="80" />
+  <Image Name="6" XPos="600" YPos="0" Width="100" Height="80" />
+  <Image Name="7" XPos="700" YPos="0" Width="100" Height="80" />
+  <Image Name="8" XPos="800" YPos="0" Width="100" Height="80" />
+  <Image Name="9" XPos="900" YPos="0" Width="100" Height="80" />
+  <Image Name="10" XPos="1000" YPos="0" Width="100" Height="80" />
+  <Image Name="11" XPos="1100" YPos="0" Width="100" Height="80" />
+  <Image Name="12" XPos="1200" YPos="0" Width="100" Height="80" />
+</Imageset>
+
+

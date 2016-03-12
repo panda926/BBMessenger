@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="explorer" Delay="0.33" >
+  <Image Set="explorer" Name="0"  />
+  <Image Set="explorer" Name="1"  />
+  <Image Set="explorer" Name="2"  />
+  <Image Set="explorer" Name="3"  />
+  <Image Set="explorer" Name="4"  />
+  <Image Set="explorer" Name="5"  />
+  <Image Set="explorer" Name="6"  />
+  <Image Set="explorer" Name="7"  />
+  <Image Set="explorer" Name="8"  />
+  <Image Set="explorer" Name="9"  />
+  <Image Set="explorer" Name="10"  />
+  <Image Set="explorer" Name="11"  />
+  <Image Set="explorer" Name="12"  />
+
+  <Image Set="explorer" Name="11"  />
+  <Image Set="explorer" Name="10"  />
+  <Image Set="explorer" Name="9"  />
+  <Image Set="explorer" Name="8"  />
+  <Image Set="explorer" Name="7"  />
+  <Image Set="explorer" Name="6"  />
+  <Image Set="explorer" Name="5"  />
+  <Image Set="explorer" Name="4"  />
+  <Image Set="explorer" Name="3"  />
+  <Image Set="explorer" Name="2"  />
+  <Image Set="explorer" Name="1"  />
+  <Image Set="explorer" Name="0"  />
+
+
+</Animation>

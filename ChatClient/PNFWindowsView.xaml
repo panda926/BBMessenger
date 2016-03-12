@@ -1,0 +1,27 @@
+﻿<Window x:Class="ChatClient.PNFWindowsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:U2UConsult"
+    Style="{DynamicResource MainWindowStyle}"
+    Title="PNFWindowsView" Height="600" Width="800" ResizeMode="NoResize" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/PNFWindowsViewGeneric.xaml" />
+                <ResourceDictionary Source="Theme/ChatDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        
+        <WrapPanel  Name="wrapPanel1" Margin="0,0,0,30" AllowDrop="True" />
+        <Grid HorizontalAlignment="Left" Margin="4,-30,0,0" VerticalAlignment="Top" Width="24" Height="21">
+        	<Image Margin="0,0,-2,-4" Source="image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Name="titleLabel" Content="Label" Margin="32,-30,0,0" Width="126.993" Foreground="#FF110101"/>
+        <Grid Name="Pagegrid" VerticalAlignment="Bottom" Height="30" HorizontalAlignment="Center">
+            
+        </Grid>
+        <Grid Height="34.296" HorizontalAlignment="Left" Margin="10.003,0,0,-5.716" Name="resultGrid" VerticalAlignment="Bottom" Width="148.99" />
+    </Grid>
+</Window>

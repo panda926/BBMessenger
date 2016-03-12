@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="coin_gold" Delay="0.33" >
+  <Image Set="role" Name="coin_gold_0"  />
+  <Image Set="role" Name="coin_gold_1"  />
+  <Image Set="role" Name="coin_gold_2"  />
+  <Image Set="role" Name="coin_gold_3"  />
+  <Image Set="role" Name="coin_gold_4"  />
+  <Image Set="role" Name="coin_gold_5"  />
+  <Image Set="role" Name="coin_gold_6"  />
+  <Image Set="role" Name="coin_gold_7"  />
+  <Image Set="role" Name="coin_gold_8"  />
+  <Image Set="role" Name="coin_gold_9"  />
+  <Image Set="role" Name="coin_gold_10"  />
+  <Image Set="role" Name="coin_gold_11"  />
+  <Image Set="role" Name="coin_gold_12"  />
+  <Image Set="role" Name="coin_gold_13"  />
+  <Image Set="role" Name="coin_gold_14"  />
+  <Image Set="role" Name="coin_gold_15"  />
+  <Image Set="role" Name="coin_gold_16"  />
+  <Image Set="role" Name="coin_gold_17"  />
+  <Image Set="role" Name="coin_gold_18"  />
+  <Image Set="role" Name="coin_gold_19"  />
+
+ 
+</Animation>
+
+
+
+

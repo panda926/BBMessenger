@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="addfish_0_move" Delay="0.33" >
+  <Image Set="addfish_0" Name="0"  />
+  <Image Set="addfish_0" Name="1"  />
+  <Image Set="addfish_0" Name="2"  />
+  <Image Set="addfish_0" Name="3"  />
+  <Image Set="addfish_0" Name="4"  />
+  <Image Set="addfish_0" Name="5"  />
+  <Image Set="addfish_0" Name="6"  />
+  <Image Set="addfish_0" Name="7"  />
+  <Image Set="addfish_0" Name="8"  />
+  <Image Set="addfish_0" Name="9"  />
+  <Image Set="addfish_0" Name="10"  />
+  <Image Set="addfish_0" Name="11"  />
+  <Image Set="addfish_0" Name="12"  />
+  <Image Set="addfish_0" Name="13"  />
+  <Image Set="addfish_0" Name="14"  />
+  <Image Set="addfish_0" Name="15"  />
+  <Image Set="addfish_0" Name="16"  />
+  <Image Set="addfish_0" Name="17"  />
+  <Image Set="addfish_0" Name="18"  />
+  <Image Set="addfish_0" Name="19"  />
+
+  <Image Set="addfish_0" Name="19"  />
+  <Image Set="addfish_0" Name="18"  />
+  <Image Set="addfish_0" Name="17"  />
+  <Image Set="addfish_0" Name="16"  />
+  <Image Set="addfish_0" Name="15"  />
+  <Image Set="addfish_0" Name="14"  />
+  <Image Set="addfish_0" Name="13"  />
+  <Image Set="addfish_0" Name="12"  />
+  <Image Set="addfish_0" Name="11"  />
+  <Image Set="addfish_0" Name="10"  />
+  <Image Set="addfish_0" Name="9"  />
+  <Image Set="addfish_0" Name="8"  />
+  <Image Set="addfish_0" Name="7"  />
+  <Image Set="addfish_0" Name="6"  />
+  <Image Set="addfish_0" Name="5"  />
+  <Image Set="addfish_0" Name="4"  />
+  <Image Set="addfish_0" Name="3"  />
+  <Image Set="addfish_0" Name="2"  />
+  <Image Set="addfish_0" Name="1"  />
+  <Image Set="addfish_0" Name="0"  />
+ 
+</Animation>
+
+

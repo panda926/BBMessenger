@@ -1,0 +1,29 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="Veideo_Chat.UserControl1"
+	x:Name="UserControl" Width="230" Height="150">
+
+	<Grid x:Name="LayoutRoot" Margin="0,0,0,0">
+		<Border Margin="0,0,0,0" BorderBrush="#FFB2ADAD" BorderThickness="2"/>
+		<Image Margin="2,2,120,2" Source="image/room/room1.gif" Stretch="Fill"/>
+		<Label Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="빨리들어와요.." Margin="0,9,11,0" Height="23" Foreground="#FFF9F9F9" FontWeight="Bold" FontSize="16" HorizontalAlignment="Right" Width="103"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="300" Margin="0,37.997,11.328,0" Width="36" FontSize="16" Height="26" FontWeight="Bold" Foreground="#FFF51313"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="방가격:" Margin="0,38,58,0" Height="23" Width="52.999" Background="#00FDF9F9" FontWeight="Bold" Foreground="#FFF5F1F1" FontSize="16"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="참가수:" Margin="0,0,59,60.334" Height="23" Foreground="#FFF9F9F9" FontWeight="Bold" FontSize="16" d:LayoutOverrides="HorizontalAlignment"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="5/3" Margin="0,0,19.334,59.43" Height="23" FontWeight="Bold" FontSize="16" Background="#00186AE7" Foreground="#FFC01BF5"/>
+		<Button HorizontalAlignment="Right" Style="{DynamicResource SimpleButton}" VerticalAlignment="Bottom" Width="75" Content="참가하기" RenderTransformOrigin="0.818,2.079" Margin="0,0,25,2" Foreground="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" FontWeight="Bold" Height="25.331">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+					<GradientStop Color="#FFEEEEEE" Offset="0"/>
+					<GradientStop Color="#FFA39E9E" Offset="1"/>
+				</LinearGradientBrush>
+			</Button.Background>
+		</Button>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="랭  킹:" Margin="0,0,60,35.662" FontWeight="Bold" Foreground="#FFF7F7F7" FontSize="16" d:LayoutOverrides="HorizontalAlignment"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="25" Margin="0,0,24,35.669" FontSize="16" Height="23" Background="#00F6F2F2" FontWeight="Bold" Foreground="#FF2956EC"/>
+	</Grid>
+</UserControl>

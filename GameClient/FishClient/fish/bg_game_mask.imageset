@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="bg_game_mask" Image="fish\MASK.png" NativeHorzRes="2048" NativeVertRes="1024" AutoScaled="false">
+  <Image Name="bg" XPos="0" YPos="0" Width="2048" Height="1024" />
+</Imageset>
+
+

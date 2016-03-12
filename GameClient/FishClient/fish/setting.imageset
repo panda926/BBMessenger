@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="setting" Image="fish\setting.png" NativeHorzRes="1024" NativeVertRes="512" AutoScaled="false">
+  <Image Name="bg" XPos="0" YPos="0" Width="503" Height="265" />
+
+  <Image Name="btn_cancle_image" XPos="503" YPos="166" Width="101" Height="51" />
+  <Image Name="btn_cancle_over" XPos="604" YPos="166" Width="101" Height="51" />
+  <Image Name="btn_cancle_down" XPos="705" YPos="166" Width="101" Height="51" />
+  <Image Name="btn_cancle_disable" XPos="806" YPos="166" Width="101" Height="51" />
+
+  <Image Name="btn_ok_image" XPos="0" YPos="265" Width="145" Height="52" />
+  <Image Name="btn_ok_over" XPos="145" YPos="265" Width="145" Height="52" />
+  <Image Name="btn_ok_down" XPos="290" YPos="265" Width="145" Height="52" />
+  <Image Name="btn_ok_disable" XPos="435" YPos="265" Width="145" Height="52" />
+
+  <Image Name="btn_add_image" XPos="503" YPos="82" Width="41" Height="42" />
+  <Image Name="btn_add_over" XPos="544" YPos="82" Width="41" Height="42" />
+  <Image Name="btn_add_down" XPos="585" YPos="82" Width="41" Height="42" />
+  <Image Name="btn_add_disable" XPos="626" YPos="82" Width="41" Height="42" />
+
+  <Image Name="btn_minus_image" XPos="503" YPos="124" Width="41" Height="42" />
+  <Image Name="btn_minus_over" XPos="544" YPos="124" Width="41" Height="42" />
+  <Image Name="btn_minus_down" XPos="585" YPos="124" Width="41" Height="42" />
+  <Image Name="btn_minus_disable" XPos="626" YPos="124" Width="41" Height="42" />
+
+  <Image Name="slider_thumb" XPos="503" YPos="37" Width="28" Height="45" />
+  <Image Name="slider_image" XPos="503" YPos="0" Width="370" Height="20" />
+
+
+</Imageset>
+
+

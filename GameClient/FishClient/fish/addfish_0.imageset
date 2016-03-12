@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="addfish_0" Image="fish\addfish_0.png" NativeHorzRes="8192" NativeVertRes="512" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="256" Height="512" />
+  <Image Name="1" XPos="256" YPos="0" Width="256" Height="512" />
+  <Image Name="2" XPos="512" YPos="0" Width="256" Height="512" />
+  <Image Name="3" XPos="768" YPos="0" Width="256" Height="512" />
+  <Image Name="4" XPos="1024" YPos="0" Width="256" Height="512" />
+  <Image Name="5" XPos="1280" YPos="0" Width="256" Height="512" />
+  <Image Name="6" XPos="1536" YPos="0" Width="256" Height="512" />
+  <Image Name="7" XPos="1792" YPos="0" Width="256" Height="512" />
+  <Image Name="8" XPos="2048" YPos="0" Width="256" Height="512" />
+  <Image Name="9" XPos="2304" YPos="0" Width="256" Height="512" />
+  <Image Name="10" XPos="2560" YPos="0" Width="256" Height="512" />
+  <Image Name="11" XPos="2816" YPos="0" Width="256" Height="512" />
+  <Image Name="12" XPos="3072" YPos="0" Width="256" Height="512" />
+  <Image Name="13" XPos="3328" YPos="0" Width="256" Height="512" />
+  <Image Name="14" XPos="3584" YPos="0" Width="256" Height="512" />
+  <Image Name="15" XPos="3840" YPos="0" Width="256" Height="512" />
+  <Image Name="16" XPos="4096" YPos="0" Width="256" Height="512" />
+  <Image Name="17" XPos="4352" YPos="0" Width="256" Height="512" />
+  <Image Name="18" XPos="4608" YPos="0" Width="256" Height="512" />
+  <Image Name="19" XPos="4864" YPos="0" Width="256" Height="512" />
+  <Image Name="20" XPos="5120" YPos="0" Width="256" Height="512" />
+  <Image Name="21" XPos="5376" YPos="0" Width="256" Height="512" />
+  <Image Name="22" XPos="5632" YPos="0" Width="256" Height="512" />
+  <Image Name="23" XPos="5888" YPos="0" Width="256" Height="512" />
+  <Image Name="24" XPos="6144" YPos="0" Width="256" Height="512" />
+  <Image Name="25" XPos="6400" YPos="0" Width="256" Height="512" />
+  <Image Name="26" XPos="6656" YPos="0" Width="256" Height="512" />
+  <Image Name="27" XPos="6912" YPos="0" Width="256" Height="512" />
+  <Image Name="28" XPos="7168" YPos="0" Width="256" Height="512" />
+  <Image Name="29" XPos="7424" YPos="0" Width="256" Height="512" />
+</Imageset>
+
+

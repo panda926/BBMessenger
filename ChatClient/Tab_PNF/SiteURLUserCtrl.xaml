@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="ChatClient.Tab_PNF.SiteURLUserCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             Height="29"  Width="Auto">
+    <Grid>
+        <Label VerticalContentAlignment="Center">
+            <Hyperlink x:Name="linkSiteUrl"  NavigateUri= "http://community.visual-basic.it/AlessandroEnglish" RequestNavigate="Hyperlink_RequestNavigate">
+                <TextBlock x:Name="txtSiteName" Text="Alessandro Del Sole" Cursor="Hand" FontFamily="Microsoft YaHei" />
+            </Hyperlink>
+        </Label>
+    </Grid>
+</UserControl>

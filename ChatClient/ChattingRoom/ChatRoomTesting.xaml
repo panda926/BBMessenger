@@ -1,0 +1,20 @@
+﻿<WPF:XWindowBase x:Class="ChatClient.ChatRoomTesting"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:WPF="clr-namespace:BeiLiNu.Ui.Controls.WPF.Windows;assembly=BeiLiNu.Ui.Controls"
+    xmlns:Control="clr-namespace:ControlExs;assembly=ControlExs"
+    Title="ChatRoomTesting" Height="600" Width="800" AllowsTransparency="True" WindowStyle="None" ShadowSize="11" BorderBrush="Black" BorderThickness="1" >
+    <WPF:XWindowBase.Background>
+        <ImageBrush ImageSource="/image/main_Pan1.png" ViewportUnits="Absolute" Viewport="0,0,800,600" TileMode="FlipXY"/>
+    </WPF:XWindowBase.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <WindowsFormsHost>
+        </WindowsFormsHost>
+        <WindowsFormsHost>
+        </WindowsFormsHost>
+    </Grid>
+</WPF:XWindowBase>

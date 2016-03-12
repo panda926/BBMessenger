@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="net_0_0" Delay="0.33" >
+  <Image Set="net_0_0" Name="0"  />
+  <Image Set="net_0_0" Name="1"  />
+  <Image Set="net_0_0" Name="2"  />
+  <Image Set="net_0_0" Name="3"  />
+  <Image Set="net_0_0" Name="4"  />
+  <Image Set="net_0_0" Name="5"  />
+  <Image Set="net_0_0" Name="6"  />
+  <Image Set="net_0_0" Name="7"  />
+ 
+</Animation>
+
+
+
+

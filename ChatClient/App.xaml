@@ -1,0 +1,19 @@
+﻿<Application x:Class="ChatClient.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:xcpt="http://schemas.xceed.com/wpf/xaml/themes"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <!--<xcpt:GlassResourceDictionary LicenseKey="XPT21-XWKKK-HAWEY-BBUA" >
+       	    <xcpt:GlassResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="QQStyle/MainResourceDictionary.xaml"/>                
+       	    </xcpt:GlassResourceDictionary.MergedDictionaries>
+        </xcpt:GlassResourceDictionary>-->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="QQStyle/MainResourceDictionary.xaml"/>
+                <ResourceDictionary Source="QQStyle/DataGridStyle/ScrollViewerStyle.xaml"/>
+                <ResourceDictionary Source="QQStyle/DataGridStyle/DataGridStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

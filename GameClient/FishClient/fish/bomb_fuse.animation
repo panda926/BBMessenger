@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="bomb_fuse" Delay="0.33" >
+  <Image Set="bomb_fuse" Name="0"  />
+  <Image Set="bomb_fuse" Name="1"  />
+  <Image Set="bomb_fuse" Name="2"  />
+  <Image Set="bomb_fuse" Name="3"  />
+  <Image Set="bomb_fuse" Name="4"  />
+  <Image Set="bomb_fuse" Name="5"  />
+  <Image Set="bomb_fuse" Name="6"  />
+  <Image Set="bomb_fuse" Name="7"  />
+
+</Animation>

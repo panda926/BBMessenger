@@ -1,0 +1,44 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.MemoPage"
+    Style="{DynamicResource MainWindowStyle}" 
+    Title="HBMessenger" Height="339" Width="275" ResizeMode="NoResize" mc:Ignorable="d" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../StyleTheme/MemoPageGeneric.xaml" />
+                <ResourceDictionary Source="../StyleTheme/RecievePaperDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Label Content="短信" Width="39" Foreground="Black" HorizontalAlignment="Left" Margin="33,-30,0,0" Height="25" VerticalAlignment="Top"></Label>
+        <!--<Grid Height="30" Margin="3,0,3,-10" x:Name="grid1" VerticalAlignment="Bottom" >
+            <TextBox Margin="2.209,0.999,1.73,7.01" x:Name="messageEditBox" Background="White" BorderThickness="0"  TabIndex="2147483647" AcceptsReturn="False" FontSize="13" Foreground="Black" PreviewKeyDown="messageEditBox_PreviewKeyDown" d:LayoutOverrides="GridBox" />
+        </Grid>
+        <ListBox Margin="2,-7,4,50" x:Name="listBox1" BorderBrush="#FF6EBAE5" Background="#FFC5E4F6" Foreground="#FF211E1E" />
+        <Grid HorizontalAlignment="Left" Margin="2,-32,0,0" VerticalAlignment="Top" Width="24" Height="22">
+        	<Image Margin="-2,0,0,-3" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+        <ComboBox Height="23" Margin="5.209,0,4.73,23" Name="UsercomboBox" VerticalAlignment="Bottom" Foreground="Black" />-->
+        <Grid Margin="0,-8,0,29" Name="grid1" Visibility="Hidden">
+            <ScrollViewer Margin="9,9,10,9" Name="scrollViewer1" Style="{DynamicResource ScrollViewerStyle}">
+                <StackPanel  Name="stackPanel1" />
+            </ScrollViewer>
+            <Rectangle Stroke="#FF0E7FF5" Margin="1" RadiusX="7.5" RadiusY="7.5" StrokeThickness="2"/>
+        </Grid>
+        <Grid Margin="0,-8,0,29" Name="grid2" Visibility="Hidden">
+            <ScrollViewer Margin="9,10,9,40" Name="scrollViewer2" Style="{DynamicResource ScrollViewerStyle}">
+                <StackPanel  Name="stackPanel2" />
+            </ScrollViewer>
+            <ComboBox Margin="4,0,2,5" Name="UsercomboBox" Height="23" VerticalAlignment="Bottom" SelectionChanged="UsercomboBox_SelectionChanged" />
+            <Rectangle Stroke="#FF0E7FF5" StrokeThickness="2" RadiusX="7.5" RadiusY="7.5" Margin="3,2,2,30"/>
+        </Grid>
+        <TextBox Height="23" x:Name="messageEditBox" Background="White" BorderThickness="0"  TabIndex="2147483647" MaxLength="20" AcceptsReturn="False" FontSize="13" Foreground="Black" PreviewKeyDown="messageEditBox_PreviewKeyDown" VerticalAlignment="Bottom" />
+        <Grid HorizontalAlignment="Left" Margin="0,-31,0,0" VerticalAlignment="Top" Width="20" Height="19">
+        	<Image Margin="0,0,-6,-6" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

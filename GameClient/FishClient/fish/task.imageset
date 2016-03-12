@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="task" Image="fish\task.png" NativeHorzRes="1024" NativeVertRes="1024" AutoScaled="false">
+  <Image Name="cum_bar" XPos="0" YPos="0" Width="194" Height="16" />
+  <Image Name="bar_0" XPos="194" YPos="0" Width="62" Height="9" />
+  <Image Name="bar_1" XPos="256" YPos="0" Width="62" Height="9" />
+  <Image Name="bar_2" XPos="318" YPos="0" Width="62" Height="9" />
+  <Image Name="bar_3" XPos="380" YPos="0" Width="62" Height="9" />
+  <Image Name="bar_blank" XPos="442" YPos="0" Width="62" Height="9" />
+  <Image Name="show_bar_0" XPos="0" YPos="17" Width="200" Height="25" />
+  <Image Name="show_bar_1" XPos="200" YPos="17" Width="200" Height="25" />
+
+  <Image Name="reel_back" XPos="0" YPos="42" Width="195" Height="123" />
+  <Image Name="reel_fast" XPos="686" YPos="0" Width="39" Height="400" />
+  <Image Name="reel_normal" XPos="39" YPos="165" Width="39" Height="230" />
+  <Image Name="reel_eff_0" XPos="459" YPos="419" Width="155" Height="60" />
+  <Image Name="reel_eff_1" XPos="614" YPos="419" Width="155" Height="60" />
+  <Image Name="reel_eff_2" XPos="769" YPos="419" Width="155" Height="60" />
+
+  <Image Name="laser_bean_0" XPos="79" YPos="165" Width="93" Height="95" />
+  <Image Name="laser_bean_1" XPos="172" YPos="165" Width="93" Height="95" />
+  <Image Name="laser_bean_2" XPos="265" YPos="165" Width="93" Height="95" />
+  <Image Name="laser_bean_3" XPos="358" YPos="165" Width="93" Height="95" />
+
+  <Image Name="bomb_0" XPos="79" YPos="260" Width="93" Height="95" />
+  <Image Name="bomb_1" XPos="172" YPos="260" Width="93" Height="95" />
+  <Image Name="bomb_2" XPos="265" YPos="260" Width="93" Height="95" />
+  <Image Name="bomb_3" XPos="358" YPos="260" Width="93" Height="95" />
+
+  <Image Name="cook_0" XPos="79" YPos="355" Width="93" Height="95" />
+  <Image Name="cook_1" XPos="172" YPos="355" Width="93" Height="95" />
+  <Image Name="cook_2" XPos="265" YPos="355" Width="93" Height="95" />
+  <Image Name="cook_3" XPos="358" YPos="355" Width="93" Height="95" />
+
+  <Image Name="laserUp" XPos="468" YPos="0" Width="160" Height="500" />
+
+  <Image Name="task_number_0" XPos="0"   YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_1" XPos="35"  YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_2" XPos="70"  YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_3" XPos="105" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_4" XPos="140" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_5" XPos="175" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_6" XPos="210" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_7" XPos="245" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_8" XPos="280" YPos="586" Width="35" Height="43" />
+  <Image Name="task_number_9" XPos="315" YPos="586" Width="35" Height="43" />
+
+  <Image Name="task_number_l0" XPos="0" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l1" XPos="53" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l2" XPos="106" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l3" XPos="159" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l4" XPos="212" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l5" XPos="265" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l6" XPos="318" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l7" XPos="371" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l8" XPos="424" YPos="503" Width="53" Height="68" />
+  <Image Name="task_number_l9" XPos="477" YPos="503" Width="53" Height="68" />
+
+  <Image Name="coin_show_5" XPos="0"   YPos="648" Width="49" Height="39" />
+  <Image Name="coin_show_4" XPos="49"  YPos="648" Width="49" Height="39" />
+  <Image Name="coin_show_3" XPos="98"  YPos="648" Width="49" Height="39" />
+  <Image Name="coin_show_2" XPos="147" YPos="648" Width="49" Height="39" />
+  <Image Name="coin_show_1" XPos="196" YPos="648" Width="49" Height="39" />
+  <Image Name="coin_show_0" XPos="245" YPos="648" Width="49" Height="39" />
+
+</Imageset>
+
+

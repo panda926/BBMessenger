@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="connon_level" Delay="0.33" >
+  <Image Set="connon_level" Name="0"   />
+  <Image Set="connon_level" Name="1"   />
+  <Image Set="connon_level" Name="2"   />
+  <Image Set="connon_level" Name="3"   />
+  <Image Set="connon_level" Name="4"   />
+  <Image Set="connon_level" Name="5"   />
+  <Image Set="connon_level" Name="6"   />
+  <Image Set="connon_level" Name="7"   />
+  <Image Set="connon_level" Name="8"   />
+  <Image Set="connon_level" Name="9"   />
+  <Image Set="connon_level" Name="10"  />
+  <Image Set="connon_level" Name="11"  />
+  <Image Set="connon_level" Name="12"  />
+  <Image Set="connon_level" Name="13"  />
+  <Image Set="connon_level" Name="14"  />
+  <Image Set="connon_level" Name="15"  />
+  <Image Set="connon_level" Name="16"  />
+  <Image Set="connon_level" Name="17"  />
+  <Image Set="connon_level" Name="18"  />
+  <Image Set="connon_level" Name="19"  />
+  <Image Set="connon_level" Name="20"  />
+  <Image Set="connon_level" Name="21"  />
+  <Image Set="connon_level" Name="22"  />
+  <Image Set="connon_level" Name="23"  />
+  <Image Set="connon_level" Name="24"  />
+  <Image Set="connon_level" Name="25"  />
+  <Image Set="connon_level" Name="26"  />
+  <Image Set="connon_level" Name="27"  />
+  <Image Set="connon_level" Name="28"  />
+  <Image Set="connon_level" Name="29"  />
+  <Image Set="connon_level" Name="30"  />
+  <Image Set="connon_level" Name="31"  />
+  <Image Set="connon_level" Name="32"  />
+  <Image Set="connon_level" Name="33"  />
+  <Image Set="connon_level" Name="34"  />
+  <Image Set="connon_level" Name="35"  />
+  <Image Set="connon_level" Name="36"  />
+  <Image Set="connon_level" Name="37"  />
+  <Image Set="connon_level" Name="38"  />
+  <Image Set="connon_level" Name="39"  />
+  <Image Set="connon_level" Name="40"  />
+  <Image Set="connon_level" Name="41"  />
+  <Image Set="connon_level" Name="42"  />
+  <Image Set="connon_level" Name="43"  />
+  <Image Set="connon_level" Name="44"  />
+  <Image Set="connon_level" Name="45"  />
+  <Image Set="connon_level" Name="46"  />
+  <Image Set="connon_level" Name="47"  />
+  <Image Set="connon_level" Name="48"  />
+  <Image Set="connon_level" Name="49"  />
+</Animation>
+
+
+
+

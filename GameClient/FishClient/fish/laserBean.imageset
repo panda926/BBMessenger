@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="laserBean" Image="fish\laserBean.png" NativeHorzRes="2048" NativeVertRes="256" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="108" Height="200" />
+  <Image Name="1" XPos="108" YPos="0" Width="108" Height="200" />
+  <Image Name="2" XPos="216" YPos="0" Width="108" Height="200" />
+  <Image Name="3" XPos="324" YPos="0" Width="108" Height="200" />
+  <Image Name="4" XPos="432" YPos="0" Width="108" Height="200" />
+  <Image Name="5" XPos="540" YPos="0" Width="108" Height="200" />
+  <Image Name="6" XPos="648" YPos="0" Width="108" Height="200" />
+  <Image Name="7" XPos="756" YPos="0" Width="108" Height="200" />
+  <Image Name="8" XPos="864" YPos="0" Width="108" Height="200" />
+  <Image Name="9" XPos="972" YPos="0" Width="108" Height="200" />
+</Imageset>
+
+

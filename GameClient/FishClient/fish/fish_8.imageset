@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="fish_8" Image="fish\fish_8.png" NativeHorzRes="5120" NativeVertRes="256" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="180" Height="256" />
+  <Image Name="1" XPos="180" YPos="0" Width="180" Height="256" />
+  <Image Name="2" XPos="360" YPos="0" Width="180" Height="256" />
+  <Image Name="3" XPos="540" YPos="0" Width="180" Height="256" />
+  <Image Name="4" XPos="720" YPos="0" Width="180" Height="256" />
+  <Image Name="5" XPos="900" YPos="0" Width="180" Height="256" />
+  <Image Name="6" XPos="1080" YPos="0" Width="180" Height="256" />
+  <Image Name="7" XPos="1260" YPos="0" Width="180" Height="256" />
+  <Image Name="8" XPos="1440" YPos="0" Width="180" Height="256" />
+  <Image Name="9" XPos="1620" YPos="0" Width="180" Height="256" />
+  <Image Name="10" XPos="1800" YPos="0" Width="180" Height="256" />
+  <Image Name="11" XPos="1980" YPos="0" Width="180" Height="256" />
+  <Image Name="12" XPos="2160" YPos="0" Width="180" Height="256" />
+  <Image Name="13" XPos="2340" YPos="0" Width="180" Height="256" />
+  <Image Name="14" XPos="2520" YPos="0" Width="180" Height="256" />
+  <Image Name="15" XPos="2700" YPos="0" Width="180" Height="256" />
+  <Image Name="16" XPos="2880" YPos="0" Width="180" Height="256" />
+  <Image Name="17" XPos="3060" YPos="0" Width="180" Height="256" />
+  <Image Name="18" XPos="3240" YPos="0" Width="180" Height="256" />
+  <Image Name="19" XPos="3420" YPos="0" Width="180" Height="256" />
+  <Image Name="20" XPos="3600" YPos="0" Width="180" Height="256" />
+  <Image Name="21" XPos="3780" YPos="0" Width="180" Height="256" />
+  <Image Name="22" XPos="3960" YPos="0" Width="180" Height="256" />
+  <Image Name="23" XPos="4140" YPos="0" Width="180" Height="256" />
+  <Image Name="24" XPos="4320" YPos="0" Width="180" Height="256" />
+  <Image Name="25" XPos="4500" YPos="0" Width="180" Height="256" />
+  <Image Name="26" XPos="4680" YPos="0" Width="180" Height="256" />
+  <Image Name="27" XPos="4860" YPos="0" Width="180" Height="256" />
+</Imageset>
+
+

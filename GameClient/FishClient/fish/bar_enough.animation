@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="bar_enough" Delay="0.33" >
+  <Image Set="bar_enough" Name="0"  />
+  <Image Set="bar_enough" Name="1"  />
+  <Image Set="bar_enough" Name="2"  />
+  <Image Set="bar_enough" Name="3"  />
+  <Image Set="bar_enough" Name="4"  />
+  <Image Set="bar_enough" Name="5"  />
+  <Image Set="bar_enough" Name="6"  />
+  <Image Set="bar_enough" Name="7"  />
+  <Image Set="bar_enough" Name="8"  />
+  <Image Set="bar_enough" Name="9"  />
+  <Image Set="bar_enough" Name="10"  />
+  <Image Set="bar_enough" Name="11"  />
+  <Image Set="bar_enough" Name="12"  />
+
+</Animation>

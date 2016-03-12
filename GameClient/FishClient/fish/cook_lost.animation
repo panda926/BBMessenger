@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="cook_lost" Delay="0.33" >
+  <Image Set="cook" Name="cook_lost_0"  />
+  <Image Set="cook" Name="cook_lost_1"  />
+  <Image Set="cook" Name="cook_lost_2"  />
+  <Image Set="cook" Name="cook_lost_3"  />
+  <Image Set="cook" Name="cook_lost_4"  />
+  <Image Set="cook" Name="cook_lost_5"  />
+  <Image Set="cook" Name="cook_lost_6"  />
+  <Image Set="cook" Name="cook_lost_7"  />
+
+
+</Animation>

@@ -1,0 +1,41 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.BankAccountReg"
+	x:Name="UserControl"
+	d:DesignWidth="480" d:DesignHeight="320">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid >
+			<Grid.RowDefinitions>
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="20*" />
+				<RowDefinition Height="20*" />
+				<RowDefinition Height="20*" />
+				<RowDefinition Height="20*" />
+				<RowDefinition Height="20*" />
+				<RowDefinition Height="30*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+				<ColumnDefinition Width="30*" />
+                <ColumnDefinition Width="30*" />
+				<ColumnDefinition Width="30*" />
+				<ColumnDefinition Width="15*" />
+		
+            </Grid.ColumnDefinitions>
+			<Label HorizontalAlignment="Right" VerticalAlignment="Center" Content="银行类型" Grid.Column="1" Grid.Row="1" Foreground="Gray"/>
+            <TextBox Style="{DynamicResource TextBoxStyle}" MaxLength="15" Height="25" VerticalAlignment="Center" Grid.Column="2" Grid.Row="1" Grid.ColumnSpan="2" Text="txtBankAccountNumber" TextWrapping="Wrap" d:LayoutOverrides="Width" Name="txtBankAccountNumber" Foreground="Black" PreviewKeyDown="txtBankAccountNumber_PreviewKeyDown" />
+			<Label HorizontalAlignment="Right" VerticalAlignment="Center" Content="银行账号" Grid.Column="1" Grid.Row="2" Foreground="Gray"/>
+            <TextBox Style="{DynamicResource TextBoxStyle}" MaxLength="15" Height="25" VerticalAlignment="Center" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2" Text="txtBankAccounID" TextWrapping="Wrap" d:LayoutOverrides="Width" Name="txtBankAccountID" Foreground="Black" PreviewKeyDown="txtBankAccountID_PreviewKeyDown" />
+			<Label Name="lblPassword1"  HorizontalAlignment="Right" VerticalAlignment="Center" Content="密码" Grid.Column="1" Grid.Row="3" Foreground="Gray"/>
+            <PasswordBox Style="{DynamicResource passwordBoxStyle}" MaxLength="20" Height="25" VerticalAlignment="Center" Name="txtPassword" Foreground="Black" Grid.Column="2" Grid.Row="3" Grid.ColumnSpan="2" PreviewKeyDown="txtPassword_PreviewKeyDown" />
+			<Label Name="lblPassword2"  HorizontalAlignment="Right" VerticalAlignment="Center" Content="确认密码" Grid.Column="1" Grid.Row="4" Foreground="Gray"/>
+            <PasswordBox Style="{DynamicResource passwordBoxStyle}" MaxLength="20" Height="25" VerticalAlignment="Center" Name="txtConfirmPassword" Foreground="Black" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="2" PreviewKeyDown="txtConfirmPassword_PreviewKeyDown" />
+            <Button Style="{DynamicResource NormalButtonStyle}" Margin="30,5,0,5" Content="确认" Grid.Column="3" Grid.Row="5" d:LayoutOverrides="Height" Name="btnSaveOrChange" Foreground="Gray" Click="btnSaveOrChange_Click" />
+		</Grid>
+	</Grid>
+</UserControl>

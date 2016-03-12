@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BF82D3F5-4348-4ED4-A7CF-D430A3D48C10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DzCardClient</RootNamespace>
+    <AssemblyName>DzCardClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardControl.cs" />
+    <Compile Include="DzCardView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DzCardView.Designer.cs">
+      <DependentUpon>DzCardView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoldControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GoldControl.Designer.cs">
+      <DependentUpon>GoldControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GoldView.cs" />
+    <Compile Include="Prompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prompt.Designer.cs">
+      <DependentUpon>Prompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ScoreView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScoreView.Designer.cs">
+      <DependentUpon>ScoreView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowHand.Designer.cs">
+      <DependentUpon>ShowHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SmallCardControl.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DzCardView.resx">
+      <DependentUpon>DzCardView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GoldControl.resx">
+      <DependentUpon>GoldControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prompt.resx">
+      <DependentUpon>Prompt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScoreView.resx">
+      <DependentUpon>ScoreView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowHand.resx">
+      <DependentUpon>ShowHand.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADD_SCORE.WAV" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUTO_START_FALSE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AUTO_START_TRUE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_ADD.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_CANCEL.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_EXIT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_FOLLOW.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_GIVEUP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_MAX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_MIN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_NO1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_OK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_OPEN_CARD.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_PASS_CARD.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_SHOWHAND.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_SITDOWN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_START.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_YES1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD_CUR.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD_MASK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\D.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FOLLOW.WAV" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRAME.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_END.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_LOGO.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_LOST.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_START.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_WARN.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_WIN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_WIN.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameClient.ico" />
+    <None Include="Resources\GameClient.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GameClient.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIVE_UP.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HUMAN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LEFT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAX.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MAX1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MID.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NO_ADD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NUMBER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RIGHT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SEND_CARD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHOW_HAND.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SHOWHAND_COMFIRE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SMALL_CARD.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIME_ARROWHEAD.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TITLE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChatEngine\ChatEngine.csproj">
+      <Project>{9C4E241B-2C49-40C1-B39F-0428ED435915}</Project>
+      <Name>ChatEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameControls\GameControls.csproj">
+      <Project>{88E4C78D-F41C-4BA9-976A-698AB4A60E16}</Project>
+      <Name>GameControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VIEW_BACK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

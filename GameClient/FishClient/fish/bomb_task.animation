@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="bomb_task" Delay="0.33" >
+  <Image Set="bomb_task" Name="0"  />
+  <Image Set="bomb_task" Name="1"  />
+  <Image Set="bomb_task" Name="2"  />
+  <Image Set="bomb_task" Name="3"  />
+
+</Animation>

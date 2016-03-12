@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1B0A1A43-AD80-45F3-BBC8-7100F07B8B6B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SicboClient</RootNamespace>
+    <AssemblyName>SicboClient</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SicboView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SicboView.Designer.cs">
+      <DependentUpon>SicboView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SicboView.resx">
+      <DependentUpon>SicboView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChatEngine\ChatEngine.csproj">
+      <Project>{9C4E241B-2C49-40C1-B39F-0428ED435915}</Project>
+      <Name>ChatEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GameControls\GameControls.csproj">
+      <Project>{88E4C78D-F41C-4BA9-976A-698AB4A60E16}</Project>
+      <Name>GameControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JETTOM_VIEW.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\JETTOM_VIEW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ME_BANKER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ME_SCORE_NUMBER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NO_BANKER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OPEN_BANK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_NUMBER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_DESKTOP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EFFECT_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EFFECT_DESKTOP.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EFFECT_INMIDAIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EFFECT_NORMAL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EFFECT_RESULT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_EPLAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_IN_MIDAIR.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_IN_THE_AIR.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_NUM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_NUMBER_DOT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_PLAN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_POINT.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIME_FLAG.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_PROMPT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VIEW_BACK.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VIEW_FILL.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WIN_FLAGS.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CARD_TYPE.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHANGE_BANKER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FIRE_EFFECT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SICBO_IN_THE_AIR1.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GIFT_INTHEAIR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_END.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FRAME_WIN.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_100.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_1000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_10000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_100000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_1000000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_5000000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_JETTON_500000.BMP" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_100.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_500.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_1000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_10000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_50000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_100000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_500000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_1000000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SCORE_5000000.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_APPLY_BANKER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_CANCEL_BANKER.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_UP.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BT_DOWN.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NORMAL.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADD_GOLD.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ADD_GOLD_EX.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACK_GROUND.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHEER1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHEER2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CHEER3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\END_DRAW.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\END_LOST.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\END_WIN.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAME_START.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIME_WARIMG.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\one_00.png" />
+    <Content Include="Resources\one_01.png" />
+    <Content Include="Resources\one_02.png" />
+    <Content Include="Resources\one_03.png" />
+    <Content Include="Resources\one_04.png" />
+    <Content Include="Resources\one_05.png" />
+    <Content Include="Resources\one_06.png" />
+    <Content Include="Resources\one_07.png" />
+    <Content Include="Resources\one_08.png" />
+    <Content Include="Resources\one_09.png" />
+    <Content Include="Resources\one_10.png" />
+    <Content Include="Resources\one_11.png" />
+    <Content Include="Resources\one_12.png" />
+    <Content Include="Resources\one_13.png" />
+    <Content Include="Resources\one_14.png" />
+    <Content Include="Resources\one_15.png" />
+    <Content Include="Resources\one_16.png" />
+    <Content Include="Resources\one_17.png" />
+    <Content Include="Resources\one_18.png" />
+    <Content Include="Resources\one_19.png" />
+    <Content Include="Resources\one_20.png" />
+    <Content Include="Resources\one_21.png" />
+    <Content Include="Resources\one_22.png" />
+    <Content Include="Resources\one_23.png" />
+    <Content Include="Resources\one_24.png" />
+    <Content Include="Resources\one_25.png" />
+    <Content Include="Resources\one_26.png" />
+    <Content Include="Resources\one_27.png" />
+    <Content Include="Resources\one_28.png" />
+    <Content Include="Resources\one_29.png" />
+    <Content Include="Resources\one_30.png" />
+    <Content Include="Resources\one_31.png" />
+    <Content Include="Resources\one_32.png" />
+    <Content Include="Resources\one_33.png" />
+    <Content Include="Resources\one_34.png" />
+    <Content Include="Resources\one_35.png" />
+    <Content Include="Resources\one_36.png" />
+    <Content Include="Resources\one_37.png" />
+    <Content Include="Resources\one_38.png" />
+    <Content Include="Resources\one_39.png" />
+    <Content Include="Resources\one_40.png" />
+    <Content Include="Resources\one_41.png" />
+    <Content Include="Resources\one_42.png" />
+    <Content Include="Resources\one_43.png" />
+    <Content Include="Resources\one_44.png" />
+    <Content Include="Resources\one_45.png" />
+    <Content Include="Resources\one_46.png" />
+    <Content Include="Resources\one_47.png" />
+    <Content Include="Resources\one_48.png" />
+    <Content Include="Resources\one_49.png" />
+    <Content Include="Resources\one_50.png" />
+    <Content Include="Resources\one_51.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

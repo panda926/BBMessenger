@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="reel_eff" Delay="0.33" >
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+  <Image Set="task" Name="reel_eff_0"  />
+  <Image Set="task" Name="reel_eff_1"  />
+  <Image Set="task" Name="reel_eff_2"  />
+</Animation>

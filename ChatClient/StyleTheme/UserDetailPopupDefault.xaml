@@ -1,0 +1,9 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ImageBrush x:Key="MainWindowBackground" ImageSource="/Resources;component/image/myInfoPan.jpg" />
+    <!--<SolidColorBrush x:Key="MainWindowBackground" Color="Aqua" />-->
+    <SolidColorBrush x:Key="CaptionButtonColor" Color="Transparent" />
+  
+
+</ResourceDictionary>

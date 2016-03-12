@@ -1,0 +1,22 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.SelectNoticeMemberControl"
+	x:Name="UserControl"
+	d:DesignWidth="426" d:DesignHeight="304">
+
+	<Grid x:Name="LayoutRoot">
+		<Grid VerticalAlignment="Top" Height="38">
+			<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" Content="아이디 신청개수:" Margin="0,10,127.006,12.5" d:LayoutOverrides="Height" FontFamily="SimSun" FontSize="13.333"/>
+			<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" Name="reqBuyer" RenderTransformOrigin="9.681,1.817" Margin="0,10,105.506,12" d:LayoutOverrides="Height" FontFamily="SimSun" FontSize="13.333"/>
+        </Grid>
+		<Grid Margin="0,38,0,0">
+			<ScrollViewer Style="{DynamicResource SimpleScrollViewer}">
+				<StackPanel Name="memberList"/>
+			</ScrollViewer>
+		</Grid>
+	</Grid>
+</UserControl>

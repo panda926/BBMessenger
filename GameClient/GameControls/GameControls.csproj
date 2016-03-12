@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88E4C78D-F41C-4BA9-976A-698AB4A60E16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameControls</RootNamespace>
+    <AssemblyName>GameControls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\ChatClient\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectX_Dll\Microsoft.DirectX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.AudioVideoPlayback, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectX_Dll\Microsoft.DirectX.AudioVideoPlayback.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3D, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectX_Dll\Microsoft.DirectX.Direct3D.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.Direct3DX, Version=1.0.2910.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectX_Dll\Microsoft.DirectX.Direct3DX.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DirectX_Dll\Microsoft.DirectX.DirectSound.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MFC\CBitmap.cs" />
+    <Compile Include="MFC\CBrush.cs" />
+    <Compile Include="MFC\CButton.cs" />
+    <Compile Include="MFC\CComboBox.cs" />
+    <Compile Include="MFC\CControl.cs" />
+    <Compile Include="MFC\CDC.cs" />
+    <Compile Include="MFC\CDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MFC\CEdit.cs" />
+    <Compile Include="MFC\CFont.cs" />
+    <Compile Include="MFC\CListCtrl.cs" />
+    <Compile Include="CMy3DFont.cs" />
+    <Compile Include="CPngImage.cs" />
+    <Compile Include="MFC\CPoint.cs" />
+    <Compile Include="CRadioButton.cs" />
+    <Compile Include="MFC\CRect.cs" />
+    <Compile Include="MFC\CSize.cs" />
+    <Compile Include="CSkinButton.cs" />
+    <Compile Include="DirectX\CD3DMusic.cs" />
+    <Compile Include="DirectX\CD3DTexture.cs" />
+    <Compile Include="DirectX\CLapseCount.cs" />
+    <Compile Include="DirectX\CVirtualButton.cs" />
+    <Compile Include="DirectX\CVirtualEngine.cs" />
+    <Compile Include="DirectX\CVirtualWindow.cs" />
+    <Compile Include="DirectX\Game3DView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameGraphics.cs" />
+    <Compile Include="GameView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyImage.cs" />
+    <Compile Include="PictureButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PictureButton.Designer.cs">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="XLBE\Action.cs" />
+    <Compile Include="XLBE\Action_Combine.cs" />
+    <Compile Include="XLBE\Action_Interval.cs" />
+    <Compile Include="XLBE\Action_Manager.cs" />
+    <Compile Include="XLBE\Animation.cs" />
+    <Compile Include="XLBE\Animation_Manager.cs" />
+    <Compile Include="XLBE\Button_Widget.cs" />
+    <Compile Include="XLBE\Color_Rect.cs" />
+    <Compile Include="XLBE\Director.cs" />
+    <Compile Include="XLBE\Frame_Listener.cs" />
+    <Compile Include="XLBE\Input_Manager.cs" />
+    <Compile Include="XLBE\MouseState.cs" />
+    <Compile Include="XLBE\ostringstream.cs" />
+    <Compile Include="XLBE\Point.cs" />
+    <Compile Include="XLBE\Progress_Widget.cs" />
+    <Compile Include="XLBE\Rect.cs" />
+    <Compile Include="XLBE\Render_Line.cs" />
+    <Compile Include="XLBE\Render_System.cs" />
+    <Compile Include="XLBE\Render_Window.cs" />
+    <Compile Include="XLBE\Resource_Manager.cs" />
+    <Compile Include="XLBE\Root.cs" />
+    <Compile Include="XLBE\Size.cs" />
+    <Compile Include="XLBE\Slider_Widget.cs" />
+    <Compile Include="XLBE\Sound_Instance.cs" />
+    <Compile Include="XLBE\Font.cs" />
+    <Compile Include="XLBE\Font_Manager.cs" />
+    <Compile Include="XLBE\Image.cs" />
+    <Compile Include="XLBE\ImageSet.cs" />
+    <Compile Include="XLBE\Imageset_Manager.cs" />
+    <Compile Include="XLBE\Layer.cs" />
+    <Compile Include="XLBE\Node.cs" />
+    <Compile Include="XLBE\Scene.cs" />
+    <Compile Include="XLBE\Sound_Manager.cs" />
+    <Compile Include="XLBE\Sprite.cs" />
+    <Compile Include="XLBE\Timer.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="PictureButton.resx">
+      <DependentUpon>PictureButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ChatEngine\ChatEngine.csproj">
+      <Project>{9C4E241B-2C49-40C1-B39F-0428ED435915}</Project>
+      <Name>ChatEngine</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIME_BACK.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TIME_NUMBER.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_READY.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\USER_STATUS.bmp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

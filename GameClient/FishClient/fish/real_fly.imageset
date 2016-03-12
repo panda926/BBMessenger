@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="real_fly" Image="fish\real_fly.png" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="418" Height="400" />
+  <Image Name="1" XPos="418" YPos="0" Width="418" Height="400" />
+  <Image Name="2" XPos="836" YPos="0" Width="418" Height="400" />
+  <Image Name="3" XPos="1254" YPos="0" Width="418" Height="400" />
+ 
+  <Image Name="4" XPos="0" YPos="400" Width="418" Height="400" />
+  <Image Name="5" XPos="418" YPos="400" Width="418" Height="400" />
+  <Image Name="6" XPos="836" YPos="400" Width="418" Height="400" />
+  <Image Name="7" XPos="1254" YPos="400" Width="418" Height="400" />
+
+  <Image Name="8" XPos="0" YPos="800" Width="418" Height="400" />
+  <Image Name="9" XPos="418" YPos="800" Width="418" Height="400" />
+  <Image Name="10" XPos="836" YPos="800" Width="418" Height="400" />
+  <Image Name="11" XPos="1254" YPos="800" Width="418" Height="400" />
+
+  <Image Name="12" XPos="0" YPos="1200" Width="418" Height="400" />
+  <Image Name="13" XPos="418" YPos="1200" Width="418" Height="400" />
+  <Image Name="14" XPos="836" YPos="1200" Width="418" Height="400" />
+  <Image Name="15" XPos="1254" YPos="1200" Width="418" Height="400" />
+
+  <Image Name="16" XPos="0" YPos="1600" Width="418" Height="400" />
+  <Image Name="17" XPos="418" YPos="1600" Width="418" Height="400" />
+  <Image Name="18" XPos="836" YPos="1600" Width="418" Height="400" />
+  <Image Name="19" XPos="1254" YPos="1600" Width="418" Height="400" />
+
+</Imageset>
+
+

@@ -1,0 +1,32 @@
+﻿<Window x:Class="ChatClient.UserDetailPopup"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d" xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    Style="{DynamicResource MainWindowStyle}"
+    Title="UserDetailPopup" Height="217" Width="300" ResizeMode="NoResize" WindowStyle="None">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/UserDetailPopupGeneric.xaml" />
+                <ResourceDictionary Source="Theme/UserDetailPopupDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+    	<Grid HorizontalAlignment="Left" Margin="1,-28,0,0" VerticalAlignment="Top" Width="60" Height="60" Name="imageGrid"/>
+    	
+    	<Label VerticalAlignment="Top" Content="Label" Margin="64,2,38.007,0" Name="userName" Foreground="Black" />
+        <Grid Margin="1,0,0,0" Name="grid1" VerticalAlignment="Bottom" Height="78">
+            <TextBlock   Margin="0,0,0,0" Name="textBlock1"  />
+        </Grid>
+        <TextBlock Height="21" Margin="65,-26,93,0" Name="userSign" VerticalAlignment="Top" />
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="年龄 :" Margin="8,36,0,0" Foreground="#FF110101"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="10" Margin="51,36,0,0" Width="33.993" Foreground="#FF110101" Name="ago"/>
+        <Label HorizontalAlignment="Left" VerticalAlignment="Top" Content="岁" Margin="72.993,36,0,0" Foreground="#FF110101"/>
+        <Label VerticalAlignment="Top" Content="评价 :" Margin="140,36,0,0" Foreground="#FF110101" Height="25.96" HorizontalAlignment="Left" Width="54" />
+        <Label HorizontalAlignment="Right" VerticalAlignment="Top" Content="2859" RenderTransformOrigin="3.106,1.81" Margin="0,36,59,0" Foreground="#FF110101" Name="count" Height="25.96" Width="41" />
+        <Label HorizontalAlignment="Left" Content="地址 :" Margin="7.893,62.96,0,86.08" Foreground="#FF110101" d:LayoutOverrides="Height"/>
+        <Label Content="단동시 메이꾸이깡반 신짱쩨 12호" Margin="51,62.96,0,86.08" d:LayoutOverrides="Width, Height" Foreground="#FF110101" Name="address"/>
+    </Grid>
+</Window>

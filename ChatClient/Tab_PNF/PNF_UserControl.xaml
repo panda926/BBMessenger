@@ -1,0 +1,9 @@
+﻿<UserControl x:Class="ChatClient.PNF_UserControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Height="29" Width="Auto" MouseDoubleClick="UserControl_MouseDoubleClick">
+    <Grid Cursor="Hand" MouseEnter="Grid_MouseEnter" MouseLeave="Grid_MouseLeave" MouseDown="Grid_MouseDown" Name="classGrid">
+        <Label Name="label1"  HorizontalAlignment="Left"  HorizontalContentAlignment="Left" Foreground="Black" FontFamily="Microsoft YaHei" />
+        <Label Name="label2"   HorizontalAlignment="Right" HorizontalContentAlignment="Right" FontFamily="Microsoft YaHei" />
+    </Grid>
+</UserControl>

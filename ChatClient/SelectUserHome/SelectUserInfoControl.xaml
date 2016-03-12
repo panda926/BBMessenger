@@ -1,0 +1,29 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.SelectUserInfoControl"
+	x:Name="UserControl"
+	d:DesignWidth="426" d:DesignHeight="304">
+
+	<Grid x:Name="LayoutRoot">
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="아이디:" Margin="41.4,42,0,0"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="닉네임:" Margin="0,42,143.393,0"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Content="생년월일:" Margin="41.4,81.04,0,0"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" Content="집주소:" Margin="41.4,129.04,0,0" d:LayoutOverrides="HorizontalAlignment" VerticalAlignment="Top"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Top" Name="userId" Margin="100,42,0,0"/>
+		<TextBox Style="{DynamicResource SimpleTextBox}"  Margin="96,124.04,18,0" VerticalAlignment="Top" Name="userAddress" IsEnabled="False" />
+		<TextBox HorizontalAlignment="Right" Style="{DynamicResource SimpleTextBox}" VerticalAlignment="Top" Margin="0,40,18,0" Width="117.392" Name="userNicname" IsEnabled="False" />
+        <Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="기존암호:" Margin="42.006,0,0,111.04"/>
+		<Label HorizontalAlignment="Left" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="변경암호:" Margin="43.006,0,0,69.04"/>
+		<Label HorizontalAlignment="Right" Style="{DynamicResource SimpleLabel}" VerticalAlignment="Bottom" Content="암호확인:" Margin="0,0,153.999,69.04"/>
+		<PasswordBox VerticalAlignment="Bottom" Margin="98.993,0,0,111.04" Width="115" HorizontalAlignment="Left" Name="rePass" IsEnabled="False" />
+		<PasswordBox VerticalAlignment="Bottom" Margin="99.993,0,208.599,69.04" Width="115" Name="newPass" IsEnabled="False" />
+		<PasswordBox HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,41.392,69.04" Width="115" d:LayoutOverrides="HorizontalAlignment" Name="newPassverif" IsEnabled="False" />
+		<ComboBox Margin="96.197,81.04,0,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Name="userYear" IsEnabled="False" />
+		<ComboBox Margin="203,81.04,153.999,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Name="userMonth" IsEnabled="False" />
+		<ComboBox HorizontalAlignment="Right" Margin="0,81.04,82,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Width="56" Name="userDay" IsEnabled="False" />
+	</Grid>
+</UserControl>

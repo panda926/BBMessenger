@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="show_bar" Delay="0.33" >
+  <Image Set="task" Name="show_bar_0"  />
+  <Image Set="task" Name="show_bar_1"  />
+</Animation>

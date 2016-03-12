@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="fish_2" Image="fish\fish_2.png" NativeHorzRes="2048" NativeVertRes="128" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="48" Height="70" />
+  <Image Name="1" XPos="48" YPos="0" Width="48" Height="70" />
+  <Image Name="2" XPos="96" YPos="0" Width="48" Height="70" />
+  <Image Name="3" XPos="144" YPos="0" Width="48" Height="70" />
+  <Image Name="4" XPos="192" YPos="0" Width="48" Height="70" />
+  <Image Name="5" XPos="240" YPos="0" Width="48" Height="70" />
+  <Image Name="6" XPos="288" YPos="0" Width="48" Height="70" />
+  <Image Name="7" XPos="336" YPos="0" Width="48" Height="70" />
+  <Image Name="8" XPos="384" YPos="0" Width="48" Height="70" />
+  <Image Name="9" XPos="432" YPos="0" Width="48" Height="70" />
+  <Image Name="10" XPos="480" YPos="0" Width="48" Height="70" />
+  <Image Name="11" XPos="528" YPos="0" Width="48" Height="70" />
+  <Image Name="12" XPos="576" YPos="0" Width="48" Height="70" />
+  <Image Name="13" XPos="624" YPos="0" Width="48" Height="70" />
+  <Image Name="14" XPos="672" YPos="0" Width="48" Height="70" />
+  <Image Name="15" XPos="720" YPos="0" Width="48" Height="70" />
+  <Image Name="16" XPos="768" YPos="0" Width="48" Height="70" />
+  <Image Name="17" XPos="816" YPos="0" Width="48" Height="70" />
+  <Image Name="18" XPos="864" YPos="0" Width="48" Height="70" />
+  <Image Name="19" XPos="912" YPos="0" Width="48" Height="70" />
+  <Image Name="20" XPos="960" YPos="0" Width="48" Height="70" />
+  <Image Name="21" XPos="1008" YPos="0" Width="48" Height="70" />
+  <Image Name="22" XPos="1056" YPos="0" Width="48" Height="70" />
+  <Image Name="23" XPos="1104" YPos="0" Width="48" Height="70" />
+  <Image Name="24" XPos="1152" YPos="0" Width="48" Height="70" />
+</Imageset>
+
+

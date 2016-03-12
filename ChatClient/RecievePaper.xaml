@@ -1,0 +1,32 @@
+﻿<Window x:Class="ChatClient.RecievePaper"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{DynamicResource MainWindowStyle}"    
+    Title="MyHome"
+    Height="333" Width="491" ResizeMode="NoResize" Closing="Window_Closing">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/RecievePaperGeneric.xaml" />
+                <ResourceDictionary Source="Theme/RecievePaperDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="0,-5,0,5">
+        <Grid HorizontalAlignment="Left" Margin="0,48,0,-5" Name="grid1" Width="170">
+            <ListBox Name="listBox1" Margin="0,0,0,-3"  BorderBrush="#fbfbfb" BorderThickness="1" Opacity="1" Style="{DynamicResource SimpleListBox}" Background="{x:Null}"/>
+        </Grid>
+        <Grid Margin="183,47,1,-4" Name="grid2">
+            <TextBox Margin="0" Name="textBlock1" HorizontalAlignment="Right" Width="289" TextWrapping="Wrap" Foreground="Black" IsReadOnly="True" />
+        </Grid>
+        <Grid Height="43" Margin="2,1,3,0" Name="grid3" VerticalAlignment="Top" >
+        	<Image Margin="-2,1,0,-1" Source="image/news.png" Stretch="Fill" HorizontalAlignment="Left" Width="200"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Margin="0,-32,0,0" VerticalAlignment="Top" Width="25" Height="24">
+        	<Image Margin="0,0,-1,-1" Source="image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

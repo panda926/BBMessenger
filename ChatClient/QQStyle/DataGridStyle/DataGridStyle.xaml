@@ -1,0 +1,678 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:toolkit="http://schemas.microsoft.com/wpf/2008/toolkit"
+                    xmlns:local ="clr-namespace:ChatClient"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+                    xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:vsm="clr-namespace:System.Windows;assembly=WPFToolkit">
+	<!--<Style TargetType="{x:Type DataGridColumnHeader}">
+		<Setter Property="VerticalContentAlignment" Value="Center" />
+		<Setter Property="Height" Value="35" />
+		<Setter Property="SeparatorBrush" Value="DarkRed" />
+		<Setter Property="FontWeight" Value="Black" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+					<Grid>
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal" />
+								<vsm:VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="columnHeaderBorder" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="LightYellow" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<Border x:Name="columnHeaderBorder"
+						        BorderThickness="1"
+						        Padding="3,0,3,0">
+							<Border.BorderBrush>
+								<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+									<GradientStop Offset="0" Color="#A5A5A5" />
+									<GradientStop Offset="1" Color="#4B4B4B" />
+								</LinearGradientBrush>
+							</Border.BorderBrush>
+							<Border.Background>
+								<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+									<GradientStop Offset="0" Color="#DEB40A" />
+									<GradientStop Offset="1" Color="#FF7F00" />
+								</LinearGradientBrush>
+							</Border.Background>
+							<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+							                  SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="{x:Type DataGridRow}">
+		<Setter Property="Background" Value="LightYellow" />
+		<Setter Property="SnapsToDevicePixels" Value="true" />
+		<Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
+		<Setter Property="ValidationErrorTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<TextBlock Margin="2,0,0,0"
+					           VerticalAlignment="Center"
+					           Foreground="Red"
+					           Text="!" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type DataGridRow}">
+					<Border x:Name="DGR_Border"
+					        BorderBrush="{TemplateBinding BorderBrush}"
+					        BorderThickness="{TemplateBinding BorderThickness}"
+					        SnapsToDevicePixels="True">
+						<Border.Background>
+							<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+								<GradientStop Offset="0" Color="#AAFFFFAA" />
+								<GradientStop Offset="1" Color="#AAFFD455" />
+							</LinearGradientBrush>
+						</Border.Background>
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal" />
+								<vsm:VisualState x:Name="Normal_AlternatingRow">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#AAF0C570" />
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#AAFF7F00" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Normal_Selected">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#CCAA0000" />
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#77D52B00" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[0].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#AAEA9595" />
+										</ColorAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DGR_Border" Storyboard.TargetProperty="(Panel.Background).                         (GradientBrush.GradientStops)[1].(GradientStop.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="#AAF54B4B" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<SelectiveScrollingGrid>
+							<SelectiveScrollingGrid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto" />
+								<ColumnDefinition Width="*" />
+							</SelectiveScrollingGrid.ColumnDefinitions>
+							<SelectiveScrollingGrid.RowDefinitions>
+								<RowDefinition Height="*" />
+								<RowDefinition Height="Auto" />
+							</SelectiveScrollingGrid.RowDefinitions>
+							<DataGridCellsPresenter Grid.Column="1"
+							                        ItemsPanel="{TemplateBinding ItemsPanel}"
+							                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							<DataGridDetailsPresenter Grid.Row="1"
+							                          Grid.Column="1"
+							                          SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen,
+							                                                                                         ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical},
+							                                                                                         Converter={x:Static DataGrid.RowDetailsScrollingConverter},
+							                                                                                         RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+							                          Visibility="{TemplateBinding DetailsVisibility}" />
+							<DataGridRowHeader Grid.RowSpan="2"
+							                   SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+							                   Visibility="{Binding HeadersVisibility,
+							                                        ConverterParameter={x:Static DataGridHeadersVisibility.Row},
+							                                        Converter={x:Static DataGrid.HeadersVisibilityConverter},
+							                                        RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+						</SelectiveScrollingGrid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="{x:Type DataGridCell}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type DataGridCell}">
+					<Border x:Name="border"
+					        Background="Transparent"
+					        BorderBrush="Transparent"
+					        BorderThickness="1"
+					        SnapsToDevicePixels="True">
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="FocusStates">
+								<vsm:VisualState x:Name="Unfocused" />
+								<vsm:VisualState x:Name="Focused" />
+							</vsm:VisualStateGroup>
+							<vsm:VisualStateGroup x:Name="CurrentStates">
+								<vsm:VisualState x:Name="Regular" />
+								<vsm:VisualState x:Name="Current">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)">
+											<EasingColorKeyFrame KeyTime="0" Value="Gray" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>-->
+	<Style TargetType="ToggleButton">
+		<Setter Property="Padding" Value="3" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ToggleButton">
+					<Grid>
+						<vsm:VisualStateManager.VisualStateGroups>
+							<vsm:VisualStateGroup x:Name="CommonStates">
+								<vsm:VisualState x:Name="Normal" />
+								<vsm:VisualState x:Name="MouseOver">
+									<Storyboard>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="DefaultPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+											<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#AA0000" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Pressed" />
+								<vsm:VisualState x:Name="Disabled" />
+							</vsm:VisualStateGroup>
+							<vsm:VisualStateGroup x:Name="CheckStates">
+								<vsm:VisualState x:Name="Checked">
+									<Storyboard>
+										<ObjectAnimationUsingKeyFrames Duration="0"
+										                               Storyboard.TargetName="DefaultPath"
+										                               Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Collapsed</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ObjectAnimationUsingKeyFrames Duration="0"
+										                               Storyboard.TargetName="CheckedPath"
+										                               Storyboard.TargetProperty="Visibility">
+											<DiscreteObjectKeyFrame KeyTime="0">
+												<DiscreteObjectKeyFrame.Value>
+													<Visibility>Visible</Visibility>
+												</DiscreteObjectKeyFrame.Value>
+											</DiscreteObjectKeyFrame>
+										</ObjectAnimationUsingKeyFrames>
+										<ColorAnimationUsingKeyFrames Storyboard.TargetName="CheckedPath" Storyboard.TargetProperty="(Path.Fill).(SolidColorBrush.Color)">
+											<SplineColorKeyFrame KeyTime="0:0:0.2" Value="#CCAA0000" />
+										</ColorAnimationUsingKeyFrames>
+									</Storyboard>
+								</vsm:VisualState>
+								<vsm:VisualState x:Name="Unchecked" />
+							</vsm:VisualStateGroup>
+						</vsm:VisualStateManager.VisualStateGroups>
+						<ContentPresenter x:Name="contentPresenter"
+						                  Margin="{TemplateBinding Padding}"
+						                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+						                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+						                  Content="{TemplateBinding Content}"
+						                  ContentTemplate="{TemplateBinding ContentTemplate}" />
+						<Path x:Name="DefaultPath"
+						      VerticalAlignment="Top"
+						      Data="M0,0 14,7 0,14 Z"
+						      Fill="Gray"
+						      Stretch="Fill" />
+						<Path x:Name="CheckedPath"
+						      VerticalAlignment="Top"
+						      Data="M0,0 14,0 7,14 Z"
+						      Fill="LightGray"
+						      Stretch="Fill"
+						      Visibility="Collapsed" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+    <Style TargetType="{x:Type toolkit:DataGrid}" x:Key="DataGridStyle">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+		<Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected" />
+		<Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+		<Setter Property="ScrollViewer.PanningMode" Value="Both" />
+		<Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+                <ControlTemplate TargetType="{x:Type toolkit:DataGrid}">
+					<Border Background="{TemplateBinding Background}"
+					        BorderBrush="{TemplateBinding BorderBrush}"
+					        BorderThickness="0"
+					        CornerRadius="3"
+					        Padding="{TemplateBinding Padding}"
+					        SnapsToDevicePixels="True">
+						<ScrollViewer x:Name="DG_ScrollViewer" Focusable="false">
+							<ScrollViewer.Template>
+								<ControlTemplate TargetType="{x:Type ScrollViewer}">
+									<Grid>
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition Width="Auto" />
+											<ColumnDefinition Width="*" />
+											<ColumnDefinition Width="Auto" />
+										</Grid.ColumnDefinitions>
+										<Grid.RowDefinitions>
+											<RowDefinition Height="Auto" />
+											<RowDefinition Height="*" />
+											<RowDefinition Height="Auto" />
+										</Grid.RowDefinitions>
+										<Button Width="{Binding CellsPanelHorizontalOffset,
+										                        RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}"
+										        Command="{x:Static toolkit:DataGrid.SelectAllCommand}"
+										        Focusable="false"
+										        Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle,
+										                                                      TypeInTargetAssembly={x:Type toolkit:DataGrid}}}"
+										        Visibility="{Binding HeadersVisibility,
+										                             ConverterParameter={x:Static DataGridHeadersVisibility.All},
+										                             Converter={x:Static toolkit:DataGrid.HeadersVisibilityConverter},
+										                             RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" />
+                                        <toolkit:DataGridColumnHeadersPresenter x:Name="PART_ColumnHeadersPresenter"
+										                                Grid.Column="1"
+										                                Visibility="{Binding HeadersVisibility,
+										                                                     ConverterParameter={x:Static toolkit:DataGridHeadersVisibility.Column},
+										                                                     Converter={x:Static toolkit:DataGrid.HeadersVisibilityConverter},
+										                                                     RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" />
+										<ScrollContentPresenter x:Name="PART_ScrollContentPresenter"
+										                        Grid.Row="1"
+										                        Grid.ColumnSpan="2"
+										                        CanContentScroll="{TemplateBinding CanContentScroll}" />
+										<ScrollBar x:Name="PART_VerticalScrollBar"
+										           Grid.Row="1"
+										           Grid.Column="2"
+										           Maximum="{TemplateBinding ScrollableHeight}"
+										           Orientation="Vertical"
+										           Style="{DynamicResource MyScrollBar}"
+										           ViewportSize="{TemplateBinding ViewportHeight}"
+										           Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+										           Value="{Binding VerticalOffset,
+										                           Mode=OneWay,
+										                           RelativeSource={RelativeSource TemplatedParent}}" />
+										<Grid Grid.Row="2" Grid.Column="1">
+											<Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type toolkit:DataGrid}}}" />
+												<ColumnDefinition Width="*" />
+											</Grid.ColumnDefinitions>
+											<ScrollBar x:Name="PART_HorizontalScrollBar"
+											           Grid.Column="1"
+											           Maximum="{TemplateBinding ScrollableWidth}"
+											           Orientation="Horizontal"
+											           ViewportSize="{TemplateBinding ViewportWidth}"
+											           Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+											           Value="{Binding HorizontalOffset,
+											                           Mode=OneWay,
+											                           RelativeSource={RelativeSource TemplatedParent}}" Style="{DynamicResource MyScrollBar}" />
+										</Grid>
+									</Grid>
+								</ControlTemplate>
+							</ScrollViewer.Template>
+							<ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+						</ScrollViewer>
+
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>        
+        <Setter Property="CanUserResizeColumns" Value="true"/>
+        <Setter Property="Background" Value="#E6DBBB" />
+        <Setter Property="BorderBrush" Value="#d6c79b" />
+        <Setter Property="HorizontalGridLinesBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#d6c79b"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="VerticalGridLinesBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#d6c79b"/>
+            </Setter.Value>
+        </Setter>
+		<Style.Triggers>
+			<Trigger Property="IsGrouping" Value="True">
+				<Setter Property="ScrollViewer.CanContentScroll" Value="True" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<BooleanToVisibilityConverter x:Key="bool2VisibilityConverter" />
+	<!--<Style TargetType="{x:Type DataGridRowHeader}">
+		<Setter Property="Width" Value="25" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type DataGridRowHeader}">
+					<Grid>
+						<Microsoft_Windows_Themes:DataGridHeaderBorder Background="{TemplateBinding Background}"
+						                                               BorderBrush="{TemplateBinding BorderBrush}"
+						                                               BorderThickness="{TemplateBinding BorderThickness}"
+						                                               IsHovered="{TemplateBinding IsMouseOver}"
+						                                               IsPressed="{TemplateBinding IsPressed}"
+						                                               IsSelected="{TemplateBinding IsRowSelected}"
+						                                               Orientation="Horizontal"
+						                                               Padding="{TemplateBinding Padding}"
+						                                               SeparatorBrush="{TemplateBinding SeparatorBrush}"
+						                                               SeparatorVisibility="{TemplateBinding SeparatorVisibility}">
+							<StackPanel Orientation="Horizontal">
+								<ContentPresenter VerticalAlignment="Center" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+								<Control SnapsToDevicePixels="false"
+								         Template="{Binding ValidationErrorTemplate,
+								                            RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}"
+								         Visibility="{Binding (Validation.HasError),
+								                              Converter={StaticResource bool2VisibilityConverter},
+								                              RelativeSource={RelativeSource AncestorType={x:Type DataGridRow}}}" />
+							</StackPanel>
+						</Microsoft_Windows_Themes:DataGridHeaderBorder>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>-->
+    <!-- Simple Expander Button's Template-->
+    <ControlTemplate x:Key="SimpleExpanderButtonTemp" TargetType="{x:Type ToggleButton}">
+        <Border x:Name="ExpanderButtonBorder"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}"
+                    >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Fill="Transparent"
+                               Grid.ColumnSpan="2"/>
+                <Ellipse Name="Circle"
+                         Grid.Column="0"
+                         Stroke="DarkGray"
+                         Width="20"
+                         Height="20"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         />
+                <Path x:Name="Sign"
+                      Grid.Column="0"
+                      Data="M 0,5 H 10 M 5,0 V 10 Z"
+                      Stroke="#FF666666"
+                      Width="10"
+                      Height="10"
+                      StrokeThickness="2"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      RenderTransformOrigin="0.5,0.5"
+                      />
+                <ContentPresenter x:Name="HeaderContent" VerticalAlignment="Center"
+                                  Grid.Column="1"
+                                  Margin="4,0,0,0"
+                                  ContentSource="Content"/>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <!--Change the sign to minus when toggled-->
+            <Trigger Property="IsChecked"
+                         Value="True">
+                <Setter Property="Data" TargetName="Sign" Value="M 0,5 H 10 Z"/>
+            </Trigger>
+
+            <!-- MouseOver, Pressed behaviours-->
+            <Trigger Property="IsMouseOver"
+                                 Value="true">
+                <Setter Property="Stroke"
+                                    Value="#FF3C7FB1"
+                                    TargetName="Circle"/>
+                <Setter Property="Stroke"
+                                    Value="#222"
+                                    TargetName="Sign"/>
+            </Trigger>
+            <Trigger Property="IsPressed"
+                                 Value="true">
+                <Setter Property="Stroke"
+                                    Value="#FF526C7B"
+                                    TargetName="Circle"/>
+                <Setter Property="StrokeThickness"
+                                    Value="1.5"
+                                    TargetName="Circle"/>
+                <Setter Property="Stroke"
+                                    Value="#FF003366"
+                                    TargetName="Sign"/>
+            </Trigger>
+            <Trigger Property="FocusVisualStyle" Value="{x:Null}"/>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Simple Expander Template-->
+    <ControlTemplate x:Key="SimpleExpanderTemp" TargetType="{x:Type Expander}">
+        <DockPanel FocusVisualStyle="{x:Null}">
+            <ToggleButton x:Name="ExpanderButton" 
+                              DockPanel.Dock="Top"
+                              Template="{StaticResource SimpleExpanderButtonTemp}"
+                              Content="{TemplateBinding Header}"
+                              IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                              OverridesDefaultStyle="True"
+                              Padding="1.5,0">
+            </ToggleButton>
+            <ContentPresenter x:Name="ExpanderContent"
+                                  Grid.Row="1" 
+                                  Visibility="Collapsed"
+                                  DockPanel.Dock="Bottom" />
+        </DockPanel>
+        <ControlTemplate.Triggers>
+            <Trigger Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Trigger Property="IsExpanded" Value="True">
+                <Setter TargetName="ExpanderContent" Property="Visibility" Value="Visible"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Animated Expander Button's Template-->
+    <ControlTemplate x:Key="AnimatedExpanderButtonTemp" TargetType="{x:Type ToggleButton}">
+        <Border x:Name="ExpanderButtonBorder"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}"
+                    Padding="{TemplateBinding Padding}"
+                    >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Fill="Transparent"
+                               Grid.ColumnSpan="2"/>
+                <Ellipse Name="Circle"
+                         Grid.Column="0"
+                         Stroke="DarkGray"
+                         Width="20"
+                         Height="20"
+                         HorizontalAlignment="Center"
+                         VerticalAlignment="Center"
+                         />
+                <Path x:Name="Arrow"
+                      Grid.Column="0"
+                      Data="M 1,1.5 L 4.5,5 8,1.5"
+                      Stroke="#FF666666"
+                      StrokeThickness="2"
+                      HorizontalAlignment="Center"
+                      VerticalAlignment="Center"
+                      RenderTransformOrigin="0.5,0.5"
+                      >
+                    <Path.RenderTransform>
+                        <RotateTransform Angle="0"/>
+                    </Path.RenderTransform>
+                </Path>
+                <ContentPresenter x:Name="HeaderContent"
+                                      Grid.Column="1"
+                                      Margin="4,0,0,0"
+                                      ContentSource="Content"/>
+            </Grid>
+        </Border>
+        <ControlTemplate.Triggers>
+            <!-- Animate arrow when toggled-->
+            <Trigger Property="IsChecked"
+                         Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Arrow"
+                                                 Storyboard.TargetProperty="(Path.RenderTransform).(RotateTransform.Angle)"
+                                                 To="180"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="Arrow"
+                                                 Storyboard.TargetProperty="(Path.RenderTransform).(RotateTransform.Angle)"
+                                                 To="0"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+            <!-- MouseOver, Pressed behaviours-->
+            <Trigger Property="IsMouseOver"
+                                 Value="true">
+                <Setter Property="Stroke"
+                                    Value="#FF3C7FB1"
+                                    TargetName="Circle"/>
+                <Setter Property="Stroke"
+                                    Value="#222"
+                                    TargetName="Arrow"/>
+            </Trigger>
+            <Trigger Property="IsPressed"
+                                 Value="true">
+                <Setter Property="Stroke"
+                                    Value="#FF526C7B"
+                                    TargetName="Circle"/>
+                <Setter Property="StrokeThickness"
+                                    Value="1.5"
+                                    TargetName="Circle"/>
+                <Setter Property="Stroke"
+                                    Value="#FF003366"
+                                    TargetName="Arrow"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Stretch Out Content Expander's Template,
+        Uses: AnimatedExpanderButtonTemp from above-->
+    <ControlTemplate x:Key="StretchyExpanderTemp" TargetType="{x:Type Expander}">
+        <DockPanel>
+            <ToggleButton x:Name="ExpanderButton" 
+                              DockPanel.Dock="Top"
+                              Template="{StaticResource AnimatedExpanderButtonTemp}"
+                              Content="{TemplateBinding Header}"
+                              IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                              OverridesDefaultStyle="True"
+                              Padding="1.5,0">
+            </ToggleButton>
+            <ContentPresenter x:Name="ExpanderContent"
+                                  ContentSource="Content"
+                                  DockPanel.Dock="Bottom"
+                                  >
+                <ContentPresenter.LayoutTransform>
+                    <ScaleTransform ScaleY="0"/>
+                </ContentPresenter.LayoutTransform>
+            </ContentPresenter>
+        </DockPanel>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsExpanded" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContent"
+                                                 Storyboard.TargetProperty="(ContentPresenter.LayoutTransform).(ScaleTransform.ScaleY)"                                                 
+                                                 To="1"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContent"
+                                                 Storyboard.TargetProperty="(ContentPresenter.LayoutTransform).(ScaleTransform.ScaleY)"
+                                                 To="0"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <!-- Slide Out Content Expander's Template, 
+        Uses: AnimatedExpanderButtonTemp from above, 
+              MultiplyConverter in codebehind-->
+    <local:MultiplyConverter x:Key="multiplyConverter" />
+    <ControlTemplate x:Key="RevealExpanderTemp" TargetType="{x:Type Expander}">
+        <DockPanel>
+            <ToggleButton x:Name="ExpanderButton" 
+                              DockPanel.Dock="Top"
+                              Template="{StaticResource AnimatedExpanderButtonTemp}"
+                              Content="{TemplateBinding Header}"
+                              IsChecked="{Binding Path=IsExpanded, RelativeSource={RelativeSource TemplatedParent}}"
+                              OverridesDefaultStyle="True"
+                              Padding="1.5,0">
+            </ToggleButton>
+            <ScrollViewer x:Name="ExpanderContentScrollView" DockPanel.Dock="Bottom"
+                              HorizontalScrollBarVisibility="Hidden"
+                              VerticalScrollBarVisibility="Hidden"
+                              HorizontalContentAlignment="Stretch"
+                              VerticalContentAlignment="Bottom"
+                              >
+                <ScrollViewer.Tag>
+                    <sys:Double>0.0</sys:Double>
+                </ScrollViewer.Tag>
+                <ScrollViewer.Height>
+                    <MultiBinding Converter="{StaticResource multiplyConverter}">
+                        <Binding Path="ActualHeight" ElementName="ExpanderContent"/>
+                        <Binding Path="Tag" RelativeSource="{RelativeSource Self}" />
+                    </MultiBinding>
+                </ScrollViewer.Height>
+                <ContentPresenter x:Name="ExpanderContent" ContentSource="Content"/>
+            </ScrollViewer>
+        </DockPanel>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsExpanded" Value="True">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContentScrollView"
+                                                 Storyboard.TargetProperty="Tag"                                                 
+                                                 To="1"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetName="ExpanderContentScrollView"
+                                                 Storyboard.TargetProperty="Tag"                                                 
+                                                 To="0"
+                                                 Duration="0:0:0.4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+</ResourceDictionary>

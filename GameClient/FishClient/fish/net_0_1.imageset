@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="net_0_1" Image="fish\net_0_1.png" NativeHorzRes="2048" NativeVertRes="256" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="220" Height="220" />
+  <Image Name="1" XPos="220" YPos="0" Width="220" Height="220" />
+  <Image Name="2" XPos="440" YPos="0" Width="220" Height="220" />
+  <Image Name="3" XPos="660" YPos="0" Width="220" Height="220" />
+  <Image Name="4" XPos="880" YPos="0" Width="220" Height="220" />
+  <Image Name="5" XPos="1100" YPos="0" Width="220" Height="220" />
+  <Image Name="6" XPos="1320" YPos="0" Width="220" Height="220" />
+  <Image Name="7" XPos="1540" YPos="0" Width="220" Height="220" />
+</Imageset>
+
+

@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EE3B8D84-91CF-43DC-A6D4-1F1EBB0FB18B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Resources</RootNamespace>
+    <AssemblyName>Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>kuaikuai.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\PromptNotice.png" />
+    <Resource Include="image\star0.png" />
+    <Resource Include="image\star1.png" />
+    <Resource Include="image\UserNotice.png" />
+    <Resource Include="kuaikuai.ico" />
+    <Resource Include="image\Add.png" />
+    <Resource Include="image\Audi.gif" />
+    <Resource Include="image\b9m0_0.png" />
+    <Resource Include="image\backGround.jpg" />
+    <Resource Include="image\BackImage\BlueBack.jpg" />
+    <Resource Include="image\BackImage\GreenBack.jpg" />
+    <Resource Include="image\BackImage\PinkBack.jpg" />
+    <Resource Include="image\BackImage\TreeBack.jpg" />
+    <Resource Include="Icons\away.ico" />
+    <Resource Include="Icons\blank.ico" />
+    <Resource Include="Icons\Bulb.ico" />
+    <Resource Include="Icons\busy.ico" />
+    <Resource Include="Icons\Computers.ico" />
+    <Resource Include="Icons\Error.ico" />
+    <Resource Include="Icons\imoffline.ico" />
+    <Resource Include="Icons\imonline.ico" />
+    <Resource Include="Icons\Inactive.ico" />
+    <Resource Include="Icons\invisible.ico" />
+    <Resource Include="Icons\mute.ico" />
+    <Resource Include="Icons\NetDrives.ico" />
+    <Resource Include="Icons\Qme.ico" />
+    <Resource Include="Icons\striped.ico" />
+    <Resource Include="image\AdminNotice.png" />
+    <Resource Include="Icons\BumperCarClient.ico" />
+    <Resource Include="Icons\DiceClient.ico" />
+    <Resource Include="Icons\HorseClient.ico" />
+    <Resource Include="image\GameLogo.png" />
+    <Resource Include="image\Benz.gif" />
+    <Resource Include="image\best.png" />
+    <Resource Include="image\bg.png" />
+    <Resource Include="image\BMW.gif" />
+    <Resource Include="image\ChatRoomIcon\aio_quickbar_twitter.png" />
+    <Resource Include="image\ChatRoomIcon\emotionFace_16.png" />
+    <Resource Include="image\ChatRoomIcon\font.png" />
+    <Resource Include="image\ChatRoomIcon\videowindow.PNG" />
+    <Resource Include="image\Close.png" />
+    <Resource Include="image\co_btn_delete.gif" />
+    <Resource Include="image\co_btn_modify.gif" />
+    <Resource Include="image\default.gif" />
+    <Resource Include="image\diceGame\BT_JETTON_100_1.png" />
+    <Resource Include="image\diceGame\BT_JETTON_100_2.png" />
+    <Resource Include="image\diceGame\BT_JETTON_100_3.png" />
+    <Resource Include="image\diceGame\BT_JETTON_10_1.png" />
+    <Resource Include="image\diceGame\BT_JETTON_10_2.png" />
+    <Resource Include="image\diceGame\BT_JETTON_10_3.png" />
+    <Resource Include="image\diceGame\BT_JETTON_500_1.png" />
+    <Resource Include="image\diceGame\BT_JETTON_500_2.png" />
+    <Resource Include="image\diceGame\BT_JETTON_500_3.png" />
+    <Resource Include="image\diceGame\BT_JETTON_50_1.png" />
+    <Resource Include="image\diceGame\BT_JETTON_50_2.png" />
+    <Resource Include="image\diceGame\BT_JETTON_50_3.png" />
+    <Resource Include="image\diceGame\BT_JETTON_5_1.png" />
+    <Resource Include="image\diceGame\BT_JETTON_5_2.png" />
+    <Resource Include="image\diceGame\BT_JETTON_5_3.png" />
+    <Resource Include="image\diceGame\Chip10.png" />
+    <Resource Include="image\diceGame\Chip100.png" />
+    <Resource Include="image\diceGame\Chip1000.png" />
+    <Resource Include="image\diceGame\Chip10000.png" />
+    <Resource Include="image\diceGame\Chip100000.png" />
+    <Resource Include="image\diceGame\Chip5.png" />
+    <Resource Include="image\diceGame\Chip50.png" />
+    <Resource Include="image\diceGame\Chip500.png" />
+    <Resource Include="image\diceGame\Chip500000.png" />
+    <Resource Include="image\diceGame\DanPanel.png" />
+    <Resource Include="image\diceGame\DaPanel.png" />
+    <Resource Include="image\diceGame\dice1.gif" />
+    <Resource Include="image\diceGame\dice2.gif" />
+    <Resource Include="image\diceGame\dice3.gif" />
+    <Resource Include="image\diceGame\dice4.gif" />
+    <Resource Include="image\diceGame\dice5.gif" />
+    <Resource Include="image\diceGame\dice6.gif" />
+    <Resource Include="image\diceGame\DiceGameBackground.jpg" />
+    <Resource Include="image\diceGame\mark.png" />
+    <Resource Include="image\diceGame\Num0.png" />
+    <Resource Include="image\diceGame\Num1.png" />
+    <Resource Include="image\diceGame\Num2.png" />
+    <Resource Include="image\diceGame\Num3.png" />
+    <Resource Include="image\diceGame\Num4.png" />
+    <Resource Include="image\diceGame\Num5.png" />
+    <Resource Include="image\diceGame\Num6.png" />
+    <Resource Include="image\diceGame\Num7.png" />
+    <Resource Include="image\diceGame\Num8.png" />
+    <Resource Include="image\diceGame\Num9.png" />
+    <Resource Include="image\diceGame\SCORE_10.cur" />
+    <Resource Include="image\diceGame\SCORE_100.cur" />
+    <Resource Include="image\diceGame\SCORE_5.cur" />
+    <Resource Include="image\diceGame\SCORE_50.cur" />
+    <Resource Include="image\diceGame\SCORE_500.cur" />
+    <Resource Include="image\diceGame\ShuangPanel.png" />
+    <Resource Include="image\diceGame\VolumnClose.png" />
+    <Resource Include="image\diceGame\VolumnOpen.png" />
+    <Resource Include="image\diceGame\XiaoPanel.png" />
+    <Resource Include="image\diceGame\YellowSqure.png" />
+    <Resource Include="image\dot2.png" />
+    <Resource Include="image\Download-icon.png" />
+    <Resource Include="image\EmoticonButton1.png" />
+    <Resource Include="image\emoticon\0.gif" />
+    <Resource Include="image\emoticon\1.gif" />
+    <Resource Include="image\emoticon\10.gif" />
+    <Resource Include="image\emoticon\11.gif" />
+    <Resource Include="image\emoticon\12.gif" />
+    <Resource Include="image\emoticon\13.gif" />
+    <Resource Include="image\emoticon\14.gif" />
+    <Resource Include="image\emoticon\15.gif" />
+    <Resource Include="image\emoticon\16.gif" />
+    <Resource Include="image\emoticon\17.gif" />
+    <Resource Include="image\emoticon\18.gif" />
+    <Resource Include="image\emoticon\19.gif" />
+    <Resource Include="image\emoticon\2.gif" />
+    <Resource Include="image\emoticon\20.gif" />
+    <Resource Include="image\emoticon\21.gif" />
+    <Resource Include="image\emoticon\22.gif" />
+    <Resource Include="image\emoticon\23.gif" />
+    <Resource Include="image\emoticon\24.gif" />
+    <Resource Include="image\emoticon\25.gif" />
+    <Resource Include="image\emoticon\26.gif" />
+    <Resource Include="image\emoticon\27.gif" />
+    <Resource Include="image\emoticon\28.gif" />
+    <Resource Include="image\emoticon\29.gif" />
+    <Resource Include="image\emoticon\3.gif" />
+    <Resource Include="image\emoticon\30.gif" />
+    <Resource Include="image\emoticon\31.gif" />
+    <Resource Include="image\emoticon\32.gif" />
+    <Resource Include="image\emoticon\33.gif" />
+    <Resource Include="image\emoticon\34.gif" />
+    <Resource Include="image\emoticon\35.gif" />
+    <Resource Include="image\emoticon\36.gif" />
+    <Resource Include="image\emoticon\37.gif" />
+    <Resource Include="image\emoticon\38.gif" />
+    <Resource Include="image\emoticon\39.gif" />
+    <Resource Include="image\emoticon\4.gif" />
+    <Resource Include="image\emoticon\40.gif" />
+    <Resource Include="image\emoticon\41.gif" />
+    <Resource Include="image\emoticon\42.gif" />
+    <Resource Include="image\emoticon\43.gif" />
+    <Resource Include="image\emoticon\44.gif" />
+    <Resource Include="image\emoticon\45.gif" />
+    <Resource Include="image\emoticon\46.gif" />
+    <Resource Include="image\emoticon\47.gif" />
+    <Resource Include="image\emoticon\48.gif" />
+    <Resource Include="image\emoticon\49.gif" />
+    <Resource Include="image\emoticon\5.gif" />
+    <Resource Include="image\emoticon\50.gif" />
+    <Resource Include="image\emoticon\51.gif" />
+    <Resource Include="image\emoticon\52.gif" />
+    <Resource Include="image\emoticon\53.gif" />
+    <Resource Include="image\emoticon\54.gif" />
+    <Resource Include="image\emoticon\55.gif" />
+    <Resource Include="image\emoticon\56.gif" />
+    <Resource Include="image\emoticon\57.gif" />
+    <Resource Include="image\emoticon\58.gif" />
+    <Resource Include="image\emoticon\59.gif" />
+    <Resource Include="image\emoticon\6.gif" />
+    <Resource Include="image\emoticon\60.gif" />
+    <Resource Include="image\emoticon\61.gif" />
+    <Resource Include="image\emoticon\7.gif" />
+    <Resource Include="image\emoticon\8.gif" />
+    <Resource Include="image\emoticon\9.gif" />
+    <Resource Include="image\face\1.gif" />
+    <Resource Include="image\face\10.gif" />
+    <Resource Include="image\face\11.gif" />
+    <Resource Include="image\face\12.gif" />
+    <Resource Include="image\face\13.gif" />
+    <Resource Include="image\face\14.gif" />
+    <Resource Include="image\face\15.gif" />
+    <Resource Include="image\face\16.gif" />
+    <Resource Include="image\face\17.gif" />
+    <Resource Include="image\face\18.gif" />
+    <Resource Include="image\face\19.gif" />
+    <Resource Include="image\face\2.gif" />
+    <Resource Include="image\face\20.gif" />
+    <Resource Include="image\face\21.gif" />
+    <Resource Include="image\face\22.gif" />
+    <Resource Include="image\face\23.gif" />
+    <Resource Include="image\face\24.gif" />
+    <Resource Include="image\face\25.gif" />
+    <Resource Include="image\face\26.gif" />
+    <Resource Include="image\face\27.gif" />
+    <Resource Include="image\face\28.gif" />
+    <Resource Include="image\face\29.gif" />
+    <Resource Include="image\face\3.gif" />
+    <Resource Include="image\face\30.gif" />
+    <Resource Include="image\face\31.gif" />
+    <Resource Include="image\face\32.gif" />
+    <Resource Include="image\face\33.gif" />
+    <Resource Include="image\face\34.gif" />
+    <Resource Include="image\face\35.gif" />
+    <Resource Include="image\face\36.gif" />
+    <Resource Include="image\face\37.gif" />
+    <Resource Include="image\face\38.gif" />
+    <Resource Include="image\face\39.gif" />
+    <Resource Include="image\face\4.gif" />
+    <Resource Include="image\face\40.gif" />
+    <Resource Include="image\face\41.gif" />
+    <Resource Include="image\face\42.gif" />
+    <Resource Include="image\face\43.gif" />
+    <Resource Include="image\face\44.gif" />
+    <Resource Include="image\face\45.gif" />
+    <Resource Include="image\face\46.gif" />
+    <Resource Include="image\face\47.gif" />
+    <Resource Include="image\face\48.gif" />
+    <Resource Include="image\face\49.gif" />
+    <Resource Include="image\face\5.gif" />
+    <Resource Include="image\face\50.gif" />
+    <Resource Include="image\face\51.gif" />
+    <Resource Include="image\face\52.gif" />
+    <Resource Include="image\face\53.gif" />
+    <Resource Include="image\face\54.gif" />
+    <Resource Include="image\face\55.gif" />
+    <Resource Include="image\face\56.gif" />
+    <Resource Include="image\face\57.gif" />
+    <Resource Include="image\face\58.gif" />
+    <Resource Include="image\face\59.gif" />
+    <Resource Include="image\face\6.gif" />
+    <Resource Include="image\face\60.gif" />
+    <Resource Include="image\face\7.gif" />
+    <Resource Include="image\face\8.gif" />
+    <Resource Include="image\face\9.gif" />
+    <Resource Include="image\face\DefaultHeadImage.png" />
+    <Resource Include="image\filmPlay.gif" />
+    <Resource Include="image\FontButton.png" />
+    <Resource Include="image\friend.png" />
+    <Resource Include="image\friend1.png" />
+    <Resource Include="image\GameCashIcon.png" />
+    <Resource Include="image\gameHome.png" />
+    <Resource Include="image\GameImage\carGame.jpg" />
+    <Resource Include="image\GameImage\carGameResult.jpg" />
+    <Resource Include="image\GameImage\diceGame.jpg" />
+    <Resource Include="image\GameImage\diceGameResult.jpg" />
+    <Resource Include="image\GameImage\horseGame.jpg" />
+    <Resource Include="image\GameImage\horseGameResult.jpg" />
+    <Resource Include="image\GamePointIcon.png" />
+    <Resource Include="image\heart.png" />
+    <Resource Include="image\heart1.png" />
+    <Resource Include="image\home.png" />
+    <Resource Include="image\HorSeperator.gif" />
+    <Resource Include="image\icon1.gif" />
+    <Resource Include="image\ChatRoomIcon\AV_Accept.png" />
+    <Resource Include="image\ChatRoomIcon\AV_Refuse.png" />
+    <Resource Include="image\ChatRoomIcon\HDVideoHangs.png" />
+    <Resource Include="image\ChatRoomIcon\VideoWaitToAnswer.png" />
+    <Resource Include="image\ChatRoomIcon\Pen.png" />
+    <Resource Include="image\ChatRoomIcon\writing-icon.gif" />
+    <Resource Include="image\GoldCoin.jpg" />
+    <Resource Include="image\Coin.png" />
+    <Resource Include="image\diceGame\Background.jpg" />
+    <Resource Include="image\Chip100.png" />
+    <Resource Include="image\Chip1000.png" />
+    <Resource Include="image\Chip100000.png" />
+    <Resource Include="image\Chip10000.png" />
+    <Resource Include="image\Chip500000.png" />
+    <Resource Include="image\GameBackground.png" />
+    <Resource Include="image\GameTitle.png" />
+    <Resource Include="image\diceGame\btnHelp.png" />
+    <Resource Include="image\img_CaptionButtons\btn_close_down.png" />
+    <Resource Include="image\img_CaptionButtons\btn_close_highlight.png" />
+    <Resource Include="image\img_CaptionButtons\btn_close_normal.png" />
+    <Resource Include="image\img_CaptionButtons\btn_max_down.png" />
+    <Resource Include="image\img_CaptionButtons\btn_max_highlight.png" />
+    <Resource Include="image\img_CaptionButtons\btn_max_normal.png" />
+    <Resource Include="image\img_CaptionButtons\btn_mini_down.png" />
+    <Resource Include="image\img_CaptionButtons\btn_mini_highlight.png" />
+    <Resource Include="image\img_CaptionButtons\btn_mini_normal.png" />
+    <Resource Include="image\img_CaptionButtons\btn_restore_down.png" />
+    <Resource Include="image\img_CaptionButtons\btn_restore_highlight.png" />
+    <Resource Include="image\img_CaptionButtons\btn_restore_normal.png" />
+    <Resource Include="image\kuaikuai.ico" />
+    <Resource Include="image\loginPan.jpg" />
+    <Resource Include="image\M.png" />
+    <Resource Include="image\main_Pan1.png" />
+    <Resource Include="image\main_Pan2.jpg" />
+    <Resource Include="image\menu2.gif" />
+    <Resource Include="image\menu3.gif" />
+    <Resource Include="image\menu5.gif" />
+    <Resource Include="image\menu6.gif" />
+    <Resource Include="image\menuicon\aio_toobar_app.png" />
+    <Resource Include="image\menuicon\aio_toobar_Report.png" />
+    <Resource Include="image\menuicon\colour.png" />
+    <Resource Include="image\menuicon\email-receive-icon.png" />
+    <Resource Include="image\menuicon\email-send-icon.png" />
+    <Resource Include="image\menuicon\Home.png" />
+    <Resource Include="image\menuicon\mail.png" />
+    <Resource Include="image\menuicon\Messagebox18.PNG" />
+    <Resource Include="image\menuicon\money.png" />
+    <Resource Include="image\menuicon\purse18.png" />
+    <Resource Include="image\menuicon\Tools.png" />
+    <Resource Include="image\mic.png" />
+    <Resource Include="image\msgmgr.png" />
+    <Resource Include="image\NoCamera.png" />
+    <Resource Include="image\new_vip.png" />
+    <Resource Include="image\loading.gif" />
+    <Resource Include="image\novideo.png" />
+    <Resource Include="image\point.png" />
+    <Resource Include="image\pointRoom.gif" />
+    <Resource Include="image\prenext.png" />
+    <Resource Include="image\present\1.png" />
+    <Resource Include="image\present\10.png" />
+    <Resource Include="image\present\11.png" />
+    <Resource Include="image\present\12.png" />
+    <Resource Include="image\present\13.png" />
+    <Resource Include="image\present\14.png" />
+    <Resource Include="image\present\15.png" />
+    <Resource Include="image\present\16.png" />
+    <Resource Include="image\present\17.png" />
+    <Resource Include="image\present\18.png" />
+    <Resource Include="image\present\19.png" />
+    <Resource Include="image\present\2.png" />
+    <Resource Include="image\present\20.png" />
+    <Resource Include="image\present\21.png" />
+    <Resource Include="image\present\22.png" />
+    <Resource Include="image\present\23.png" />
+    <Resource Include="image\present\24.png" />
+    <Resource Include="image\present\25.png" />
+    <Resource Include="image\present\3.png" />
+    <Resource Include="image\present\4.png" />
+    <Resource Include="image\present\5.png" />
+    <Resource Include="image\present\6.png" />
+    <Resource Include="image\present\7.png" />
+    <Resource Include="image\present\8.png" />
+    <Resource Include="image\present\9.png" />
+    <Resource Include="image\profile.png" />
+    <Resource Include="image\Remove.png" />
+    <Resource Include="image\rose2.png" />
+    <Resource Include="image\search.gif" />
+    <Resource Include="image\seprater.gif" />
+    <Resource Include="image\star2.png" />
+    <Resource Include="image\star3.png" />
+    <Resource Include="image\star4.png" />
+    <Resource Include="image\star5.png" />
+    <Resource Include="image\Renminbi.png" />
+    <Resource Include="image\UserState\chat-away.ico" />
+    <Resource Include="image\UserState\chat-busy.ico" />
+    <Resource Include="image\UserState\chat-offline.ico" />
+    <Resource Include="image\UserState\chat.ico" />
+    <Resource Include="image\video.png" />
+    <Resource Include="image\VideoCall\vc-endcall.png" />
+    <Resource Include="image\VideoCall\vc-startcall.png" />
+    <Resource Include="image\vip.gif" />
+    <Resource Include="image\webcamIcon.png" />
+    <Resource Include="image\Wg.gif" />
+    <Resource Include="image\yellow_star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="image\Chip100000_1.png" />
+    <Resource Include="image\Chip10000_1.png" />
+    <Resource Include="image\Chip1000_1.png" />
+    <Resource Include="image\Chip100_1.png" />
+    <Resource Include="image\Chip500000_1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,44 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	x:Class="ChatClient.RecieveChatting"
+	x:Name="Window"
+    Style="{DynamicResource MainWindowStyle}"
+	Title="HBMessenger"
+	Width="370" Height="256" ResizeMode="NoResize" mc:Ignorable="d">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/StyleTheme/RecievChatGeneric.xaml" />
+                <ResourceDictionary Source="/StyleTheme/CommonDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    
+	<Grid x:Name="LayoutRoot" Margin="0,-11,0,11">
+        <Grid HorizontalAlignment="Left" Margin="14,19,0,0" Width="80" Name="faceGrid" Height="83" VerticalAlignment="Top" >
+            <Ellipse Fill="White" Stroke="White" StrokeThickness="2" Name="myPicture" Margin="0,0,0,0" />
+        </Grid>
+        
+          
+        
+        <Label Height="28" HorizontalAlignment="Left" Margin="97,18,0,0" x:Name="label1" VerticalAlignment="Top" Width="55" Content="別  名:" FontFamily="SimSun" Foreground="Black" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="96,45,0,0" x:Name="label2" VerticalAlignment="Top" Width="56" Content="评  价:" FontFamily="SimSun" Foreground="Black" />
+        <Label HorizontalAlignment="Left" Margin="96,75,0,0" x:Name="label3" Width="56" VerticalAlignment="Top" Height="27" Content="房价格:" FontFamily="SimSun" Foreground="Black" />
+        <Label Height="25" Margin="156,20,54,0" Name="nickName" VerticalAlignment="Top" FontFamily="SimSun" Foreground="Black" />
+        <Label Height="25" Margin="154,45,72,0" Name="marklabel" VerticalAlignment="Top" FontFamily="SimSun" Foreground="Black" />
+        <Label Margin="154,74,56,85" Name="pricestate" FontFamily="SimSun" Foreground="Black" />
+        <Button Height="23" Margin="144,0,0,-7" Name="button1" VerticalAlignment="Bottom" Foreground="Black" Click="button1_Click" HorizontalAlignment="Left" Width="75">接受</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,18,-7" Name="button2" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button2_Click">拒绝</Button>
+        <Grid HorizontalAlignment="Left" Margin="2,-20,0,0" VerticalAlignment="Top" Width="22" Height="23">
+        	<Image Margin="0,0,-4,-2" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+        <Grid Margin="12,108,6,22" Name="grid1" >
+            <ScrollViewer Style="{DynamicResource ScrollViewerStyle}">
+                <TextBlock Name="textBlock1" TextWrapping="WrapWithOverflow" ScrollViewer.HorizontalScrollBarVisibility="Disabled" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Imageset Name="change_eff" Image="fish\change_eff.png" NativeHorzRes="512" NativeVertRes="512" AutoScaled="false">
+  <Image Name="0" XPos="0" YPos="0" Width="450" Height="238" />
+  <Image Name="1" XPos="450" YPos="0" Width="450" Height="238" />
+  <Image Name="2" XPos="900" YPos="0" Width="450" Height="238" />
+  <Image Name="3" XPos="1350" YPos="0" Width="450" Height="238" />
+  <Image Name="4" XPos="1800" YPos="0" Width="450" Height="238" />
+  <Image Name="5" XPos="2250" YPos="0" Width="450" Height="238" />
+  <Image Name="6" XPos="2700" YPos="0" Width="450" Height="238" />
+  <Image Name="7" XPos="3150" YPos="0" Width="450" Height="238" />
+  <Image Name="8" XPos="3600" YPos="0" Width="450" Height="238" />
+  <Image Name="9" XPos="4050" YPos="0" Width="450" Height="238" />
+  <Image Name="10" XPos="4500" YPos="0" Width="450" Height="238" />
+  <Image Name="11" XPos="4950" YPos="0" Width="450" Height="238" />
+  <Image Name="12" XPos="5400" YPos="0" Width="450" Height="238" />
+  <Image Name="13" XPos="5850" YPos="0" Width="450" Height="238" />
+
+
+
+
+</Imageset>
+
+

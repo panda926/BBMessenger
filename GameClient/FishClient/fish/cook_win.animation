@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="cook_win" Delay="0.33" >
+  <Image Set="cook" Name="cook_win_0"  />
+  <Image Set="cook" Name="cook_win_1"  />
+  <Image Set="cook" Name="cook_win_2"  />
+  <Image Set="cook" Name="cook_win_3"  />
+  <Image Set="cook" Name="cook_win_4"  />
+  <Image Set="cook" Name="cook_win_5"  />
+  <Image Set="cook" Name="cook_win_6"  />
+  <Image Set="cook" Name="cook_win_7"  />
+  <Image Set="cook" Name="cook_win_8"  />
+  <Image Set="cook" Name="cook_win_9"  />
+
+</Animation>

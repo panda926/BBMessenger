@@ -1,0 +1,41 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.RoomUserControl"
+    Height="55" Width="260" mc:Ignorable="d">
+    <Grid Name="roomGrid" MouseEnter="roomGrid_MouseEnter" MouseLeave="roomGrid_MouseLeave"  Cursor="Hand" MouseDown="roomGrid_MouseDown">
+    	<Image HorizontalAlignment="Left" Margin="2.75,1,0,1" Width="48" Source="/Resources;component/image/default.gif" Stretch="Fill" Name="roomIcon" Height="48"/>
+    	<Grid Margin="59.25,0.333,8,24.167">
+    		<Label Content="Label" d:LayoutOverrides="Width, Height" FontSize="10.667" Margin="0" Name="roomName"/>
+    	</Grid>
+    	<!--<Grid Margin="59.25,0,80.5,0.5" VerticalAlignment="Bottom" Height="22.75">
+    		<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="0.019*"/>
+    			<ColumnDefinition Width="0.114*"/>
+    			<ColumnDefinition Width="0.355*"/>
+    			<ColumnDefinition Width="0.266*"/>
+    			<ColumnDefinition Width="0.246*"/>
+    		</Grid.ColumnDefinitions>
+    		<Image Margin="0.171,4.507,1.071,0" Grid.Column="1" Source="/Resources;component/image/best.png" Stretch="Fill" VerticalAlignment="Top" Height="14.743"/>
+    		<Label Content="100/500" Grid.Column="2" FontSize="10.667" Margin="1.663,0,14,0" Name="roomCount" Grid.ColumnSpan="2" />
+    		<Label Content="价  格:" Margin="42,0,23,0" Grid.Column="2" FontSize="10.667" Grid.ColumnSpan="3" />
+    		<Label Content="1500" Margin="0.093,0,-24,0" Grid.Column="4" FontSize="10.667" Name="roomValue" />
+    	</Grid>-->
+    	<Grid VerticalAlignment="Bottom" Height="20.4" Name="roomSetting" Margin="59.25,0,8,0" MouseLeave="roomSetting_MouseLeave" MouseEnter="roomSetting_MouseEnter" Visibility="Hidden">
+    		<Grid.ColumnDefinitions>
+    			<ColumnDefinition Width="14.2*"/>
+                <ColumnDefinition Width="20.4*" />
+                <ColumnDefinition Width="74*" />
+                <ColumnDefinition Width="21.8*"/>
+    			<ColumnDefinition Width="15.2*"/>
+    			<ColumnDefinition Width="22.6*"/>
+    			<ColumnDefinition Width="24.55*"/>
+    		</Grid.ColumnDefinitions>
+            <Image Margin="0.171,0,1.071,1.15" Grid.Column="1" Source="/Resources;component/image/best.png" Stretch="Fill" />
+            <Label Content="100" Grid.Column="2" FontSize="10.667" Margin="0.6,0,0,0" Name="roomCount" Padding="2" />
+    		<Image Margin="2,0,0,1.75" Source="/Resources;component/image/co_btn_modify.gif" Stretch="Fill" MouseUp="roomModify_MouseUp" ToolTip="修改" Grid.Column="3" />
+    		<Image Margin="2,0,1.6,1.75" Grid.Column="5" Source="/Resources;component/image/co_btn_delete.gif" Stretch="Fill" MouseUp="roomDelete_MouseUp" ToolTip="删除" />
+    	</Grid>
+            
+    </Grid>
+</UserControl>

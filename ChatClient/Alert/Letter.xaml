@@ -1,0 +1,30 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	x:Class="ChatClient.Letter"
+	x:Name="Window"
+    Style="{DynamicResource MainWindowStyle}"
+	Title="HBMessenger"
+	Width="370" Height="220" ResizeMode="NoResize" mc:Ignorable="d" Icon="/Resources;component/image/kuaikuai.ico">
+
+    <!--<Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/StyleTheme/LetterGeneric.xaml" />
+                <ResourceDictionary Source="/StyleTheme/CommonDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>-->
+    
+	<Grid x:Name="LayoutRoot">
+		<Label  VerticalAlignment="Top" Content="別  名:" Margin="114,0,0,0" FontWeight="Bold" d:LayoutOverrides="HorizontalAlignment" Height="25" FontSize="12" Foreground="Black" HorizontalAlignment="Left" Width="50" />
+		<Label  VerticalAlignment="Top" Content="別  名:" Margin="166,1,41,0" FontWeight="Normal" Height="25" Name="userName" FontSize="12" Foreground="Black" />
+        <Label  VerticalAlignment="Top" Content="別  名:" Margin="114,25,0,0" FontWeight="Bold" Name="label" Height="26.32" FontSize="12" Foreground="Black" HorizontalAlignment="Left" Width="52" />
+		<Label  VerticalAlignment="Top" Content="別  名:" Margin="165,25,40,0" FontWeight="Normal" Height="26" Name="cash_point" FontSize="12" Foreground="Black" />
+        <TextBox Name="contents" TextWrapping="Wrap" Margin="13,71,9,37"  FontSize="12" Foreground="Black" MaxLength="100" />
+        <Button Height="23" HorizontalAlignment="Left" Margin="83,0,0,8" Name="button1" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button1_Click">发送</Button>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,67,8" Name="button2" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button2_Click">关闭</Button>
+        <Ellipse Height="82" HorizontalAlignment="Left" Margin="15,-15,0,0" Name="myPicture" Stroke="White" VerticalAlignment="Top" Width="84" StrokeThickness="2" />
+    </Grid>
+</Window>

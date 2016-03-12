@@ -1,0 +1,24 @@
+﻿<Window
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" x:Class="ChatClient.MessageBoxCommon"
+    Style="{DynamicResource MainWindowStyle}"  
+    Title="HBMessenger" Height="118" Width="332" ResizeMode="NoResize" Loaded="Window_Loaded" mc:Ignorable="d" WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/StyleTheme/MessageBoxGeneric.xaml" />
+                <ResourceDictionary Source="/StyleTheme/MrssageBoxDefault.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="0,-13,0,0">
+        <Button Height="23" HorizontalAlignment="Left" Margin="66,0,0,6" x:Name="yesBt" VerticalAlignment="Bottom" Width="54" Foreground="Black" Click="yesBt_Click" Content="是" d:LayoutOverrides="VerticalAlignment"/>
+        <Button Margin="131,0,130,6" x:Name="okBt" Height="23" VerticalAlignment="Bottom" Foreground="Black" Click="okBt_Click" Content="确认" d:LayoutOverrides="VerticalAlignment"/>
+        <Button Height="23" Margin="0,0,67,6" x:Name="noBt" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="55" Foreground="Black" Click="noBt_Click" Content="否是" d:LayoutOverrides="VerticalAlignment"/>
+        <Label Height="32" Margin="20,13,18,0" x:Name="msgBoxlabel" VerticalAlignment="Top" Foreground="Black" HorizontalContentAlignment="Center"></Label>
+        <Grid HorizontalAlignment="Left" Margin="3,-20,0,0" VerticalAlignment="Top" Width="24" Height="24">
+        	<Image Margin="0,0,-2,-1" Source="/Resources;component/image/icon1.gif" Stretch="Fill"/>
+        </Grid>
+    </Grid>
+</Window>

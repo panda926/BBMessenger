@@ -1,0 +1,8 @@
+﻿<Window x:Class="ChatClient.Emoticon.EmoticonSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="HBMessenger" Height="180" Width="300" Topmost="True"
+    WindowStyle="None" ResizeMode="NoResize" BorderBrush="LightGray" BorderThickness="1"
+    ShowInTaskbar="False" ShowActivated="True" Deactivated="Window_Deactivated" Closing="Window_Closing" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <UniformGrid x:Name="root" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Columns="10" /> 
+</Window>

@@ -1,0 +1,11 @@
+﻿<Window x:Class="ChatClient.LoadingWnd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Height="150" Width="150" WindowStartupLocation="CenterOwner" ShowInTaskbar="False" Background="Transparent"
+        WindowStyle="None" AllowsTransparency="True"
+        Style="{DynamicResource MainWindowStyle}" Opacity="0.7"
+        xmlns:control="clr-namespace:LoadingControl.Control" Loaded="Window_Loaded">
+    <Grid>
+        <control:LoadingAnimation HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    </Grid>
+</Window>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="cook_normal" Delay="0.33" >
+  <Image Set="cook" Name="cook_normal_0"  />
+  <Image Set="cook" Name="cook_normal_1"  />
+  <Image Set="cook" Name="cook_normal_2"  />
+  <Image Set="cook" Name="cook_normal_3"  />
+  <Image Set="cook" Name="cook_normal_4"  />
+  <Image Set="cook" Name="cook_normal_5"  />
+  <Image Set="cook" Name="cook_normal_6"  />
+  <Image Set="cook" Name="cook_normal_7"  />
+  <Image Set="cook" Name="cook_normal_8"  />
+  <Image Set="cook" Name="cook_normal_9"  />
+  <Image Set="cook" Name="cook_normal_10"  />
+  <Image Set="cook" Name="cook_normal_11"  />
+  <Image Set="cook" Name="cook_normal_12"  />
+  <Image Set="cook" Name="cook_normal_13"  />
+  <Image Set="cook" Name="cook_normal_14"  />
+
+</Animation>

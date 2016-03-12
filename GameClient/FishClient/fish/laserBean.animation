@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="laserBean" Delay="0.33" >
+  <Image Set="laserBean" Name="0"  />
+  <Image Set="laserBean" Name="1"  />
+  <Image Set="laserBean" Name="2"  />
+  <Image Set="laserBean" Name="3"  />
+  <Image Set="laserBean" Name="4"  />
+  <Image Set="laserBean" Name="5"  />
+  <Image Set="laserBean" Name="6"  />
+  <Image Set="laserBean" Name="7"  />
+  <Image Set="laserBean" Name="8"  />
+  <Image Set="laserBean" Name="9"  />
+</Animation>

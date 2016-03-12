@@ -1,0 +1,293 @@
+﻿<Window x:Class="Sample.CommRoom"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:WPFMediaKit="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit" 
+    Title="ChatRoom" Height="640" Width="720" 
+    mc:Ignorable="d" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize" Icon="image/kuaikuai.ico" >
+	<Window.Resources>
+		<Style x:Key="ButtonStyle3" TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Image x:Name="image1" Source="image/EmoticonButton.png" Stretch="Fill"/>
+							<Image x:Name="image" Source="image/EmoticonButtonClick.png" Stretch="Fill" Opacity="0"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True">
+								<Setter Property="Opacity" TargetName="image" Value="1"/>
+								<Setter Property="Opacity" TargetName="image1" Value="0"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="False"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+		<Style x:Key="ButtonStyle4" TargetType="{x:Type Button}">
+			<Setter Property="Template">
+				<Setter.Value>
+					<ControlTemplate TargetType="{x:Type Button}">
+						<Grid>
+							<Image x:Name="image1" Source="Image/FontButton.png" Stretch="Fill"/>
+							<Image x:Name="image" Margin="0" Source="Image/FontButtonClick.png" Stretch="Fill" Opacity="0"/>
+						</Grid>
+						<ControlTemplate.Triggers>
+							<Trigger Property="IsFocused" Value="True"/>
+							<Trigger Property="IsDefaulted" Value="True"/>
+							<Trigger Property="IsMouseOver" Value="True"/>
+							<Trigger Property="IsPressed" Value="True">
+								<Setter Property="Opacity" TargetName="image" Value="1"/>
+								<Setter Property="Opacity" TargetName="image1" Value="0"/>
+							</Trigger>
+							<Trigger Property="IsEnabled" Value="False"/>
+						</ControlTemplate.Triggers>
+					</ControlTemplate>
+				</Setter.Value>
+			</Setter>
+		</Style>
+	</Window.Resources>
+    <Grid x:Name="Grid">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFF9F456" Offset="1"/>
+                <GradientStop Color="#FF252525" Offset="0.004"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto" MinHeight="288" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--<Image Name="MainImage"  Grid.RowSpan="3" Source="/Sample;component/Image/848.jpg" Stretch="UniformToFill" Opacity="0.3"/>-->
+        <Grid Grid.Row="1" Name="grid1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Border Grid.Column="1" Grid.Row="1" Name="border1" Width="320" Height="240" Background="White" ClipToBounds="False" BorderBrush="Beige" BorderThickness="1">
+            	<Border.BindingGroup>
+            		<BindingGroup/>
+            	</Border.BindingGroup>
+                <Grid Name="grid12">
+                    <Image Grid.ZIndex="1"
+                               x:Name="webCamImage" Stretch="Fill" Visibility="Visible" Source="image/NoCamera.png" />
+                    <WPFMediaKit:VideoCaptureElement 
+                        Grid.ZIndex="0" x:Name="MyVideoCapElement"
+                                 LoadedBehavior="Play"
+                                 DesiredPixelWidth="640"
+                                 DesiredPixelHeight="480"
+                                 Stretch="Fill"
+                                 VideoCaptureSource="{Binding Path=CaptureDeviceName}"
+                                 FPS="30" />
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" Name="border2" Width="320" Height="240" Background="White" ClipToBounds="False" BorderBrush="Beige" BorderThickness="1">
+                <!--<WPFMediaKit:VideoCaptureElement x:Name="videoCapElement"
+                                 LoadedBehavior="Play"
+                                 DesiredPixelWidth="640"
+                                 DesiredPixelHeight="480"
+                                 Stretch="Fill"
+                                 VideoCaptureSource="{Binding Path=CaptureDeviceName}"
+                                 FPS="30" OpacityMask="Black" />-->
+                <Image Grid.ZIndex="1"
+                               x:Name="receiveImage" Stretch="Fill" Visibility="Visible" Source="image/NoCamera.png" />
+            </Border>
+            <Label Height="28" Margin="100, 6" Name="lblWebCam1" VerticalAlignment="Top" Background="White" BorderBrush="Red" BorderThickness="1" Foreground="Gray">우유나무 님 화면</Label>
+            <Label Grid.Column="1" Height="28" Margin="100, 6" Name="lblWebCam2" VerticalAlignment="Top" Background="White" BorderBrush="Red" BorderThickness="1" Foreground="Gray">끝내줌 님 화면</Label>
+        </Grid>
+        <Grid Grid.Row="2" Name="grid2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid Name="grid3">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <RichTextBox Height="165" Width="400" Margin="5,5" Name="messageHistoryBox" BorderBrush="Cyan" IsEnabled="True" Focusable="False" FontSize="13" Foreground="Gray" />
+                <Grid Grid.Row="2" Name="grid4">
+                    <Border Name="border3" Margin="5,5" BorderThickness="1" Background="White" BorderBrush="Cyan">
+                        <Grid Name="grid5">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <RichTextBox Name="messageEditBox" Width="330" BorderThickness="0" Height="50" HorizontalAlignment="Left" TabIndex="2147483647" AcceptsReturn="False" FontSize="13" Foreground="Gray" PreviewKeyDown="messageEditBox_PreviewKeyDown" />
+                            <Button Grid.Column="1" Margin="2,2" Name="button1" Cursor="Hand" Click="button1_Click">Send</Button>
+                        </Grid>
+                    </Border>
+                </Grid>
+                <Grid Grid.Row="1" Name="grid13">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <StackPanel Name="stackPanel1" Width="Auto" Orientation="Horizontal">
+                        <Button Style="{DynamicResource ButtonStyle3}" Width="65" Margin="5,0" Height="25" Content="Button" x:Name="Emoticon" Cursor="Hand" Click="Emoticon_Click" />
+                        <Button Style="{DynamicResource ButtonStyle4}" Width="65" Height="25" Content="Button" Cursor="Hand" Click="Button_Click" />
+                    </StackPanel>
+                    <StackPanel Grid.Column="2" Name="stackPanel2" Orientation="Horizontal"/>
+                </Grid>
+            </Grid>
+            <Border Grid.Column="1" Margin="5,5" Name="border5" Background="White" BorderThickness="1" BorderBrush="Cyan">
+                <Grid Name="grid8">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Grid Name="grid9">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <ListBox Margin="2,2" Height="200" Name="userList" Background="Beige" Foreground="Black" Focusable="False" FontSize="15" FontWeight="Bold" />
+                        <Button Grid.Row="1" Width="100" Height="30" Name="button2" Click="button2_Click" Cursor="Hand">캐쉬충전</Button>
+                    </Grid>
+                    <Grid Grid.Column="1" Margin="2,2" Name="grid10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Grid Name="grid11">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Button Height="25" Width="50" Name="button3" Cursor="Hand">
+                            	<Button.Background>
+                            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            			<LinearGradientBrush.RelativeTransform>
+                            				<TransformGroup>
+                            					<ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                            					<SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            					<RotateTransform Angle="-7" CenterX="0.5" CenterY="0.5"/>
+                            					<TranslateTransform/>
+                            				</TransformGroup>
+                            			</LinearGradientBrush.RelativeTransform>
+                            			<GradientStop Color="#FFCDCDCD"/>
+                            			<GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            			<GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                            			<GradientStop Color="#FFFB1F08"/>
+                            			<GradientStop Color="#FF4D8DDD" Offset="1"/>
+                            		</LinearGradientBrush>
+                            	</Button.Background>300캐쉬</Button>
+                            <Button Grid.Column="1" Height="25" Width="50" Name="button4" Cursor="Hand"><Button.Background>
+                            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            			<LinearGradientBrush.RelativeTransform>
+                            				<TransformGroup>
+                            					<ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                            					<SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            					<RotateTransform Angle="-7" CenterX="0.5" CenterY="0.5"/>
+                            					<TranslateTransform/>
+                            				</TransformGroup>
+                            			</LinearGradientBrush.RelativeTransform>
+                            			<GradientStop Color="#FFCDCDCD"/>
+                            			<GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            			<GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                            			<GradientStop Color="#FFFB1F08"/>
+                            			<GradientStop Color="#FF4D8DDD" Offset="1"/>
+                            		</LinearGradientBrush>
+                            	</Button.Background>450캐쉬</Button>
+                        </Grid>
+                        <CheckBox Grid.Row="1" Margin="13,10" Name="checkBox1" Foreground="Black">채팅중 쪽지 거부</CheckBox>
+                        <Button Grid.Row="2" Width="100" Height="30" Name="buttonSendMyVideo" Cursor="Hand" Click="buttonSendMyVideo_Click"><Button.Background>
+                            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            			<LinearGradientBrush.RelativeTransform>
+                            				<TransformGroup>
+                            					<ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                            					<SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            					<RotateTransform Angle="-7" CenterX="0.5" CenterY="0.5"/>
+                            					<TranslateTransform/>
+                            				</TransformGroup>
+                            			</LinearGradientBrush.RelativeTransform>
+                            			<GradientStop Color="#FFCDCDCD"/>
+                            			<GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            			<GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                            			<GradientStop Color="#FFFB1F08"/>
+                            			<GradientStop Color="#FF4D8DDD" Offset="1"/>
+                            		</LinearGradientBrush>
+                            	</Button.Background>내화면전송하기</Button>
+                        <Button Grid.Row="3" Width="100" Height="30" Name="button6" Cursor="Hand" Click="button6_Click">
+                        	<Button.Background>
+                            		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                            			<LinearGradientBrush.RelativeTransform>
+                            				<TransformGroup>
+                            					<ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                            					<SkewTransform CenterX="0.5" CenterY="0.5"/>
+                            					<RotateTransform Angle="-7" CenterX="0.5" CenterY="0.5"/>
+                            					<TranslateTransform/>
+                            				</TransformGroup>
+                            			</LinearGradientBrush.RelativeTransform>
+                            			<GradientStop Color="#FFCDCDCD"/>
+                            			<GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                            			<GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                            			<GradientStop Color="#FFFB1F08"/>
+                            			<GradientStop Color="#FF4D8DDD" Offset="1"/>
+                            		</LinearGradientBrush>
+                            	</Button.Background>내음성전송하기</Button>
+                        <Grid Grid.Row="4" Name="GridMark">
+                            <TextBox Grid.ZIndex="1" Height="28" Name="numberMark" Width="120" BorderBrush="Blue" TextChanged="numberMark_TextChanged" MaxLength="1" Opacity="0.5" />
+                            <Label Name="lblMark" Height="28" Width="120" BorderBrush="Blue" Grid.ZIndex="0" Foreground="Gray" Opacity="1">1점부터 5점 입력</Label>
+                        </Grid>
+                        <Button Grid.Row="5" Width="100" Height="30" Name="btnSendMark" Cursor="Hand" Click="btnSendMark_Click" IsEnabled="False">
+                            <Button.Background>
+                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" MappingMode="RelativeToBoundingBox">
+                                    <LinearGradientBrush.RelativeTransform>
+                                        <TransformGroup>
+                                            <ScaleTransform CenterX="0.5" CenterY="0.5"/>
+                                            <SkewTransform CenterX="0.5" CenterY="0.5"/>
+                                            <RotateTransform Angle="-7" CenterX="0.5" CenterY="0.5"/>
+                                            <TranslateTransform/>
+                                        </TransformGroup>
+                                    </LinearGradientBrush.RelativeTransform>
+                                    <GradientStop Color="#FFCDCDCD"/>
+                                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
+                                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
+                                    <GradientStop Color="#FFFB1F08"/>
+                                    <GradientStop Color="#FF4D8DDD" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> 점수주기</Button>
+                    </Grid>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Name="grid6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Image Name="image1" Stretch="Fill" Margin="2,3" Width="45" Opacity="0.6" Height="38" />
+            <Border Grid.Column="1" Name="border4" Height="28
+                    " Margin="5,0" BorderThickness="1" Background="White" BorderBrush="Blue" VerticalAlignment="Bottom">
+                <Grid Name="grid7">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Label Height="28" Name="lblCurRemainPrice" Foreground="Gray">현재 보유캐쉬: 700</Label>
+                    <Label Grid.Column="1" Height="28" Name="lblCurUsingPrice" Foreground="Gray">현재 사용캐쉬: 150</Label>
+                    <Label Grid.Column="2" Height="28" Name="lblPricePerSecond" Foreground="Gray">30초당 채팅비용: 150</Label>
+                </Grid>
+            </Border>
+        </Grid>
+        <Image HorizontalAlignment="Left" Margin="11,-0.18,0,-40.1" Width="37" Source="image/gril.gif" Stretch="Fill" Opacity="0.8"/>
+    </Grid>
+</Window>

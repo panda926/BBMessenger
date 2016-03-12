@@ -1,0 +1,33 @@
+﻿<UserControl
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	mc:Ignorable="d"
+	x:Class="ChatClient.MyInfoControl"
+	x:Name="UserControl"
+	Width="392" Height="326">
+
+	<Grid x:Name="LayoutRoot" Width="392" Height="326">
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Top" Content="帐    号:" Margin="26,6,0,0" Foreground="Black" Height="23.687" Width="64" />
+		<Label  VerticalAlignment="Top" Content="称  号:" Margin="180,4,160,0" Foreground="Black" Height="25.96" />
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Top" Content="出生年月:" Margin="25,35.04,0,0" Foreground="Black" Height="25.96" Width="63.006" />
+		<Label HorizontalAlignment="Left"  Content="地  址:" Margin="34,76,0,0" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment" VerticalAlignment="Top" Foreground="Black" Height="25.96" Width="52.6" />
+        <Label HorizontalAlignment="Left"  VerticalAlignment="Top" Name="userId" Margin="94,7,0,0" Foreground="Black" Height="26" Width="91">Label</Label>
+        <TextBox   Margin="91,79.04,8,0" VerticalAlignment="Top" Name="userAddress" Foreground="Black" MaxLength="30" TextChanged="userAddress_TextChanged" />
+		<TextBox HorizontalAlignment="Right"  VerticalAlignment="Top" Margin="0,6,8,0" Width="145.392" Name="userNicname" Foreground="Black" MaxLength="24" TextChanged="userNicname_TextChanged" />
+		<Button HorizontalAlignment="Right"  VerticalAlignment="Bottom" Width="75" Content="保存" Margin="0,0,12,99" Height="26.96" Click="Button_Click" Foreground="Black" Name="buttonSave" />
+		<Label HorizontalAlignment="Left"  VerticalAlignment="Bottom" Content="原密码:" Margin="33.006,0,0,102.04" Foreground="Black" />
+        <PasswordBox VerticalAlignment="Bottom" Margin="89,0,145,102.04" Name="rePass" Foreground="Black" Height="19.8" PasswordChanged="rePass_PasswordChanged" />
+        <ComboBox Margin="96,37.04,0,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" HorizontalAlignment="Left" Width="90" Name="userYear" SelectionChanged="userYear_SelectionChanged" Height="19.687" />
+		<ComboBox Margin="203,37.04,123,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Name="userMonth" Width="56" SelectionChanged="userMonth_SelectionChanged" />
+		<ComboBox HorizontalAlignment="Right" Margin="0,37.04,51,0" Style="{DynamicResource ComboBoxStyle}" VerticalAlignment="Top" Width="56" Name="userDay" SelectionChanged="userDay_SelectionChanged" />
+        <Label HorizontalAlignment="Right"  VerticalAlignment="Bottom" Name="gamepercent" RenderTransformOrigin="6.466,6.704" Margin="0,0,77,59" Foreground="Black" Height="25.96" Width="70">0</Label>
+        <Label VerticalAlignment="Bottom" Content="积  分:" Name="gamePro" Margin="194,0,147,59" Foreground="Black" Height="25.96" />
+		<Label HorizontalAlignment="Left"  Name="chatprecent" Margin="93,0,0,59.92" Width="82" VerticalAlignment="Bottom" Height="25.04" Foreground="Black">0</Label>
+        <Label VerticalAlignment="Bottom" Content="元  宝:" Name="chatPro" Margin="33,0,0,59" d:LayoutOverrides="HorizontalAlignment" Foreground="Black" Height="25.96" HorizontalAlignment="Left" Width="51" />
+		<Label HorizontalAlignment="Left" Content="签  名:" Margin="35,112,0,0" Foreground="Black" Width="55" VerticalAlignment="Top" Height="30.96" />
+		<TextBox TextWrapping="Wrap" Margin="91,117,8,131.96" Foreground="Black" Name="signBox" MaxLength="30" TextChanged="signBox_TextChanged" />
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,30" Name="button1" VerticalAlignment="Bottom" Width="75" Foreground="Black" Click="button1_Click">充值</Button>
+    </Grid>
+</UserControl>

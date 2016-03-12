@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="GB2312" ?> 
+<Animation Name="real_fly" Delay="0.33" >
+  <Image Set="real_fly" Name="0"  />
+  <Image Set="real_fly" Name="1"  />
+  <Image Set="real_fly" Name="2"  />
+  <Image Set="real_fly" Name="3"  />
+  <Image Set="real_fly" Name="4"  />
+  <Image Set="real_fly" Name="5"  />
+  <Image Set="real_fly" Name="6"  />
+  <Image Set="real_fly" Name="7"  />
+  <Image Set="real_fly" Name="8"  />
+  <Image Set="real_fly" Name="9"  />
+  <Image Set="real_fly" Name="10"  />
+  <Image Set="real_fly" Name="11"  />
+  <Image Set="real_fly" Name="12"  />
+  <Image Set="real_fly" Name="13"  />
+  <Image Set="real_fly" Name="14"  />
+  <Image Set="real_fly" Name="15"  />
+  <Image Set="real_fly" Name="16"  />
+  <Image Set="real_fly" Name="17"  />
+  <Image Set="real_fly" Name="18"  />
+  <Image Set="real_fly" Name="19"  />
+
+</Animation>

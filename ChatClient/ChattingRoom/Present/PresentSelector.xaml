@@ -1,0 +1,8 @@
+﻿<Window x:Class="ChatClient.Present.PresentSelector"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="HBMessenger" Width="160" Height="180"
+    WindowStyle="None" ResizeMode="NoResize" BorderBrush="LightGray" BorderThickness="1"
+    ShowInTaskbar="False" ShowActivated="True" Deactivated="Window_Deactivated" Closing="Window_Closing" KeyDown="Window_KeyDown" Loaded="Window_Loaded">
+    <UniformGrid x:Name="root" FlowDirection="{StaticResource flowDirection}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Columns="4" />
+</Window>
